@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/miblify.svg";
+---
+
+<header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+    <a href="/">
+      <Image src={logo} alt="Miblify" class="w-32" />
+    </a>
+    {
+      false && (
+        <div class="flex gap-3 md:gap-10">
+          <a class="btn btn-neutral btn-outline" href="/login">
+            Entrar
+          </a>
+          <a class="btn btn-primary btn-outline" href="/register">
+            Criar minha loja
+          </a>
+        </div>
+      )
+    }
+  </div>
+</header>
+
+<style>
+  /* Header sticky com fundo semi-transparente */
+  #main-header {
+    background-color: transparent;
+  }
+
+  #main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+</style>
+
+<script>
+  // Header sticky com scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("main-header");
+
+    // Check if we are already scrolled on load
+    if (window.pageYOffset > 50) {
+      header?.classList.add("scrolled");
+    }
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 50) {
+        header?.classList.add("scrolled");
+      } else {
+        header?.classList.remove("scrolled");
+      }
+    });
+  });
+</script>

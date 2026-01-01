@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'cabinet';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(/fonts/cgrotesk.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'cabinet-bold';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(/fonts/cgroteskBold.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "miblify";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(0.9873 0.0096 72.66);
+  --color-base-200: oklch(93.982% 0.007 61.449);
+  --color-base-300: oklch(93.982% 0.007 61.449);
+  --color-base-content: oklch(0.235 0 129.63);
+  --color-primary: oklch(0.5041 0.2195 277.11);
+  --color-primary-content: oklch(98% 0.003 247.858);
+  --color-secondary: oklch(0.7774 0.2001 333.22);
+  --color-secondary-content: oklch(28% 0.109 3.907);
+  --color-accent: oklch(90% 0.076 70.697);
+  --color-accent-content: oklch(47% 0.157 37.304);
+  --color-neutral: oklch(27% 0.006 286.033);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(68% 0.169 237.323);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(85% 0.199 91.936);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --font-cabinet: "cabinet", serif; 
+  --font-cabinet-bold: "cabinet-bold", serif;
+  --color-amarelo: oklch(0.8994 0.1526 94.7);
+  --color-orange: oklch(0.666 0.2145 36.1);
+  --color-pink: oklch(0.7791 0.1994 332.91);
+}
+.link {
+   @apply text-primary underline-offset-4;
+  }
+  .link:hover {
+   @apply text-primary/75;
+  }
+
+  .btn {
+    @apply font-cabinet text-lg;
+  }

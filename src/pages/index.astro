@@ -1,11 +1,596 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from "astro:assets";
+import eyes from "../assets/img/eyes.svg";
+import sun from "../assets/img/sun.svg";
+import deUmCliqueSucesso from "../assets/img/de-um-clique-sucesso.svg";
+import setinhas from "../assets/img/setinhas-coloridas.svg";
+import chefKiss from "../assets/img/chef-kiss.svg";
+import flower from "../assets/img/flower.svg";
+import question from "../assets/img/question-attention.svg";
+import greenGlobe from "../assets/img/green-globe.svg";
+import lookGood from "../assets/img/look-good.svg";
+import pinkStar from "../assets/img/pink-star.svg";
+import heartEyesSoft from "../assets/img/heart-eyes-soft.svg";
+import moneys from "../assets/img/moneys.svg";
+import sales from "../assets/img/sales.png";
+import zeroDrama from "../assets/img/zero-drama.png";
+import Layout from "../layouts/Layout.astro";
+import ArrowRight from "phosphor-astro/ArrowRight.astro";
+import Check from "phosphor-astro/Check.astro";
+import X from "phosphor-astro/X.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <main>
+    <div class="px-6 py-10 md:py-20 md:px-10 max-w-4xl mx-auto relative reveal-scale">
+      <Image id="eyes-img" src={eyes} alt="Miblify" class="size-15 absolute top-20 right-20 hidden md:block" />
+      <Image id="sun-img" src={sun} alt="Miblify" class="size-24 absolute top-15 left-10 hidden md:block" />
+      <Image
+        id="clique-img"
+        src={deUmCliqueSucesso}
+        alt="Miblify"
+        class="size-32 absolute bottom-32 -left-10 hidden md:block"
+      />
+      <Image id="setinhas-img" src={setinhas} alt="Miblify" class="size-36 absolute top-40 -right-20 hidden lg:block" />
+      <Image id="chef-img" src={chefKiss} alt="Miblify" class="size-12 absolute bottom-10 left-46 hidden md:block" />
+      <Image id="flower-img" src={flower} alt="Miblify" class="size-24 absolute bottom-20 right-20 hidden md:block" />
+      <div class="text-center mb-5">
+        <span
+          class="inline-block text-base-content text-lg font-cabinet bg-pink-200 px-5 py-1 rounded-full"
+          style="animation: bounce-rotated 4s ease-in-out infinite;">
+          Comece gratuitamente
+        </span>
+      </div>
+      <h2 class="text-base-content text-5xl md:text-6xl font-cabinet-bold text-center">
+        Venda seu produto digital em minutos. Sem taxas absurdas, sem enrolação.
+      </h2>
+      <p class="text-base-content text-center text-lg md:text-2xl mt-5 mb-10">
+        Chega de quebrar a cabeça com tecnologia complicada. Na Miblify, você cria sua conta, cadastra seu produto e
+        começa a vender.
+      </p>
+      <div class="text-center mt-10">
+        <a
+          id="cta-button"
+          href="#lista_espera"
+          class="btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl px-10 md:px-20"
+          style="box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63); font-size: clamp(1.125rem, 4vw, 1.5rem);">
+          Começar agora de graça
+          <ArrowRight class="size-5" />
+        </a>
+        <p class="text-base-content/50 text-center mt-5">É sério, não paga nada pra entrar.</p>
+      </div>
+    </div>
+    <div class="px-6 md:px-10 max-w-5xl mx-auto text-center mt-10 md:mt-20 reveal">
+      <span class="font-cabinet bg-orange px-5 py-2 text-white rounded-lg">Conecte, publique, venda.</span>
+      <h3 class="text-base-content text-3xl md:text-4xl mt-5 font-cabinet-bold text-center">
+        O caminho mais curto para sua primeira venda.
+      </h3>
+      <p class="text-base-content text-center text-base md:text-xl lg:text-2xl mt-5 mb-10">
+        A gente acredita que vender online não precisa ser um caos técnico. Com a Miblify, você tem total controle do
+        seu negócio e faz sua primeira venda rápido.
+      </p>
+    </div>
+    <div
+      class="px-6 md:px-10 max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-5 md:gap-10 justify-center">
+      <Image src={zeroDrama} alt="Miblify" class="w-full md:w-1/2 reveal-left" />
+      <div class="grow reveal-right">
+        <h4 class="text-base-content text-xl md:text-2xl font-cabinet-bold">Seu negócio, suas regras</h4>
+        <p class="text-base-content text-base md:text-lg mt-5">
+          Conecte sua conta com o Mercado Pago e receba seus pagamentos na hora. Sem taxas escondidas de saque. Sem ter
+          que esperar dias pelo Pix.
+        </p>
+      </div>
+    </div>
+    <div class="px-6 md:px-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-5 md:gap-10 justify-center">
+      <div class="grow reveal-left">
+        <h4 class="text-base-content text-xl md:text-2xl font-cabinet-bold">Do upload à venda antes do café esfriar</h4>
+        <p class="text-base-content text-base md:text-lg mt-5">
+          Esqueça longos cadastros, validações e burocracias. Na Miblify você cria sua página de venda e começa a
+          faturar no mesmo dia.
+        </p>
+      </div>
+      <Image src={sales} alt="Miblify" class="w-full md:w-1/2 reveal-right" />
+    </div>
+
+    <div class="px-6 md:px-10 max-w-2xl mx-auto text-center mt-10 md:mt-20 reveal">
+      <span class="font-cabinet bg-primary text-white px-5 py-2 rounded-full">É pra quem ta começando</span>
+      <h4 class="text-xl md:text-2xl lg:text-3xl font-cabinet mt-5">
+        Feito para quem cria, compartilha e quer viver do digital.
+      </h4>
+      <p class="text-base md:text-lg mt-3">
+        Simplificamos o processo para você não travar no meio do caminho. Sem integrações difíceis e sem taxas abusivas.
+        Aqui, você transforma seu conhecimento em dinheiro na conta.
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mt-10 md:mt-20 mx-auto px-6
+      [&_p]:pt-4 gap-y-10">
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={heartEyesSoft} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>Crie sua loja em minutos. Não precisa ser programador nem especialista.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={greenGlobe} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>Venda e-books, curso, consultoria, assinaturas, microsaas, serviços, arquivos digitais.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={lookGood} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>Ofereça produtos gratuitos para atrair clientes.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={pinkStar} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>Checkout transparente com sua marca. Cupons de desconto e recuperação de carrinhos abandonados.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={question} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>Mantenha sua comunidade atualizada com email marketing integrado.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg relative reveal-scale">
+        <Image src={moneys} alt="Miblify" class="size-12 absolute -top-5 left-5" />
+        <p>
+          Conecte sua conta Mercado Pago e receba seus pagamentos na hora. Sem tarifas de saque. Sem limite de vendas.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center my-10 md:my-20 max-w-4xl mx-auto px-6 reveal">
+      <h4 class="text-2xl md:text-3xl font-cabinet-bold">Preço simples e justo</h4>
+      {
+        false && (
+          <p class="text-base md:text-lg mt-2">
+            Não precisa de mensalidade para começar. Quando estiver pronto para o próximo passo, estaremos aqui com
+            você.
+          </p>
+        )
+      }
+      <div class="relative w-fit mx-auto my-10">
+        <span
+          class="offer-badge absolute -top-3 -right-6 md:-top-4 md:-right-10 bg-pink text-white text-[10px] md:text-xs font-cabinet-bold px-2 py-1 rounded-md rotate-1 shadow-sm z-10">
+          Oferta de lançamento
+        </span>
+        <p class="text-base md:text-3xl font-cabinet-bold text-primary bg-primary/10 p-2 px-5 rounded-full text-center">
+          2% por venda
+        </p>
+      </div>
+      <p class="text-base md:text-lg mt-2">Sem mensalidades, sem taxas ocultas. Simples assim.</p>
+    </div>
+    {
+      false && (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto px-6 text-sm [&_li]:mb-4 mb-10">
+          <div class="p-5 rounded-lg bg-white reveal-left">
+            <p class="text-xl font-bold mb-2">Plano grátis</p>
+            <p class="text-3xl font-bold font-cabinet-bold text-primary">
+              R$ 0 <span class="text-sm text-primary/75 font-cabinet">/ mês</span>
+            </p>
+            <p class="my-5">
+              <ul class="[&_svg]:text-base-content/80 [&_svg]:rounded-full [&_svg]:bg-primary/10 [&_svg]:p-1 [&_svg]:mr-2">
+                <li>
+                  <Check class="size-5 inline" /> 5% + R$ 2,00 de taxa por venda
+                </li>
+                <li>
+                  <Check class="size-5 inline" />1 Loja
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Transações ilimitadas
+                </li>
+
+                <li>
+                  <Check class="size-5 inline" />
+                  Recuperação de carrinhos abandonados
+                </li>
+                <li class="text-base-content/50 line-through">
+                  <X class="size-5 inline" />
+                  Domínio personalizado
+                </li>
+                <li class="text-base-content/50 line-through">
+                  <X class="size-5 inline" />
+                  Email marketing
+                </li>
+
+                <li class="text-base-content/50 line-through">
+                  <X class="size-5 inline" />
+                  Suporte priorizado
+                </li>
+              </ul>
+            </p>
+            <p class="mt-5">
+              <a href="#" class="btn btn-sm btn-primary btn-outline w-full rounded-xl">
+                Começar agora
+              </a>
+            </p>
+          </div>
+          <div class="p-5 rounded-lg md:-mt-10 bg-primary text-primary-content ring-8 ring-primary/50 reveal-scale">
+            <p class="text-xl font-bold mb-2 flex justify-between items-center">
+              Plano Pro
+              <span class="text-xs bg-white px-2 py-1 rounded-lg text-primary font-cabinet text-right">
+                Mais popular
+              </span>
+            </p>
+            <p class="text-3xl font-cabinet-bold">
+              R$ 99 <span class="text-sm font-cabinet text-primary-content/50">/ mês</span>
+            </p>
+            <p class="my-5">
+              <ul class="[&_svg]:text-primary [&_svg]:bg-primary-content/80 [&_svg]:rounded-full [&_svg]:p-1 [&_svg]:mr-2">
+                <li>
+                  <Check class="size-5 inline rounded-full" />
+                  2,5% + R$ 1,00 de taxa por venda
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Até 3 Lojas
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Transações ilimitadas
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Recuperação de carrinhos abandonados
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Domínio personalizado
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Email marketing
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Suporte priorizado
+                </li>
+              </ul>
+            </p>
+            <p class="mt-5">
+              <a
+                href="#"
+                class="btn btn-sm bg-pink hover:bg-pink border-black w-full rounded-xl"
+                style="box-shadow: 3px 3px 0 0 #000000 !important;">
+                Começar agora
+              </a>
+            </p>
+          </div>
+          <div class="p-5 rounded-lg bg-white min-h-52 reveal-right">
+            <p class="text-xl font-bold mb-2">Plano Scale</p>
+            <p class="text-3xl font-bold font-cabinet-bold text-primary">
+              R$ 299
+              <span class="text-sm font-cabinet text-primary/75">/ mês</span>
+            </p>
+            <p class="my-5">
+              <ul class="[&_svg]:text-primary [&_svg]:rounded-full [&_svg]:bg-primary/10 [&_svg]:p-1 [&_svg]:mr-2">
+                <li>
+                  <Check class="size-5 inline" /> 1% + R$ 0,50 de taxa por venda
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Lojas ilimitadas
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Transações ilimitadas
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Recuperação de carrinhos abandonados
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Domínio personalizado
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Email marketing
+                </li>
+                <li>
+                  <Check class="size-5 inline" />
+                  Suporte priorizado
+                </li>
+              </ul>
+            </p>
+            <p class="mt-5">
+              <a href="#" class="btn btn-sm btn-primary btn-outline w-full rounded-xl">
+                Começar agora
+              </a>
+            </p>
+          </div>
+        </div>
+      )
+    }
+    <p class="text-center text-base-content/50">As taxas por venda não incluem a comissão cobrada pelo Gateway.</p>
+    <div class="bg-pink p-6 md:p-10 mt-20">
+      <div class="max-w-6xl mx-auto text-white">
+        <div class="md:grid md:grid-cols-3 md:gap-0 items-start">
+          <h4 class="text-4xl font-bold font-cabinet">Tire suas dúvidas</h4>
+          <div class="join join-vertical w-full col-span-2">
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" checked="checked" />
+              <div class="collapse-title text-lg font-bold">Quanto custa usar o Miblify?</div>
+              <div class="collapse-content text-white/75">
+                <p>
+                  Nossa filosofia é crescer com você. Não cobramos mensalidade, taxa de adesão ou taxa de cancelamento.
+                  A única taxa cobrada é de 2% sobre o valor de pedidos pagos. Se você não vender, não paga nada.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" />
+              <div class="collapse-title text-lg font-bold">
+                Existe alguma cobrança para pedidos cancelados ou não pagos?
+              </div>
+              <div class="collapse-content text-white/75">
+                <p>Não. A taxa de 2% incide exclusivamente sobre vendas aprovadas e pagas.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" />
+              <div class="collapse-title text-lg font-bold">Tenho que pagar algum plano mensal?</div>
+              <div class="collapse-content text-white/75">
+                <p>
+                  Todas as funcionalidades da plataforma estão liberadas desde o primeiro dia, sem travas por planos.
+                  Essa é nossa oferta de lançamento.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" />
+              <div class="collapse-title text-lg font-bold">Preciso cadastrar cartão de crédito para começar?</div>
+              <div class="collapse-content text-white/75">
+                <p>
+                  Não é necessário. Como não há cobrança de mensalidade, você pode criar sua conta, configurar sua loja
+                  e começar a vender sem informar dados de cobrança antecipadamente.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" />
+              <div class="collapse-title text-lg font-bold">Existe fidelidade ou contrato de longo prazo?</div>
+              <div class="collapse-content text-white/75">
+                <p>
+                  Não. Você é livre para usar o Miblify pelo tempo que desejar. Acreditamos na qualidade do nosso
+                  serviço para manter você conosco, não em contratos amarrados.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item">
+              <input type="radio" name="miblify-faq" />
+              <div class="collapse-title text-lg font-bold">Como a taxa de 2% é cobrada?</div>
+              <div class="collapse-content text-white/75">
+                <p>
+                  Quando você começar a vender, o sistema vai requisitar que você forneça dados de pagamento para a
+                  cobrança das comissões.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-6 py-20 md:px-10 max-w-4xl mx-auto text-center reveal">
+      <h2 class="text-3xl md:text-5xl font-cabinet-bold mb-6">Quer acelerar suas vendas?</h2>
+      <p class="text-lg md:text-xl mb-10 text-base-content/70 max-w-2xl mx-auto">
+        O futuro das vendas digitais está chegando. Entre na nossa lista de espera oficial e tenha acesso antecipado às
+        novidades.
+      </p>
+      <div id="lista_espera" class="flex justify-center">
+        <a
+          href="https://forms.gle/ant3DU1Bvpo69i9PA"
+          class="btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl px-10 md:px-20"
+          style="box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63); font-size: clamp(1.125rem, 4vw, 1.5rem);">
+          Entrar na lista de espera
+          <ArrowRight class="size-5" />
+        </a>
+      </div>
+    </div>
+    <Footer />
+  </main>
+
+  <style>
+    #cta-button {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate(0, 0);
+    }
+
+    #cta-button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 0 oklch(0.235 0 129.63) !important;
+    }
+
+    #cta-button:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 0 oklch(0.235 0 129.63) !important;
+    }
+
+    @keyframes bounce-rotated {
+      0%,
+      100% {
+        transform: rotate(-4deg) translateY(0);
+      }
+      50% {
+        transform: rotate(-4deg) translateY(-8px);
+      }
+    }
+
+    /* Animações para as imagens decorativas */
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes gentle-rotate {
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+    }
+
+    @keyframes subtle-bounce {
+      0%,
+      100% {
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-8px) scale(1.05);
+      }
+    }
+
+    @keyframes swing {
+      0%,
+      100% {
+        transform: translateX(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateX(6px) rotate(3deg);
+      }
+    }
+
+    @keyframes float-rotate {
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(5deg);
+      }
+    }
+
+    @keyframes pulse-subtle {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes badge-pulse {
+      0%,
+      100% {
+        transform: rotate(12deg) scale(1);
+      }
+      50% {
+        transform: rotate(12deg) scale(1.05);
+      }
+    }
+
+    .offer-badge {
+      animation: badge-pulse 2s ease-in-out infinite;
+    }
+
+    #eyes-img {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    #sun-img {
+      animation: gentle-rotate 4s ease-in-out infinite;
+    }
+
+    #clique-img {
+      animation: subtle-bounce 6s ease-in-out infinite;
+    }
+
+    #setinhas-img {
+      animation: swing 7s ease-in-out infinite;
+    }
+
+    #chef-img {
+      animation: pulse-subtle 5s ease-in-out infinite;
+    }
+
+    #flower-img {
+      animation: gentle-rotate 4s ease-in-out infinite;
+    }
+
+    /* Scroll reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition:
+        opacity 0.5s ease-out,
+        transform 0.5s ease-out;
+    }
+
+    .reveal-scale.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+    }
+
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+    }
+
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+
+  <script>
+    // Intersection Observer para animações de scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos os elementos com classe reveal
+    document.addEventListener("DOMContentLoaded", () => {
+      const revealElements = document.querySelectorAll(".reveal, .reveal-scale, .reveal-left, .reveal-right");
+      revealElements.forEach((el) => observer.observe(el));
+    });
+  </script>
 </Layout>
