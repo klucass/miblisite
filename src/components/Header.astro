@@ -5,8 +5,11 @@ import logo from "../assets/miblify.svg";
 
 <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
   <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
-    <a href="/">
-      <Image src={logo} alt="Miblify" class="w-32" />
+    <a
+      href="/"
+      class="outline-none focus:outline-none active:outline-none"
+      style="-webkit-tap-highlight-color: transparent;">
+      <Image src={logo} alt="Miblify" class="w-32 border-none ring-0 outline-none" />
     </a>
     {
       false && (
