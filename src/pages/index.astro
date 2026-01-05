@@ -302,14 +302,14 @@ import Footer from "../components/Footer.astro";
     }
     <p class="text-center text-base-content/50">As taxas por venda não incluem a comissão cobrada pelo Gateway.</p>
     <div class="bg-pink p-6 md:p-10 mt-20">
-      <div class="max-w-6xl mx-auto text-white">
+      <div class="max-w-6xl mx-auto text-base-content">
         <div class="md:grid md:grid-cols-3 md:gap-0 items-start">
           <h4 class="text-4xl font-bold font-cabinet">Tire suas dúvidas</h4>
           <div class="join join-vertical w-full col-span-2">
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" checked="checked" />
+              <input type="radio" name="miblify-faq" aria-label="Quanto custa usar o Miblify?" checked="checked" />
               <div class="collapse-title text-lg font-bold">Quanto custa usar o Miblify?</div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>
                   Nossa filosofia é crescer com você. Não cobramos mensalidade, taxa de adesão ou taxa de cancelamento.
                   A única taxa cobrada é de 2% sobre o valor de pedidos pagos. Se você não vender, não paga nada.
@@ -318,19 +318,23 @@ import Footer from "../components/Footer.astro";
             </div>
 
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" />
+              <input
+                type="radio"
+                name="miblify-faq"
+                aria-label="Existe alguma cobrança para pedidos cancelados ou não pagos?"
+              />
               <div class="collapse-title text-lg font-bold">
                 Existe alguma cobrança para pedidos cancelados ou não pagos?
               </div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>Não. A taxa de 2% incide exclusivamente sobre vendas aprovadas e pagas.</p>
               </div>
             </div>
 
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" />
+              <input type="radio" name="miblify-faq" aria-label="Tenho que pagar algum plano mensal?" />
               <div class="collapse-title text-lg font-bold">Tenho que pagar algum plano mensal?</div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>
                   Todas as funcionalidades da plataforma estão liberadas desde o primeiro dia, sem travas por planos.
                   Essa é nossa oferta de lançamento.
@@ -339,9 +343,9 @@ import Footer from "../components/Footer.astro";
             </div>
 
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" />
+              <input type="radio" name="miblify-faq" aria-label="Preciso cadastrar cartão de crédito para começar?" />
               <div class="collapse-title text-lg font-bold">Preciso cadastrar cartão de crédito para começar?</div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>
                   Não é necessário. Como não há cobrança de mensalidade, você pode criar sua conta, configurar sua loja
                   e começar a vender sem informar dados de cobrança antecipadamente.
@@ -350,9 +354,9 @@ import Footer from "../components/Footer.astro";
             </div>
 
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" />
+              <input type="radio" name="miblify-faq" aria-label="Existe fidelidade ou contrato de longo prazo?" />
               <div class="collapse-title text-lg font-bold">Existe fidelidade ou contrato de longo prazo?</div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>
                   Não. Você é livre para usar o Miblify pelo tempo que desejar. Acreditamos na qualidade do nosso
                   serviço para manter você conosco, não em contratos amarrados.
@@ -361,9 +365,9 @@ import Footer from "../components/Footer.astro";
             </div>
 
             <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" />
+              <input type="radio" name="miblify-faq" aria-label="Como a taxa de 2% é cobrada?" />
               <div class="collapse-title text-lg font-bold">Como a taxa de 2% é cobrada?</div>
-              <div class="collapse-content text-white/75">
+              <div class="collapse-content text-base-content/80">
                 <p>
                   Quando você começar a vender, o sistema vai requisitar que você forneça dados de pagamento para a
                   cobrança das comissões.
