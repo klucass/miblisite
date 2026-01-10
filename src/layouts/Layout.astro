@@ -6,6 +6,7 @@ interface Props {
   description?: string;
   image?: string;
   robots?: string;
+  logo?: string;
 }
 
 const {
@@ -13,6 +14,7 @@ const {
   description = "Venda seu produto digital em minutos. Sem taxas absurdas ou mensalidades. Crie sua loja, conecte com o Mercado Pago e comece a faturar hoje mesmo com a Miblify.",
   image = "/og-image.png",
   robots = "index, follow",
+  logo = "https://app.miblify.com/miblify.png",
 } = Astro.props;
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
@@ -45,6 +47,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
+    <meta property="og:logo" content={logo} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
