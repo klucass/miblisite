@@ -1,28 +1,37 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/miblify_logo.png";
+
+interface Props {
+  isBlog?: boolean;
+}
+
+const { isBlog = false } = Astro.props;
 ---
 
 <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
   <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
     <a
-      href="/"
+      href={isBlog ? "/blog/" : "/"}
       class="outline-none focus:outline-none active:outline-none"
       style="-webkit-tap-highlight-color: transparent;">
       <Image src={logo} alt="Miblify" class="w-32 border-none ring-0 outline-none" />
     </a>
-    {
-      false && (
-        <div class="flex gap-3 md:gap-10">
-          <a class="btn btn-neutral btn-outline" href="/login">
-            Entrar
+
+    <div class="flex items-center gap-6 md:gap-8">
+      {
+        isBlog && (
+          <a href="/" class="text-[#1A1A1A] font-medium hover:text-[#3B38E8] transition-colors hidden sm:block">
+            Home do site
           </a>
-          <a class="btn btn-primary btn-outline" href="/register">
-            Criar minha loja
-          </a>
-        </div>
-      )
-    }
+
+      <a
+        href="https://app.miblify.com"
+        class="bg-amarelo border-2 border-[#1A1A1A] text-[#1A1A1A] px-6 py-2 rounded-xl font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 header-cta">
+        Entrar
+      </a>
+      ) }
+    </div>
   </div>
 </header>
 
@@ -36,6 +45,16 @@ import logo from "../assets/miblify_logo.png";
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  .header-cta {
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+  }
+  .header-cta:hover {
+    box-shadow: 4px 4px 0 0 #1a1a1a;
+  }
+  .header-cta:active {
+    box-shadow: 1px 1px 0 0 #1a1a1a;
   }
 </style>
 

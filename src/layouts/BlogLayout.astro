@@ -1,0 +1,97 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BlogCTA from "../components/BlogCTA.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  heroImage?: any;
+}
+
+const { title, description, pubDate, heroImage } = Astro.props;
+
+// Normaliza a URL da imagem para o Layout (Open Graph)
+const ogImage = heroImage
+  ? typeof heroImage === "string"
+    ? heroImage.startsWith("http")
+      ? heroImage
+      : new URL(heroImage, Astro.site || "https://www.miblify.com").toString()
+    : new URL(heroImage.src, Astro.site || "https://www.miblify.com").toString()
+  : undefined;
+---
+
+<Layout title={`${title} | Blog Miblify`} description={description} image={ogImage}>
+  <div class="flex flex-col min-h-screen">
+    <Header isBlog={true} />
+    <main class="max-w-4xl mx-auto px-6 py-20 md:py-28 grow w-full">
+      <article class="prose prose-lg prose-slate max-w-none">
+        {
+          heroImage && (
+            <Image src={heroImage} alt="" class="w-full h-auto rounded-sm mb-16 shadow-sm border-2 border-[#1A1A1A]" />
+          )
+        }
+        <div class="py-12 md:py-20 mb-10">
+          <h1 class="text-5xl md:text-7xl font-bold text-[#3B38E8] mb-8 font-cabinet-bold leading-tight tracking-tight">
+            {title}
+          </h1>
+          <div class="w-20 h-2 bg-[#3B38E8] rounded-full"></div>
+        </div>
+        <div class="blog-content">
+          <slot />
+        </div>
+      </article>
+    </main>
+    <BlogCTA />
+    <Footer />
+  </div>
+</Layout>
+
+<style is:global>
+  .blog-content {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.25rem;
+  }
+  .blog-content a {
+    color: #3b38e8;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .blog-content a:hover {
+    color: #1a1a1a;
+    text-decoration-thickness: 2px;
+  }
+  .blog-content h2 {
+    font-family: "cabinet-bold", sans-serif;
+    color: #1a1a1a;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .blog-content h3 {
+    font-family: "cabinet-bold", sans-serif;
+    color: #1a1a1a;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .blog-content p {
+    margin-bottom: 1.5rem;
+  }
+  .blog-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .blog-content li {
+    margin-bottom: 0.75rem;
+  }
+</style>
