@@ -1,0 +1,273 @@
+/*
+ * Miblify Starlight Theme — Light Mode Only
+ *
+ * Color mapping (light mode convention — Starlight inverts semantics):
+ *   --sl-color-white  → darkest text color
+ *   --sl-color-black  → lightest bg color
+ *   --sl-color-gray-1 → near-darkest (headings, strong text)
+ *   --sl-color-gray-7 → near-lightest (subtle backgrounds)
+ *
+ * Miblify palette reference:
+ *   base-100 (off-white bg): oklch(0.9873 0.0096 72.66) → #F7F7F3
+ *   base-200/300:            oklch(0.93982 0.007 61.449) → #EDEDE8
+ *   base-content (text):     oklch(0.235 0 129.63)       → #1A1A1A
+ *   primary (purple):        oklch(0.5041 0.2195 277.11) → #3B38E8
+ *   secondary (pink):        oklch(0.7774 0.2001 333.22)
+ *   accent (yellow):         oklch(0.8994 0.1526 94.7)
+ *   orange:                  oklch(0.666 0.2145 36.1)
+ */
+
+/* ──────────────────────────────────────────────
+   Force light mode: override dark defaults
+   ────────────────────────────────────────────── */
+:root,
+::backdrop {
+  /* Accent — Miblify primary purple */
+  --sl-color-accent-low: oklch(0.94 0.04 277);   /* light purple tint for backgrounds */
+  --sl-color-accent: oklch(0.5041 0.2195 277.11); /* main purple */
+  --sl-color-accent-high: oklch(0.35 0.15 277);   /* dark purple for text on light bg */
+
+  /* Gray palette — warm tones matching Miblify's off-white identity
+     In light mode: gray-1 = darkest, gray-7 = lightest */
+  --sl-color-white: oklch(0.235 0 129.63);        /* base-content — near-black text */
+  --sl-color-gray-1: oklch(0.28 0.005 72);        /* very dark — headings */
+  --sl-color-gray-2: oklch(0.35 0.005 72);        /* dark — secondary text */
+  --sl-color-gray-3: oklch(0.50 0.005 72);        /* medium — muted text */
+  --sl-color-gray-4: oklch(0.65 0.005 72);        /* soft — borders, icons */
+  --sl-color-gray-5: oklch(0.82 0.007 72);        /* light — subtle borders */
+  --sl-color-gray-6: oklch(0.94 0.007 61.45);     /* base-200 — card/nav bg */
+  --sl-color-gray-7: oklch(0.96 0.008 72);        /* very light bg accents */
+  --sl-color-black: oklch(0.9873 0.0096 72.66);   /* base-100 — page bg */
+
+  /* Semantic slots — light mode mappings */
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: oklch(0.96 0.008 72);        /* nav slightly lighter than base */
+  --sl-color-bg-sidebar: var(--sl-color-bg);
+  --sl-color-bg-inline-code: oklch(0.94 0.007 61.45);
+  --sl-color-bg-accent: var(--sl-color-accent);
+  --sl-color-hairline-light: oklch(0.90 0.007 72);
+  --sl-color-hairline: oklch(0.94 0.007 61.45);
+  --sl-color-hairline-shade: oklch(0.90 0.007 72);
+  --sl-color-backdrop-overlay: oklch(0.235 0.005 72 / 0.4);
+
+  /* Shadows — softer for light mode */
+  --sl-shadow-sm: 0px 1px 2px oklch(0.235 0 72 / 0.04), 0px 1px 1px oklch(0.235 0 72 / 0.06);
+  --sl-shadow-md: 0px 4px 6px oklch(0.235 0 72 / 0.04), 0px 2px 4px oklch(0.235 0 72 / 0.06);
+  --sl-shadow-lg: 0px 10px 15px oklch(0.235 0 72 / 0.06), 0px 4px 6px oklch(0.235 0 72 / 0.1);
+}
+
+/* Prevent dark mode from ever activating */
+:root[data-theme='dark'],
+[data-theme='dark'] ::backdrop {
+  --sl-color-accent-low: oklch(0.94 0.04 277);
+  --sl-color-accent: oklch(0.5041 0.2195 277.11);
+  --sl-color-accent-high: oklch(0.35 0.15 277);
+
+  --sl-color-white: oklch(0.235 0 129.63);
+  --sl-color-gray-1: oklch(0.28 0.005 72);
+  --sl-color-gray-2: oklch(0.35 0.005 72);
+  --sl-color-gray-3: oklch(0.50 0.005 72);
+  --sl-color-gray-4: oklch(0.65 0.005 72);
+  --sl-color-gray-5: oklch(0.82 0.007 72);
+  --sl-color-gray-6: oklch(0.94 0.007 61.45);
+  --sl-color-gray-7: oklch(0.96 0.008 72);
+  --sl-color-black: oklch(0.9873 0.0096 72.66);
+
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: oklch(0.96 0.008 72);
+  --sl-color-bg-sidebar: var(--sl-color-bg);
+  --sl-color-bg-inline-code: oklch(0.94 0.007 61.45);
+  --sl-color-bg-accent: var(--sl-color-accent);
+  --sl-color-hairline-light: oklch(0.90 0.007 72);
+  --sl-color-hairline: oklch(0.94 0.007 61.45);
+  --sl-color-hairline-shade: oklch(0.90 0.007 72);
+  --sl-color-backdrop-overlay: oklch(0.235 0.005 72 / 0.4);
+
+  --sl-shadow-sm: 0px 1px 2px oklch(0.235 0 72 / 0.04), 0px 1px 1px oklch(0.235 0 72 / 0.06);
+  --sl-shadow-md: 0px 4px 6px oklch(0.235 0 72 / 0.04), 0px 2px 4px oklch(0.235 0 72 / 0.06);
+  --sl-shadow-lg: 0px 10px 15px oklch(0.235 0 72 / 0.06), 0px 4px 6px oklch(0.235 0 72 / 0.1);
+}
+
+
+/* ──────────────────────────────────────────────
+   Typography — Miblify's cabinet font
+   ────────────────────────────────────────────── */
+@font-face {
+  font-family: 'cabinet';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(/fonts/cgrotesk.woff2) format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'cabinet-bold';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(/fonts/cgroteskBold.woff2) format('woff2-variations');
+}
+
+:root {
+  --sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --sl-font-system: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Headings with bold cabinet */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+  font-family: 'cabinet-bold', ui-sans-serif, system-ui, sans-serif;
+  color: oklch(0.235 0 129.63);
+}
+
+/* Site title */
+.site-title {
+  font-family: 'cabinet-bold', sans-serif !important;
+}
+
+
+/* ──────────────────────────────────────────────
+   Navigation & Header
+   ────────────────────────────────────────────── */
+
+/* Header bar — clean white with subtle border */
+header.header {
+  border-bottom: 1px solid oklch(0.90 0.007 72);
+}
+
+/* Sidebar — clean on off-white */
+nav[aria-label="Main"] a {
+  color: oklch(0.35 0.005 72);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav[aria-label="Main"] a:hover {
+  color: oklch(0.5041 0.2195 277.11);
+}
+
+nav[aria-label="Main"] a[aria-current="page"] {
+  color: oklch(0.5041 0.2195 277.11);
+  font-weight: 600;
+  border-color: oklch(0.5041 0.2195 277.11);
+}
+
+
+/* ──────────────────────────────────────────────
+   Hero & Splash page
+   ────────────────────────────────────────────── */
+
+/* Hero section — gradient bg matching Miblify's style */
+.hero {
+  background: linear-gradient(
+    180deg,
+    oklch(0.94 0.04 277 / 0.15) 0%,
+    oklch(0.9873 0.0096 72.66) 100%
+  );
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Primary action button */
+.hero .action.primary {
+  background-color: oklch(0.5041 0.2195 277.11);
+  border-color: oklch(0.5041 0.2195 277.11);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.hero .action.primary:hover {
+  background-color: oklch(0.45 0.2 277.11);
+  transform: translateY(-1px);
+}
+
+/* Secondary action button */
+.hero .action.minimal {
+  color: oklch(0.35 0.005 72);
+  border-radius: 9999px;
+}
+
+.hero .action.minimal:hover {
+  color: oklch(0.5041 0.2195 277.11);
+}
+
+
+/* ──────────────────────────────────────────────
+   Cards
+   ────────────────────────────────────────────── */
+.card {
+  background: oklch(0.97 0.005 72);
+  border: 1px solid oklch(0.90 0.007 72);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: oklch(0.5041 0.2195 277.11 / 0.4);
+  box-shadow: 0 4px 12px oklch(0.5041 0.2195 277.11 / 0.08);
+}
+
+/* Card titles */
+.card .card-title {
+  color: oklch(0.235 0 129.63);
+  font-family: 'cabinet-bold', sans-serif;
+}
+
+
+/* ──────────────────────────────────────────────
+   Content styling
+   ────────────────────────────────────────────── */
+
+/* Links in content */
+.sl-markdown-content a {
+  color: oklch(0.5041 0.2195 277.11);
+  text-decoration-color: oklch(0.5041 0.2195 277.11 / 0.3);
+  transition: text-decoration-color 0.15s ease;
+}
+
+.sl-markdown-content a:hover {
+  text-decoration-color: oklch(0.5041 0.2195 277.11);
+}
+
+/* Tables */
+.sl-markdown-content table {
+  border-color: oklch(0.90 0.007 72);
+}
+
+.sl-markdown-content th {
+  background: oklch(0.94 0.007 61.45);
+  color: oklch(0.235 0 129.63);
+  font-family: 'cabinet-bold', sans-serif;
+}
+
+/* Code blocks */
+.sl-markdown-content code:not(pre code) {
+  background: oklch(0.94 0.007 61.45);
+  color: oklch(0.35 0.005 72);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+}
+
+/* Aside/callout boxes */
+.starlight-aside {
+  border-radius: 0.5rem;
+}
+
+
+/* ──────────────────────────────────────────────
+   Footer
+   ────────────────────────────────────────────── */
+.page-footer {
+  border-top: 1px solid oklch(0.90 0.007 72);
+}

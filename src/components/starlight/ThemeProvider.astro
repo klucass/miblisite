@@ -1,0 +1,20 @@
+---
+/**
+ * Custom ThemeProvider that forces light mode.
+ * Overrides Starlight's default ThemeProvider to match
+ * Miblify's light-only design.
+ */
+---
+
+<script is:inline>
+  // Force light theme — always
+  document.documentElement.dataset.theme = "light";
+  if (typeof localStorage !== "undefined") {
+    localStorage.setItem("starlight-theme", "light");
+  }
+  window.StarlightThemeProvider = (() => {
+    return {
+      updatePickers() {},
+    };
+  })();
+</script>

@@ -1,0 +1,46 @@
+---
+title: Central de Ajuda
+description: Bem-vindo à Central de Ajuda da Miblify. Encontre tudo que você precisa para começar a vender seus produtos digitais.
+template: splash
+---
+
+import { CardGrid } from '@astrojs/starlight/components';
+import PhosphorCard from '../../../components/starlight/PhosphorCard.astro';
+import CustomHero from '../../../components/starlight/CustomHero.astro';
+import BookOpenDuotone from 'phosphor-astro/BookOpenDuotone.astro';
+import FolderSimpleDuotone from 'phosphor-astro/FolderSimpleDuotone.astro';
+import CreditCardDuotone from 'phosphor-astro/CreditCardDuotone.astro';
+import GearDuotone from 'phosphor-astro/GearDuotone.astro';
+
+<CustomHero 
+  tagline="Encontre tudo que você precisa para criar, vender e gerenciar seus produtos digitais na Miblify."
+  actions={[
+    { text: "Começar agora", link: "/help/getting-started/introduction/", variant: "primary" },
+    { text: "Voltar ao site", link: "/", variant: "minimal" }
+  ]}
+/>
+
+## Primeiros passos
+
+<CardGrid stagger>
+  <PhosphorCard title="Começando">
+    <BookOpenDuotone slot="icon" class="icon" />
+    Conheça a Miblify e aprenda como criar sua conta e configurar sua loja em minutos.
+    [Ver guia](/help/getting-started/introduction/)
+  </PhosphorCard>
+  <PhosphorCard title="Produtos">
+    <FolderSimpleDuotone slot="icon" class="icon" />
+    Saiba como cadastrar e gerenciar seus produtos digitais.
+    [Gerenciar produtos](/help/products/create-product/)
+  </PhosphorCard>
+  <PhosphorCard title="Pagamentos">
+    <CreditCardDuotone slot="icon" class="icon" />
+    Conecte seu gateway de pagamento e comece a receber suas vendas.
+    [Configurar pagamentos](/help/payments/setup-payments/)
+  </PhosphorCard>
+  <PhosphorCard title="Integrações">
+    <GearDuotone slot="icon" class="icon" />
+    Conecte sua loja com Webhooks e Pixels de rastreamento.
+    [Ver integrações](/help/integrations/webhooks/)
+  </PhosphorCard>
+</CardGrid>
