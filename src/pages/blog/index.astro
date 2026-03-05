@@ -20,7 +20,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
         </p>
       </header>
 
-      <div class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {
           posts.map((post) => (
             <a

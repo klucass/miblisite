@@ -33,13 +33,13 @@ Diferente de vídeos curtos em redes sociais, esse conteúdo exige mais comprome
 
 Planilhas de cálculo de ROI ou simuladores de lucratividade são "iscas de utilidade" poderosas. Elas entram no cotidiano operacional do seu cliente. Quando o lead utiliza sua ferramenta diariamente para gerir o próprio negócio, a confiança na sua marca aumenta e a fricção no momento da venda de uma solução mais robusta diminui consideravelmente.
 
-## 5. Como a Miblify automatiza sua captação de leads
+## 5. Como a [Miblify](https://www.miblify.com) automatiza sua captação de leads
 
 O maior gargalo ao escalar um negócio digital é a complexidade técnica de configurar landing pages e integrações. 
 
-A Miblify elimina essa barreira com a funcionalidade de Freebies. Você hospeda seus materiais e configura a coleta de leads de forma centralizada e automática.
+A [Miblify](https://www.miblify.com) elimina essa barreira com a funcionalidade de Freebies. Você hospeda seus materiais e configura a coleta de leads de forma centralizada e automática.
 
-Com a Miblify, o lead recebe acesso ao material segundos após o cadastro e seus contatos são organizados automaticamente. Você ainda pode integrar a isca direto com o checkout, oferecendo um upsell imediato para quem acabou de consumir seu conteúdo gratuito. Isso otimiza seu tempo e garante foco no que realmente importa: estratégia e lucro.
+Com a [Miblify](https://www.miblify.com), o lead recebe acesso ao material segundos após o cadastro e seus contatos são organizados automaticamente. Você ainda pode integrar a isca direto com o checkout, oferecendo um upsell imediato para quem acabou de consumir seu conteúdo gratuito. Isso otimiza seu tempo e garante foco no que realmente importa: estratégia e lucro.
 
 ## Conclusão
 
@@ -50,13 +50,13 @@ A captura do lead é apenas o início. O objetivo final deve ser sempre conduzir
 ## Perguntas frequentes
 
 ### Preciso pagar por uma ferramenta de landing page separada para usar iscas digitais?
-Não. A Miblify já oferece nativamente a capacidade de entregar materiais gratuitos (freebies) e capturar os dados do seu lead em um ambiente integrado ao seu checkout e área de membros, eliminando a necessidade de múltiplas assinaturas.
+Não. A [Miblify](https://www.miblify.com) já oferece nativamente a capacidade de entregar materiais gratuitos (freebies) e capturar os dados do seu lead em um ambiente integrado ao seu checkout e área de membros, eliminando a necessidade de múltiplas assinaturas.
 
 ### Qual o melhor tipo de isca para quem está começando?
 Templates e checklists costumam ter a melhor performance para quem está iniciando, pois são rápidos de produzir e entregam valor imediato, o que ajuda a construir confiança rapidamente com uma audiência nova.
 
 ### Como eu evito que as pessoas usem e-mails falsos para baixar meu material?
-A melhor forma é configurar a entrega do material apenas após a confirmação do cadastro ou enviando o link de download diretamente para o e-mail informado. Ferramentas integradas como a Miblify facilitam esse controle de qualidade da base.
+A melhor forma é configurar a entrega do material apenas após a confirmação do cadastro ou enviando o link de download diretamente para o e-mail informado. Ferramentas integradas como a [Miblify](https://www.miblify.com) facilitam esse controle de qualidade da base.
 
 ### Iscas digitais ainda funcionam no Instagram e TikTok?
 Sim. O segredo é usar o conteúdo dessas redes para despertar o desejo e direcionar o tráfego para seu link de captura (na bio ou via automações de Direct). A isca digital é o que transforma o seguidor da rede social em um ativo que você realmente controla.
