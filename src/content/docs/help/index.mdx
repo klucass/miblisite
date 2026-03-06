@@ -11,6 +11,8 @@ import BookOpenDuotone from 'phosphor-astro/BookOpenDuotone.astro';
 import FolderSimpleDuotone from 'phosphor-astro/FolderSimpleDuotone.astro';
 import CreditCardDuotone from 'phosphor-astro/CreditCardDuotone.astro';
 import GearDuotone from 'phosphor-astro/GearDuotone.astro';
+import TrendUpDuotone from 'phosphor-astro/TrendUpDuotone.astro';
+import QuestionDuotone from 'phosphor-astro/QuestionDuotone.astro';
 
 <CustomHero 
   tagline="Encontre tudo que você precisa para criar, vender e gerenciar seus produtos digitais na Miblify."
@@ -38,9 +40,19 @@ import GearDuotone from 'phosphor-astro/GearDuotone.astro';
     Conecte seu gateway de pagamento e comece a receber suas vendas.
     [Configurar pagamentos](/help/payments/setup-payments/)
   </PhosphorCard>
+  <PhosphorCard title="Vendas">
+    <TrendUpDuotone slot="icon" class="icon" />
+    Acompanhe suas vendas e entenda o fluxo de checkout.
+    [Ver vendas](/help/sales/checkout-and-sales/)
+  </PhosphorCard>
   <PhosphorCard title="Integrações">
     <GearDuotone slot="icon" class="icon" />
     Conecte sua loja com Webhooks e Pixels de rastreamento.
     [Ver integrações](/help/integrations/webhooks/)
+  </PhosphorCard>
+  <PhosphorCard title="Suporte">
+    <QuestionDuotone slot="icon" class="icon" />
+    Dúvidas frequentes de acesso, pagamentos e suporte ao cliente.
+    [Ver FAQ](/help/support/customer-faq/)
   </PhosphorCard>
 </CardGrid>

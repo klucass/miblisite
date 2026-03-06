@@ -54,6 +54,10 @@ export default defineConfig({
           label: "Administração",
           autogenerate: { directory: "help/admin" },
         },
+        {
+          label: "Suporte",
+          autogenerate: { directory: "help/support" },
+        },
       ],
       components: {
         ThemeProvider: "./src/components/starlight/ThemeProvider.astro",
