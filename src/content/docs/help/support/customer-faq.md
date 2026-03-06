@@ -14,10 +14,10 @@ Primeiro, verifique sua caixa de Spam, Lixo Eletrônico ou a aba "Promoções" d
 Se o e-mail não chegou após o prazo de aprovação, você pode ter digitado o endereço incorretamente. Neste caso, entre em contato com o nosso suporte informando seu nome completo, CPF e o comprovante de pagamento para atualizarmos seu cadastro.
 
 ### 2. Errei meu e-mail na hora da compra. Como consertar?
-Não se preocupe! Envie uma mensagem para o nosso suporte técnico com o comprovante da transação (comprovante do Pix ou fatura do cartão), seu CPF e o e-mail correto. Faremos a alteração e reenviaremos o seu acesso.
+Não se preocupe! Envie uma mensagem para o nosso suporte técnico no email miblify@miblify.com com o comprovante da transação (comprovante do Pix ou fatura do cartão), seu CPF e o e-mail correto. Faremos a alteração e reenviaremos o seu acesso.
 
 ### 3. Onde eu acesso o produto que comprei?
-O link exclusivo de acesso é enviado para o e-mail cadastrado no momento da compra. Recomendamos favoritar esse e-mail ou salvar o link nos seus favoritos para facilitar os próximos acessos. Você pode acessar também suas compras e seus produtos no link https://www.miblify.com/my_library e entrando com o seu e-mail usado na compra.
+O link exclusivo de acesso é enviado para o e-mail cadastrado no momento da compra. Recomendamos favoritar esse e-mail ou salvar o link nos seus favoritos para facilitar os próximos acessos. Você pode acessar também suas compras e seus produtos no link https://app.miblify.com/my_library e entrando com o seu e-mail usado na compra.
 
 ## Pagamentos e Reembolsos
 
