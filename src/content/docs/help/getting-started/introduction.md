@@ -9,7 +9,7 @@ A **Miblify** é uma plataforma de vendas de produtos digitais feita para quem q
 
 ## O que é a Miblify?
 
-A Miblify é a sua plataforma para vender produtos digitais — e-books, cursos, consultorias, templates, arquivos, assinaturas e muito mais. Tudo isso sem mensalidades, sem taxas escondidas e com controle total do seu negócio.
+A Miblify é a sua plataforma para vender produtos digitais — e-books, cursos, consultorias, templates, arquivos, assinaturas e muito mais. Tudo isso sem taxas escondidas, porcentagens altas, sem cobranças por aluno e com controle total do seu negócio.
 
 ## Por que escolher a Miblify?
 
@@ -23,7 +23,13 @@ Crie sua conta, cadastre seu produto e comece a vender. Do upload à venda antes
 Seja você um criador de conteúdo, infoprodutor, consultor ou freelancer — a Miblify foi feita para simplificar o caminho entre o seu produto e o seu cliente.
 
 ### Pagamentos diretos
-Conecte sua conta com o **Mercado Pago** e receba seus pagamentos na hora. Sem tarifas de saque, sem limites de vendas.
+Conecte sua conta com o **Mercado Pago** (ou outros gateways em breve) e receba seus pagamentos na hora ou no prazo contratado junto ao gateway de pagamento. Sem tarifas de saque, sem limites de vendas.
+
+### A Miblify não é um gateway de pagamento
+
+Um dos mariores diferenciais da Miblify é atuar como uma infraestrutura tecnológica e não como uma subadquirente (intermediadora financeira). Isso significa que a plataforma fornece toda a vitrine, o checkout de alta conversão e a entrega segura do produto digital, mas a transação financeira acontece diretamente entre o cliente final e o gateway de pagamento do próprio vendedor (Mercado Pago etc.).
+
+Essa arquitetura descentralizada é o que permite que a Miblify funcione com tanta fluidez e, mais importante, crie uma vantagem competitiva para os criadores como o fim das taxas absurdas, dinheiro direto na conta do vendedor, fim do risco de "dinheiro preso" dentre outros benefícios. 
 
 ## Próximos passos
 
