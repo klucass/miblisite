@@ -37,7 +37,10 @@ A recusa do pagamento geralmente é feita pelo próprio banco ou emissora do car
 A Miblify é a plataforma que processa o pagamento e entrega o acesso, mas todo o conteúdo do produto é de responsabilidade do criador. Para dúvidas sobre as aulas, materiais ou bônus, você deve entrar em contato diretamente com o suporte do vendedor.
 
 ### 7. O produtor não me responde. A plataforma pode me ajudar?
-Nós monitoramos a qualidade e o tempo de resposta dos criadores que utilizam a nossa tecnologia. Se você tentou contato com o vendedor e não obteve retorno em um prazo razoável (geralmente 48 a 72 horas úteis), e ainda está dentro do prazo de garantia, você pode acionar o nosso suporte para intermediar o contato ou prosseguir com o cancelamento.
+Nós monitoramos a qualidade e o tempo de resposta dos criadores que utilizam a nossa tecnologia. Se você tentou contato com o vendedor e não obteve retorno em um prazo razoável (geralmente 48 a 72 horas úteis), e ainda está dentro do prazo de garantia, você pode acionar o nosso suporte para intermediar o contato.
 
-### 8. Preciso entrar em contato com a Miblify
+### 8. A Miblify pode devolver meu dinheiro?
+A Miblify é a plataforma que conecta o gateway de pagamento do vendedor com os compradores. Isto significa que o dinheiro das vendas não chega à Miblify. No entanto, se o produto que você comprou não atende às suas expectativas, você pode entrar em contato com o suporte do criador do produto para solicitar o reembolso.
+
+### 9. Preciso entrar em contato com a Miblify
 Se por algum motivo você precisa entrar em contato com a Miblify, você pode nos enviar um e-mail para miblify@miblify.com
