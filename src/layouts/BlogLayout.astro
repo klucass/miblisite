@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BlogCTA from "../components/BlogCTA.astro";
 import { Image } from "astro:assets";
+import Calendar from "phosphor-astro/CalendarDuotone.astro";
 
 interface Props {
   title: string;
@@ -38,6 +39,20 @@ const ogImage = heroImage
           <h1 class="text-4xl md:text-6xl font-bold text-[#3B38E8] mb-8 font-cabinet-bold leading-tight tracking-tight">
             {title}
           </h1>
+          {
+            pubDate && (
+              <div class="blog-meta">
+                <Calendar weight="duotone" class="blog-meta-icon size-8" />
+                <time dateTime={pubDate.toISOString()}>
+                  {pubDate.toLocaleDateString("pt-BR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
+            )
+          }
         </div>
         <div class="blog-content">
           <slot />
@@ -54,6 +69,34 @@ const ogImage = heroImage
     color: #333;
     line-height: 1.8;
     font-size: 1.25rem;
+  }
+
+  /* Data de publicação — discreta e elegante */
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-meta-icon {
+    color: #999;
+    flex-shrink: 0;
+  }
+
+  .blog-meta time {
+    font-family: "cabinet", sans-serif;
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+  }
+
+  .blog-meta time:hover {
+    color: #3b38e8;
   }
 
   /* Seleção de texto — divertida com cores da marca */
