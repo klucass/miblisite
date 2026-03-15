@@ -9,12 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/starlight": "^0.37.6",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.5",
-    "daisyui": "^5.5.13",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/starlight": "^0.37.7",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.0",
+    "daisyui": "^5.5.19",
     "phosphor-astro": "^2.1.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.1"
   }
 }
