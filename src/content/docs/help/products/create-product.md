@@ -14,9 +14,9 @@ Os produtos são o coração da sua loja. Na Miblify, você pode cadastrar produ
 | Campo         | Descrição                                                                 |
 |---------------|---------------------------------------------------------------------------|
 | Nome          | Nome do produto, entre 3 e 100 caracteres.                               |
-| Tipo          | Escolha entre `one_time` (pagamento único), `freebie` (gratuito) ou `subscription` (assinatura). |
+| Tipo          | Escolha entre Pagamento único, Gratuito ou Assinatura. |
 | Slug (URL)    | Endereço do produto na loja. Apenas letras minúsculas, números e hifens.  |
-| Preço         | Valor em centavos. Ex: 9900 = R$ 99,00. Freebies sempre têm preço zero.  |
+| Preço         | Valor em moeda local, ex: R$ 99,00. Freebies (produtos gratuitos) sempre têm preço zero.  |
 | Descrição     | Texto descritivo sobre o produto. Aparece na página de checkout.          |
 
 4. Clique em **Criar produto**.

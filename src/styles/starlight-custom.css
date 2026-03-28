@@ -126,7 +126,7 @@
 .sl-markdown-content h4,
 .sl-markdown-content h5,
 .sl-markdown-content h6 {
-  font-family: 'cabinet-bold', ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   color: oklch(0.235 0 129.63);
 }
 
