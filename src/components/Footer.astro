@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import LogoVertical from "../assets/img/miblify_vertical_plataforma.svg";
+import InstagramLogo from "phosphor-astro/InstagramLogo.astro";
+import TwitterLogo from "phosphor-astro/TwitterLogo.astro";
 ---
 
 <footer class="bg-base-content text-base-200">
@@ -8,9 +10,9 @@ import LogoVertical from "../assets/img/miblify_vertical_plataforma.svg";
     <div>
       <Image src={LogoVertical} alt="Miblify" class="p-0 w-full md:w-[350px]" />
     </div>
-    <div class="md:grid md:grid-cols-2 md:gap-10 [&_li]:my-2 [&_li]:text-base-100/50 [&_li>a]:link-hover mt-10 md:mt-0">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-16 lg:gap-24 [&_li]:my-2 [&_li]:text-base-100/50 [&_li>a]:link-hover mt-12 md:mt-0">
       <div>
-        <p class="font-bold">Termos legais</p>
+        <p class="font-bold mb-5">Termos legais</p>
         <ul>
           <li>
             <a href="/use">Termos de uso</a>
@@ -24,8 +26,8 @@ import LogoVertical from "../assets/img/miblify_vertical_plataforma.svg";
         </ul>
       </div>
       <div>
-        <p class="font-bold">Saiba mais</p>
-        <ul class="mt-5 md:mt-0">
+        <p class="font-bold mb-5">Saiba mais</p>
+        <ul>
           <li>
             <a href="/manifest">Manifesto</a>
           </li>
@@ -39,6 +41,27 @@ import LogoVertical from "../assets/img/miblify_vertical_plataforma.svg";
             <a href="/help/">Central de Ajuda</a>
           </li>
         </ul>
+      </div>
+      <div>
+        <p class="font-bold mb-5">Redes sociais</p>
+        <div class="flex gap-4">
+          <a
+            href="https://www.instagram.com/miblify"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary transition-all hover:-translate-y-0.5 active:translate-y-0"
+            aria-label="Instagram">
+            <InstagramLogo class="size-7" />
+          </a>
+          <a
+            href="https://twitter.com/miblify"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary transition-all hover:-translate-y-0.5 active:translate-y-0"
+            aria-label="Twitter">
+            <TwitterLogo class="size-7" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
