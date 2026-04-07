@@ -24,13 +24,17 @@ const { isBlog = false } = Astro.props;
           <a href="/" class="text-[#1A1A1A] font-medium hover:text-[#3B38E8] transition-colors hidden sm:block">
             Home do site
           </a>
-
-      <a
-        href="https://app.miblify.com"
-        class="bg-amarelo border-2 border-[#1A1A1A] text-[#1A1A1A] px-6 py-2 rounded-xl font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 header-cta">
-        Entrar
-      </a>
-      ) }
+        )
+      }
+      {
+        !isBlog && (
+          <a
+            href="https://app.miblify.com"
+            class="bg-amarelo border-2 border-[#1A1A1A] text-[#1A1A1A] px-6 py-2 rounded-xl font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 header-cta">
+            Entrar
+          </a>
+        )
+      }
     </div>
   </div>
 </header>
