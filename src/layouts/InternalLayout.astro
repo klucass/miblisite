@@ -2,9 +2,16 @@
 import Layout from "./Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
-<Layout>
+<Layout title={title ? `${title} | Miblify` : "Miblify - Venda seu produto digital"} description={description}>
   <Header />
   <main class="min-h-screen py-10 px-6">
     <div class="max-w-4xl mx-auto p-8 md:p-14">
