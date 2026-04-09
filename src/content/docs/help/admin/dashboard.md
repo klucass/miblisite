@@ -1,6 +1,8 @@
 ---
 title: Painel administrativo
 description: Conheça o painel da Miblify e saiba como acompanhar suas vendas, produtos e configurações.
+sidebar:
+  order: 1
 ---
 
 O painel administrativo (dashboard) é o seu centro de controle na Miblify. Nele, você acompanha suas vendas, gerencia produtos e acessa todas as configurações da loja.

@@ -1,6 +1,8 @@
 ---
 title: Cadastrando produtos
 description: Saiba como criar, editar e gerenciar os produtos da sua loja na Miblify.
+sidebar:
+  order: 1
 ---
 
 Os produtos são o coração da sua loja. Na Miblify, você pode cadastrar produtos digitais pagos, gratuitos (freebies) ou por assinatura.
@@ -29,11 +31,11 @@ Na tela de edição do produto, use o campo de upload de imagem. Para remover a 
 
 ## Adicionando arquivos para entrega
 
-Para produtos digitais, você pode anexar arquivos que serão disponibilizados ao comprador após a confirmação do pagamento.
+Para produtos digitais, na aba **Conteúdo** você pode anexar arquivos que serão disponibilizados ao comprador após a confirmação do pagamento.
 
+- Organize os entregáveis em módulos. Crie pelo menos um módulo para anexar arquivos nele.
 - Cada arquivo pode ter até **100 MB**.
 - Tipos proibidos: executáveis (.exe, .sh), HTML e JavaScript.
-- Você pode adicionar múltiplos arquivos ao mesmo produto.
 
 Para remover um arquivo específico, selecione-o na lista de anexos e confirme a remoção.
 

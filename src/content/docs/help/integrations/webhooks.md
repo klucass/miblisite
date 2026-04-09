@@ -1,6 +1,8 @@
 ---
 title: Integrações e Webhooks
 description: Saiba como configurar webhooks para receber notificações automáticas de vendas da sua loja Miblify.
+sidebar:
+  order: 2
 ---
 
 A Miblify permite que você conecte sua loja a sistemas externos usando **webhooks de saída**. Com isso, toda vez que uma venda for confirmada, os dados do pedido são enviados automaticamente para uma URL que você definir.

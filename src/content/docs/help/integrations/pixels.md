@@ -1,6 +1,8 @@
 ---
 title: Pixels de rastreamento
 description: Aprenda como configurar pixels do Meta Ads, Google Ads e TikTok Ads para rastrear conversões na sua loja Miblify.
+sidebar:
+  order: 1
 ---
 
 Os pixels de rastreamento permitem que você conecte sua loja Miblify com plataformas de anúncios para rastrear conversões (vendas) de forma automática. Com isso, você consegue medir o retorno das suas campanhas e otimizar seus anúncios.

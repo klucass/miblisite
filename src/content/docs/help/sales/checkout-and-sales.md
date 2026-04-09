@@ -1,6 +1,8 @@
 ---
 title: Checkout e vendas
 description: Entenda como funciona o checkout, o pagamento por Pix e o acompanhamento de vendas na Miblify.
+sidebar:
+  order: 1
 ---
 
 Este artigo explica como funciona o fluxo de compra na sua loja Miblify, desde o acesso do cliente até a confirmação do pagamento.

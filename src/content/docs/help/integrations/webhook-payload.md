@@ -1,6 +1,8 @@
 ---
 title: Formato do payload do webhook
 description: Referência completa do formato JSON enviado pelo webhook da Miblify a cada venda confirmada.
+sidebar:
+  order: 3
 ---
 
 Quando uma venda é confirmada na sua loja, a Miblify envia uma requisição POST para a URL do seu webhook com um payload em formato JSON. Este artigo detalha a estrutura completa desse payload.

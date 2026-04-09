@@ -1,6 +1,8 @@
 ---
 title: FAQ do Cliente
 description: Perguntas frequentes sobre acesso, pagamentos e suporte para clientes da Miblify.
+sidebar:
+  order: 1
 ---
 
 ## Acesso e Entrega
