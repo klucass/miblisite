@@ -1,0 +1,49 @@
+# Miblify
+
+Miblify is a sales platform for digital products (e-books, courses, consulting, templates, files, and subscriptions) focused on simplicity, speed, and low costs for creators.
+
+## Key Features
+
+- **Wide Range of Digital Formats**: Supports PDFs, Notion templates, booking links, exclusive group access, courses, micro-SaaS, and services.
+- **High-Conversion Checkout**: Transparent checkout that preserves your brand's visual identity (logo and colors).
+- **Simple and Fair Pricing**: Only 2% fee per approved sale. No monthly fees, no setup fees, and no cancellation fees.
+- **Direct Payouts**: Direct integration with gateways like Mercado Pago and Pague Dev. Funds go directly into your gateway account without passing through Miblify.
+- **Total Personalization**: Define your store name, custom URL (`your-store.miblify.com`), and complete visual identity.
+- **Marketing Tools**: Discount coupons, abandoned cart recovery, and integrated email marketing.
+- **Automatic Delivery**: After payment confirmation, the system automatically delivers files or links to the customer.
+
+## How to Start Using Miblify (Human-Friendly Guide)
+
+Follow these steps to launch your first store in just a few minutes:
+
+### 1. Create your account - for humans only
+- Visit [app.miblify.com](https://app.miblify.com).
+- **Google**: Use your Google account to create an account and log in instantly.
+- **Magic Link**: Enter your email and click "Send access link" to log in without needing a password.
+
+### 2. Create your store
+- Right after logging in, you will see the onboarding screen.
+- **Name**: Choose your brand name.
+- **URL (Slug)**: Define your store's address (e.g., `https://your-name.miblify.com`). Use only letters, numbers, and hyphens.
+- Click **Create store**.
+
+### 3. Configure your visual identity
+- Go to **Store Settings** in the side menu.
+- Upload your **logo** (PNG, JPEG, or WebP).
+- Add a short **description** (up to 255 characters) for your storefront.
+
+### 4. Connect a Payment Gateway
+- In the side menu, click **Integrations** > **Payment Gateways**.
+- Click **Connect with Mercado Pago** (or another available option).
+- Authorize the connection. This ensures sale payouts go directly to your account.
+
+### 5. Register your first product
+- In the side menu, click **Products** > **New Product**.
+- Enter the name, price, and type (One-time payment, Free, or Subscription).
+- In the **Content** tab, create a module and attach the files (.pdf, .zip, etc.) or links the customer will receive.
+- Change the product status from "Draft" to **Published**.
+
+### 6. Promote and Sell
+- Access your store's showcase or get the direct checkout link for your product.
+- Share it with your audience on Instagram, Twitter, or WhatsApp.
+- Track your sales and customers directly from your dashboard.
