@@ -163,15 +163,48 @@ const ogImage = heroImage
     margin-bottom: 1.5rem;
   }
 
-  .blog-content ul {
-    list-style-type: none;
+  .blog-content ul,
+  .blog-content ol {
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .blog-content ul {
+    list-style-type: none;
+  }
+
+  .blog-content ol {
+    list-style: decimal;
+    padding-left: 2.5rem;
   }
 
   .blog-content li {
     margin-bottom: 0.75rem;
     position: relative;
+  }
+
+  /* Marcador customizado para listas não ordenadas */
+  .blog-content ul > li {
     padding-left: 1.5rem;
+  }
+
+  .blog-content ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: #3b38e8;
+  }
+
+  .blog-content ol > li {
+    padding-left: 0.25rem;
+  }
+
+  .blog-content ol > li::marker {
+    color: #3b38e8;
+    font-weight: 700;
   }
 </style>
