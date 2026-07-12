@@ -62,6 +62,8 @@ Consulte e atualize a fila de pautas em `.claude/skills/blog-post-seo/pautas.md`
    - H3s para subtópicos.
    - Listas, negrito em termos-chave, um parágrafo = uma ideia.
 6. **Comprimento.** Tutoriais e dores: **1.200-1.800 palavras**. Tendências/pillar: até 2.200. Nunca "encher linguiça" — densidade > tamanho.
+   - **Escreva já no comprimento certo no primeiro passe** — não entregue um rascunho de ~800 palavras contando "completar depois". Antes de finalizar, conte as palavras do corpo (`awk '/^---$/{c++;next} c>=2'` até o fim do arquivo | `wc -w`); se estiver abaixo de 1.200, expanda com conteúdo real (mais exemplos, um passo a passo, uma seção de "sinais/erros comuns").
+   - **Inclua sempre uma seção de FAQ** ao final (3-4 perguntas no estilo "People Also Ask" com respostas curtas). Ajuda a rankear em featured snippets e naturalmente leva o post ao comprimento-alvo. Encaixe 1 link interno dentro de uma das respostas.
 7. **Links internos (obrigatório).** 2-4 links para outros posts do blog (`/blog/<slug>/`) e para páginas do site. Ajuda SEO e mantém o leitor. Verifique os slugs existentes em `src/content/blog/`.
 8. **Links de produto.** Cite a Miblify de forma natural no meio do texto com link `[Miblify](https://www.miblify.com)` — 2 a 3 vezes, sem soar spam.
 9. **E-E-A-T.** Traga números, exemplos concretos e passos acionáveis. Se citar dados/estatísticas, deixe claro que são estimativas de mercado quando não houver fonte — nunca invente número específico como se fosse fato verificado.
@@ -125,7 +127,8 @@ Regras:
 - [ ] `description` 140-160 chars com keyword
 - [ ] Abertura com dor/cena nas primeiras linhas
 - [ ] H2s escaneáveis + keywords secundárias naturais
-- [ ] 1.200+ palavras (tutorial/dor) sem enrolação
+- [ ] 1.200+ palavras (tutorial/dor) sem enrolação — CONTE antes de entregar
+- [ ] Seção de FAQ (3-4 perguntas) ao final
 - [ ] 2-4 links internos válidos + 2-3 menções à Miblify
 - [ ] CTA final em linha para app.miblify.com com UTM
 - [ ] `heroImage` válido OU omitido com aviso
