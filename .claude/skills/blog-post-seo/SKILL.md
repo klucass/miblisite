@@ -83,14 +83,22 @@ A coleção valida com Zod. Use exatamente:
 title: "Título com a keyword principal (50-60 chars)"
 description: "Meta description persuasiva com keyword (140-160 chars)."
 pubDate: "AAAA-MM-DD"
-heroImage: "../../assets/img/blog/<slug>-hero.png"
+heroImage: "https://images.unsplash.com/photo-XXXXXXXX?w=1600&q=80"
 ---
 ```
 
 Regras:
 - `title` e `description` são **obrigatórios** (string). `pubDate` obrigatório (data).
-- `heroImage` é **opcional** e aponta para um arquivo em `src/assets/img/blog/`. A imagem precisa existir no build. **Se a imagem ainda não existe**, OMITA a linha `heroImage` (o build quebra se apontar para arquivo inexistente) e sinalize no resumo que falta gerar/adicionar a arte. Sem heroImage o post ainda funciona, mas não mostra thumbnail no índice do blog.
+- `heroImage` **obrigatório** e deve ser uma **URL https do Unsplash** (não baixar a imagem — usar por referência). O schema aceita URL remota; não use caminho local em posts novos.
 - `updatedDate` (opcional) só ao editar um post antigo.
+
+### Como escolher a heroImage (Unsplash, sem pessoas, paisagem)
+
+- Fonte: **Unsplash** (licença livre para uso, sem atribuição obrigatória).
+- Requisitos: **foto de paisagem** (natureza, cenário, cidade, objetos, textura abstrata) — **SEM PESSOAS** e **SEM rostos**; alta qualidade; orientação **landscape** (horizontal); estilo/clima compatível com o tema do post e com o visual do blog.
+- Use a **URL direta** da imagem no formato `https://images.unsplash.com/photo-<id>?w=1600&q=80` (largura 1600, qualidade 80). Não use a URL da página (`unsplash.com/photos/...`), use a do CDN `images.unsplash.com`.
+- **Verifique que a URL responde 200** (WebFetch/HEAD) antes de gravar no frontmatter. Se não carregar, escolha outra.
+- Para achar: busque no Unsplash por termos do tema (ex.: "laptop desk", "mountain road", "abstract gradient") filtrando por landscape e sem pessoas; pegue o `photo-id` da imagem escolhida.
 
 ## Nome do arquivo / slug
 

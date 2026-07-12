@@ -31,9 +31,12 @@ const ogImage = heroImage
     <main class="max-w-4xl mx-auto px-6 pt-20 md:py-12 grow w-full">
       <article class="prose prose-lg prose-slate max-w-none">
         {
-          heroImage && (
-            <Image src={heroImage} alt="" class="w-full h-auto rounded-sm mb-6 shadow-sm border-2 border-[#1A1A1A]" />
-          )
+          heroImage &&
+            (typeof heroImage === "string" ? (
+              <img src={heroImage} alt="" class="w-full h-auto rounded-sm mb-6 shadow-sm border-2 border-[#1A1A1A]" />
+            ) : (
+              <Image src={heroImage} alt="" class="w-full h-auto rounded-sm mb-6 shadow-sm border-2 border-[#1A1A1A]" />
+            ))
         }
         <div class="md:py-6">
           <h1 class="text-4xl md:text-6xl font-bold text-[#3B38E8] mb-8 font-cabinet-bold leading-tight tracking-tight">

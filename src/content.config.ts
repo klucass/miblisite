@@ -10,7 +10,9 @@ const blog = defineCollection({
 		description: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
-		heroImage: image().optional(),
+		// Aceita imagem local (posts antigos) OU URL https remota (ex.: Unsplash).
+		// image() vem primeiro para transformar caminhos locais; URLs remotas caem no z.string().
+		heroImage: z.union([image(), z.string().url()]).optional(),
 	}),
 });
 
