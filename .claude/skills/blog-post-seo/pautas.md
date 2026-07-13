@@ -9,6 +9,10 @@ Já publicados (não repetir keyword/ângulo):
 - Chegou a hora de abandonar as plataformas tradicionais
 - Como configurar o Pixel da Meta, Google e TikTok
 - Onde vender produtos digitais em 2026
+- Quanto a Hotmart cobra de taxa
+- Conta bloqueada em plataforma de infoproduto
+- Saque retido no infoproduto
+- Eventos de marketing digital no 2º semestre de 2026 (fora da pauta, 2026-07-13)
 
 ---
 
