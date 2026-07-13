@@ -18,7 +18,7 @@ Já publicados (não repetir keyword/ângulo):
 |---|---|---|---|
 | 1 | quanto a hotmart cobra de taxa | Abrir a conta real das taxas e o quanto some do faturamento. Persona: infoprodutor escalando | usada 2026-07-12 |
 | 2 | conta bloqueada plataforma infoproduto | O que fazer quando bloqueiam sua conta e como não depender de uma só plataforma. Infoprodutor | usada 2026-07-12 |
-| 3 | saque retido infoproduto | Por que plataformas seguram seu dinheiro e como ter controle do caixa. Infoprodutor | pendente |
+| 3 | saque retido infoproduto | Por que plataformas seguram seu dinheiro e como ter controle do caixa. Infoprodutor | usada 2026-07-13 |
 | 4 | como sair da hotmart / migrar de plataforma | Passo a passo pra migrar sem perder vendas. Infoprodutor escalando | pendente |
 | 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | pendente |
 
