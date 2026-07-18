@@ -14,6 +14,7 @@ Já publicados (não repetir keyword/ângulo):
 - Saque retido no infoproduto
 - Eventos de marketing digital no 2º semestre de 2026 (fora da pauta, 2026-07-13)
 - Como sair da Hotmart / migrar de plataforma
+- Vendas de infoproduto pararam (por que minhas vendas de infoproduto pararam)
 
 ---
 
@@ -25,7 +26,7 @@ Já publicados (não repetir keyword/ângulo):
 | 2 | conta bloqueada plataforma infoproduto | O que fazer quando bloqueiam sua conta e como não depender de uma só plataforma. Infoprodutor | usada 2026-07-12 |
 | 3 | saque retido infoproduto | Por que plataformas seguram seu dinheiro e como ter controle do caixa. Infoprodutor | usada 2026-07-13 |
 | 4 | como sair da hotmart / migrar de plataforma | Passo a passo pra migrar sem perder vendas. Infoprodutor escalando | usada 2026-07-16 |
-| 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | pendente |
+| 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | usada 2026-07-19 |
 
 ## Como fazer / tutoriais (volume + topo de funil)
 
