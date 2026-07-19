@@ -15,6 +15,7 @@ Já publicados (não repetir keyword/ângulo):
 - Eventos de marketing digital no 2º semestre de 2026 (fora da pauta, 2026-07-13)
 - Como sair da Hotmart / migrar de plataforma
 - Vendas de infoproduto pararam (por que minhas vendas de infoproduto pararam)
+- Como vender ebook na internet
 
 ---
 
@@ -32,7 +33,7 @@ Já publicados (não repetir keyword/ângulo):
 
 | # | Keyword principal | Ângulo / persona | Status |
 |---|---|---|---|
-| 6 | como vender ebook na internet | Do zero à primeira venda, simples. Criador iniciante | pendente |
+| 6 | como vender ebook na internet | Do zero à primeira venda, simples. Criador iniciante | usada 2026-07-19 |
 | 7 | como criar um checkout para produto digital | Tutorial prático de checkout que converte. Iniciante / expert | pendente |
 | 8 | como criar uma comunidade paga | Monetizar audiência com comunidade. Criador de conteúdo | pendente |
 | 9 | como vender mentoria online | Estruturar e vender mentoria sem marketplace. Expert | pendente |
