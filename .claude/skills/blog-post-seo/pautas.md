@@ -16,6 +16,7 @@ Já publicados (não repetir keyword/ângulo):
 - Como sair da Hotmart / migrar de plataforma
 - Vendas de infoproduto pararam (por que minhas vendas de infoproduto pararam)
 - Como vender ebook na internet
+- Como criar um checkout para produto digital
 
 ---
 
@@ -34,7 +35,7 @@ Já publicados (não repetir keyword/ângulo):
 | # | Keyword principal | Ângulo / persona | Status |
 |---|---|---|---|
 | 6 | como vender ebook na internet | Do zero à primeira venda, simples. Criador iniciante | usada 2026-07-19 |
-| 7 | como criar um checkout para produto digital | Tutorial prático de checkout que converte. Iniciante / expert | pendente |
+| 7 | como criar um checkout para produto digital | Tutorial prático de checkout que converte. Iniciante / expert | usada 2026-07-19 |
 | 8 | como criar uma comunidade paga | Monetizar audiência com comunidade. Criador de conteúdo | pendente |
 | 9 | como vender mentoria online | Estruturar e vender mentoria sem marketplace. Expert | pendente |
 | 10 | como fazer link na bio que vende | Link-in-bio + venda direta + captura de lead. Criador de conteúdo | pendente |
