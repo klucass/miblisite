@@ -5,51 +5,43 @@ sidebar:
   order: 2
 ---
 
-
-Os cupons de desconto são uma excelente ferramenta para incentivar vendas, criar promoções sazonais ou oferecer condições especiais para parceiros e influenciadores.
+Cupons servem para promoções sazonais, campanhas de lançamento ou condições especiais para parceiros e influenciadores.
 
 ## Criando um novo cupom
 
 1. No menu lateral, clique em **Cupons**.
 2. Clique no botão **Novo cupom**.
-3. Preencha as configurações do cupom conforme detalhado abaixo.
+3. Preencha as configurações descritas abaixo.
 
 ### Código do cupom
 
-Este é o texto que seu cliente digitará no checkout.
-- O código deve conter apenas letras maiúsculas, números, hífens (`-`) e sublinhados (`_`).
-- Exemplo: `PROMO20`, `FRETE_GRATIS`, `LANÇAMENTO-2026`.
+É o texto que o cliente digita no checkout. Use apenas letras maiúsculas, números, hífens e sublinhados. Por exemplo: `PROMO20`, `FRETE_GRATIS` ou `LANCAMENTO-2026`.
 
 ### Tipo de desconto
 
-Você pode escolher entre dois tipos de desconto:
-- **Porcentagem (%)**: Reduz o valor do produto em uma porcentagem do valor original. Ex: 10% de desconto.
-- **Valor Fixo (R$)**: Reduz um valor específico em reais. Ex: R$ 50,00 de desconto.
+O desconto pode ser em porcentagem, reduzindo uma fatia do valor original (10%, por exemplo), ou em valor fixo, tirando uma quantia em reais do preço (como R$ 50,00).
 
 ---
 
 ## Configurações de produtos
 
-Por padrão, um novo cupom é aplicado a **todos os produtos** da sua loja. No entanto, você pode restringir o uso:
+Um cupom novo vale para todos os produtos da loja, exceto os que têm a opção "Desabilitar cupons" marcada nas próprias configurações.
 
-- **Todos os produtos**: O cupom funciona em qualquer item da loja (desde que o produto não tenha a opção "Desabilitar cupons" marcada em suas próprias configurações).
-- **Produtos específicos**: Você pode selecionar manualmente quais produtos aceitam este cupom. Isso é útil para promoções exclusivas de um único item.
+Se preferir, escolha **Produtos específicos** e selecione manualmente quais itens aceitam aquele código. Serve bem para promoções de um produto só.
 
 ---
 
-## Limites e Validade
+## Limites e validade
 
-Para manter o controle sobre suas promoções, você pode configurar limites:
+O limite de usos define quantas vezes o cupom pode ser aplicado no total, somando todos os clientes. Deixe em branco para uso ilimitado.
 
-- **Limite de usos**: Quantas vezes o cupom pode ser utilizado no total por todos os clientes da loja. Se deixado em branco, o uso é ilimitado.
-- **Data de início**: A partir de quando o cupom passa a ser válido.
-- **Data de expiração**: Quando o cupom deixa de funcionar automaticamente.
+Você também pode definir uma data de início, a partir da qual o cupom passa a valer, e uma data de expiração, quando ele para de funcionar sozinho.
 
 ---
 
 ## Status do cupom
 
-Você pode desativar um cupom a qualquer momento através da chave **Cupom ativo**. Cupons inativos não podem ser aplicados no checkout, mesmo que estejam dentro do prazo de validade.
+A chave **Cupom ativo** desliga o código a qualquer momento. Cupons inativos não são aceitos no checkout, mesmo dentro do prazo de validade.
 
 > [!TIP]
-> Na listagem de cupons, você pode acompanhar quantas vezes cada código já foi utilizado na coluna "Limites e Uso".
+> A coluna "Limites e Uso", na listagem de cupons, mostra quantas vezes cada código já foi usado.

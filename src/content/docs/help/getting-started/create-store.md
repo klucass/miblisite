@@ -5,38 +5,29 @@ sidebar:
   order: 3
 ---
 
-Após criar sua conta, o primeiro passo dentro da Miblify é criar a sua loja. A loja é o espaço onde seus produtos serão exibidos e onde seus clientes vão realizar as compras.
+Com a conta pronta, o próximo passo é criar a loja. É nela que seus produtos aparecem e onde seus clientes compram.
 
-## Passo 1: Escolha o nome da loja
+## Passo 1: escolha o nome da loja
 
-Na tela de onboarding, informe o **nome da sua loja**. Escolha um nome que represente bem o seu negócio ou marca pessoal. O nome pode ter até 100 caracteres.
+Na tela de onboarding, informe o nome da loja, com até 100 caracteres. Vale usar o nome do seu negócio ou da sua marca pessoal.
 
-## Passo 2: Defina a URL (slug)
+## Passo 2: defina a URL
 
-A URL da sua loja é o endereço pelo qual seus clientes vão acessar a vitrine. Ela segue o formato:
+A URL é o endereço que seus clientes vão acessar. Ela tem este formato:
 
 ```
 https://sua-loja.miblify.com
 ```
 
-Regras para a URL:
+As regras: só letras minúsculas, números e hifens, com 3 a 30 caracteres. O endereço também precisa estar livre, e você recebe um aviso se outra loja já usa aquele nome. Algumas palavras são reservadas e ficam de fora, como `admin`, `login` e `dashboard`.
 
-- Use apenas letras minúsculas, números e hifens.
-- O tamanho deve ter entre 3 e 30 caracteres.
-- A URL precisa ser única. Se outra loja já usa aquele endereço, você verá um aviso.
-- Algumas palavras reservadas não podem ser usadas como URL, como `admin`, `login`, `dashboard`, entre outras.
+## Passo 3: confirme a criação
 
-## Passo 3: Confirme a criação
-
-Clique em **Criar loja**. Se tudo estiver correto, você será levado ao painel principal (dashboard) da sua loja.
+Clique em **Criar loja**. Estando tudo certo, você vai direto para o painel.
 
 ## Completando o cadastro da loja
 
-Depois de criar a loja, é recomendado completar o perfil dela. Acesse **Configurações da Loja** no menu lateral para:
-
-- **Adicionar um logo**: envie uma imagem nos formatos JPEG, PNG ou WebP. O logo será exibido na vitrine e no checkout.
-- **Adicionar uma descrição**: escreva um texto curto (até 255 caracteres) sobre o que a sua loja oferece. Essa descrição aparece na vitrine pública.
-- **Alterar nome ou URL**: você pode editar esses dados a qualquer momento.
+Vale completar o perfil logo depois. Em **Configurações da Loja**, no menu lateral, você pode enviar um logo em JPEG, PNG ou WebP, que aparece na vitrine e no checkout, e escrever uma descrição de até 255 caracteres contando o que a loja oferece. O nome e a URL também podem ser alterados a qualquer momento.
 
 ## Acompanhe o checklist de onboarding
 
@@ -47,7 +38,7 @@ No painel principal, você verá um checklist com os passos iniciais:
 3. Criar seu primeiro produto
 4. Fazer sua primeira venda
 
-Cada etapa será marcada como concluída conforme você avança.
+Cada etapa é marcada como concluída conforme você avança.
 
 ## Próximo passo
 

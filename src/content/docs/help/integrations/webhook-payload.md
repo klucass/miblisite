@@ -5,11 +5,9 @@ sidebar:
   order: 3
 ---
 
-Quando uma venda é confirmada na sua loja, a Miblify envia uma requisição POST para a URL do seu webhook com um payload em formato JSON. Este artigo detalha a estrutura completa desse payload.
+A cada venda confirmada, a Miblify envia uma requisição POST em JSON para a URL do seu webhook. Este artigo descreve campo por campo o que vem nesse envio.
 
 ## Estrutura geral
-
-O payload segue esta estrutura:
 
 ```json
 {
@@ -82,7 +80,7 @@ Lista de itens vendidos no pedido.
 
 ## Exemplo completo
 
-Abaixo está um exemplo fictício completo do payload enviado quando uma venda é confirmada:
+Um envio fictício, com todos os campos preenchidos:
 
 ```json
 {
@@ -125,16 +123,11 @@ Abaixo está um exemplo fictício completo do payload enviado quando uma venda �
 }
 ```
 
-Neste exemplo:
-
-- A cliente **Maria Oliveira** comprou o produto **Curso Completo de Marketing Digital** por R$ 149,00.
-- Um cupom **LANCAMENTO20** foi aplicado, concedendo R$ 20,00 de desconto.
-- O valor final cobrado foi de **R$ 129,00** (12.900 centavos).
-- O pagamento foi confirmado às 14:29:45 UTC.
+Lendo esse exemplo: Maria Oliveira comprou o Curso Completo de Marketing Digital por R$ 149,00, usou o cupom LANCAMENTO20 e pagou R$ 129,00 depois dos R$ 20,00 de desconto. O pagamento foi confirmado às 14:29:45 UTC.
 
 ## Observações sobre valores
 
-Todos os valores monetários são expressos em **centavos** (inteiros). Para converter para reais, divida por 100. Exemplos:
+Todo valor monetário vem em centavos, como número inteiro. Para chegar em reais, divida por 100:
 
 | Centavos | Reais     |
 |----------|-----------|

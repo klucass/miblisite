@@ -5,66 +5,50 @@ sidebar:
   order: 1
 ---
 
-Os pixels de rastreamento permitem que você conecte sua loja Miblify com plataformas de anúncios para rastrear conversões (vendas) de forma automática. Com isso, você consegue medir o retorno das suas campanhas e otimizar seus anúncios.
+Os pixels ligam sua loja às plataformas de anúncios e avisam cada venda automaticamente. É assim que você descobre quais campanhas estão se pagando.
 
 ## Plataformas suportadas
 
-| Plataforma  | Identificador |
-|-------------|---------------|
-| Meta Ads    | `meta`        |
-| Google Ads  | `google`      |
-| TikTok Ads  | `tiktok`      |
+Meta Ads, Google Ads e TikTok Ads.
 
 ## Cadastrando um pixel
 
 1. No menu lateral, acesse **Integrações**.
-2. Clique na aba **Tracking Pixel**.
+2. Abra a aba **Tracking Pixel**.
 3. Clique em **Cadastrar Pixel**.
-4. Selecione a **plataforma** desejada (Meta, Google ou TikTok).
-5. Informe o **Pixel ID** (ou Track ID) fornecido pela plataforma de anúncios.
-6. Configure as opções adicionais, se disponíveis.
+4. Escolha a plataforma.
+5. Informe o Pixel ID (ou Track ID) fornecido por ela.
+6. Preencha as opções adicionais, se houver.
 7. Clique em **Ativar Integração**.
 
 ## Configurações por plataforma
 
 ### Meta Ads
 
-Além do Pixel ID, o Meta Ads permite configurar a **Conversion API (CAPI)** para melhorar a precisão do rastreamento:
+Além do Pixel ID, o Meta aceita a Conversion API, que envia os eventos também pelo servidor, e não só pelo navegador. Isso melhora bastante a medição de quem usa bloqueador de anúncios.
 
-- **Access Token**: token de acesso do Meta, necessário para enviar eventos pelo servidor (CAPI). Você encontra esse token no **Gerenciador de Eventos** do Meta Business Suite.
-
-A CAPI complementa o pixel do navegador, enviando eventos também pelo servidor. Isso melhora a precisão principalmente para usuários que usam bloqueadores de anúncios.
+Para ativar, informe o Access Token do Meta. Ele fica no Gerenciador de Eventos, dentro do Meta Business Suite.
 
 ### Google Ads
 
-Para o Google Ads, você pode configurar:
-
-- **Conversion Label**: o rótulo de conversão do Google Ads, no formato `AW-123456/ABCD123`. Você encontra esse valor ao criar uma ação de conversão no Google Ads.
+Aqui você pode preencher o Conversion Label, o rótulo de conversão no formato `AW-123456/ABCD123`. Ele aparece quando você cria uma ação de conversão no Google Ads.
 
 ### TikTok Ads
 
-Para o TikTok Ads, basta informar o Pixel ID. Você encontra o Pixel ID no TikTok Ads Manager, na seção de **Eventos**.
+Basta o Pixel ID, que fica no TikTok Ads Manager, na seção de Eventos.
 
 ## Escolhendo os produtos
 
-Para cada pixel, você pode definir em quais produtos o rastreamento será disparado:
-
-- **Todos os produtos**: o pixel é ativado para qualquer venda da loja.
-- **Produtos específicos**: você seleciona manualmente quais produtos devem disparar o pixel.
-
-Isso é útil quando você tem campanhas diferentes para produtos diferentes e quer rastrear cada um com o pixel correto.
+Cada pixel pode valer para a loja inteira ou só para produtos escolhidos a dedo. A segunda opção ajuda quando você tem campanhas separadas e quer cada venda contando no pixel certo.
 
 ## Ativando e desativando
 
-Cada pixel possui um controle de **status** (ativo/inativo). Você pode desativar um pixel temporariamente sem precisar excluí-lo.
+Todo pixel tem um status de ativo ou inativo, então dá para pausar o rastreamento sem perder a configuração.
 
 ## Editando e removendo pixels
 
-Na aba de Tracking Pixels, você pode:
-
-- **Editar**: alterar o Pixel ID, configurações avançadas ou os produtos vinculados.
-- **Remover**: excluir o pixel permanentemente.
+Na aba de Tracking Pixels você altera o Pixel ID, as configurações avançadas ou os produtos vinculados. Também pode excluir o pixel de vez.
 
 ## Próximo passo
 
-Com pixels configurados, suas campanhas de anúncios serão alimentadas automaticamente com os dados de conversão. Veja também como funciona o [painel administrativo](/help/admin/dashboard/) para acompanhar tudo em um só lugar.
+Com os pixels no ar, suas campanhas passam a receber os dados de conversão sozinhas. Veja também como funciona o [painel administrativo](/help/admin/dashboard/) para acompanhar tudo em um lugar só.

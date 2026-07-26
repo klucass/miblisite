@@ -5,44 +5,37 @@ sidebar:
   order: 1
 ---
 
-## Acesso e Entrega
+## Acesso e entrega
 
 ### 1. Comprei um produto, mas não recebi o e-mail de acesso. O que fazer?
-Primeiro, verifique sua caixa de Spam, Lixo Eletrônico ou a aba "Promoções" do seu e-mail. A mensagem de acesso é enviada automaticamente assim que o pagamento é aprovado.
+Comece pela caixa de Spam, pelo Lixo Eletrônico e pela aba "Promoções". O e-mail de acesso sai automaticamente assim que o pagamento é aprovado, e a aprovação por Pix ou cartão de crédito costuma ser imediata.
 
-*   **Pagamentos via Cartão de Crédito ou Pix:** A aprovação costuma ser imediata.
-*   **Pagamentos via Boleto:** Pode levar até 3 dias úteis para a compensação bancária.
-
-Se o e-mail não chegou após o prazo de aprovação, você pode ter digitado o endereço incorretamente. Neste caso, entre em contato com o nosso suporte informando seu nome completo, CPF e o comprovante de pagamento para atualizarmos seu cadastro.
+Se mesmo assim não chegou, é provável que o endereço tenha sido digitado errado na compra. Escreva para o nosso suporte com nome completo, CPF e o comprovante de pagamento, que a gente corrige o cadastro.
 
 ### 2. Errei meu e-mail na hora da compra. Como consertar?
-Não se preocupe! Envie uma mensagem para o nosso suporte técnico no email miblify@miblify.com com o comprovante da transação (comprovante do Pix ou fatura do cartão), seu CPF e o e-mail correto. Faremos a alteração e reenviaremos o seu acesso.
+Mande uma mensagem para miblify@miblify.com com o comprovante da transação (o comprovante do Pix ou a fatura do cartão), seu CPF e o e-mail correto. Fazemos a alteração e reenviamos o acesso.
 
 ### 3. Onde eu acesso o produto que comprei?
-O link exclusivo de acesso é enviado para o e-mail cadastrado no momento da compra. Recomendamos favoritar esse e-mail ou salvar o link nos seus favoritos para facilitar os próximos acessos. Você pode acessar também suas compras e seus produtos no link https://app.miblify.com/my_library e entrando com o seu e-mail usado na compra.
+O link de acesso vai para o e-mail que você cadastrou na compra, então vale guardar essa mensagem nos favoritos. Você também encontra tudo que comprou em https://app.miblify.com/my_library, entrando com o mesmo e-mail usado na compra.
 
-## Pagamentos e Reembolsos
+## Pagamentos e reembolsos
 
 ### 4. Como faço para solicitar o reembolso da minha compra?
-O reembolso pode ser solicitado dentro do prazo de garantia estipulado pelo criador do produto (geralmente de 7, 15 ou 30 dias). Para solicitar, basta entrar em contato direto com o suporte do criador do produto.
+O reembolso vale dentro do prazo de garantia definido pelo criador do produto, normalmente 7, 15 ou 30 dias. O pedido é feito direto com o suporte dele.
 
 ### 5. Minha compra foi recusada. O que aconteceu?
-A recusa do pagamento geralmente é feita pelo próprio banco ou emissora do cartão por motivos de segurança, limite insuficiente ou dados incorretos. Recomendamos que você:
+Quase sempre a recusa vem do próprio banco ou da emissora do cartão, por segurança, limite insuficiente ou dados incorretos. Confira se digitou os dados do cartão certinho, fale com o seu banco para liberar a transação, ou tente pagar de outro jeito, com Pix por exemplo.
 
-*   Verifique se os dados do cartão foram digitados corretamente.
-*   Entre em contato com o seu banco para autorizar a transação.
-*   Tente novamente utilizando outro método de pagamento, como o Pix.
+## Suporte ao conteúdo
 
-## Suporte ao Conteúdo
-
-### 6. Tenho uma dúvida sobre o conteúdo do curso/material. Com quem eu falo?
-A Miblify é a plataforma que processa o pagamento e entrega o acesso, mas todo o conteúdo do produto é de responsabilidade do criador. Para dúvidas sobre as aulas, materiais ou bônus, você deve entrar em contato diretamente com o suporte do vendedor.
+### 6. Tenho uma dúvida sobre o conteúdo do curso ou material. Com quem eu falo?
+A Miblify processa o pagamento e entrega o acesso, mas o conteúdo é responsabilidade de quem criou o produto. Dúvidas sobre aulas, materiais ou bônus vão direto para o suporte do vendedor.
 
 ### 7. O produtor não me responde. A plataforma pode me ajudar?
-Nós monitoramos a qualidade e o tempo de resposta dos criadores que utilizam a nossa tecnologia. Se você tentou contato com o vendedor e não obteve retorno em um prazo razoável (geralmente 48 a 72 horas úteis), e ainda está dentro do prazo de garantia, você pode acionar o nosso suporte para intermediar o contato.
+Pode. Acompanhamos o tempo de resposta dos criadores que usam a plataforma. Se você já tentou contato, ficou sem retorno por 48 a 72 horas úteis e ainda está dentro do prazo de garantia, acione o nosso suporte para intermediar.
 
 ### 8. A Miblify pode devolver meu dinheiro?
-A Miblify é a plataforma que conecta o gateway de pagamento do vendedor com os compradores. Isto significa que o dinheiro das vendas não chega à Miblify. No entanto, se o produto que você comprou não atende às suas expectativas, você pode entrar em contato com o suporte do criador do produto para solicitar o reembolso.
+Não, porque o dinheiro da venda nunca chega até nós: a Miblify conecta o gateway de pagamento do vendedor aos compradores, e o valor vai direto para a conta dele. Se o produto não atendeu suas expectativas, peça o reembolso ao suporte do criador.
 
 ### 9. Preciso entrar em contato com a Miblify
-Se por algum motivo você precisa entrar em contato com a Miblify, você pode nos enviar um e-mail para miblify@miblify.com
+Escreva para miblify@miblify.com.

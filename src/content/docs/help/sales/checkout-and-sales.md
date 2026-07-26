@@ -5,65 +5,53 @@ sidebar:
   order: 1
 ---
 
-Este artigo explica como funciona o fluxo de compra na sua loja Miblify, desde o acesso do cliente até a confirmação do pagamento.
+Este artigo acompanha uma compra na sua loja do começo ao fim, desde a chegada do cliente na vitrine até a confirmação do pagamento.
 
 ## Vitrine da loja
 
-Sua loja possui uma vitrine pública acessível pelo endereço:
+Sua loja tem uma vitrine pública no endereço:
 
 ```
 https://sua-loja.miblify.com
 ```
 
-Na vitrine, o cliente vê todos os produtos com status **Publicado**, incluindo nome, descrição, imagem e preço. Ao clicar em um produto, ele é levado para a página de checkout.
+Lá o cliente vê todos os produtos publicados, com nome, descrição, imagem e preço. Ao clicar em um deles, vai direto para o checkout.
 
 ## Tipos de checkout
 
-O tipo de checkout depende do produto:
+O checkout muda conforme o produto:
 
-| Tipo do produto    | Checkout exibido                                                  |
-|--------------------|-------------------------------------------------------------------|
-| Pago (one_time)    | Checkout com formulário de dados pessoais e pagamento por Pix.    |
-| Gratuito (freebie) | Checkout simplificado, sem etapa de pagamento.                    |
-| Produto em rascunho| Página informando que o produto ainda não está disponível.        |
+| Tipo do produto | Checkout exibido |
+|-----------------|------------------|
+| Pago | Formulário de dados pessoais e pagamento por Pix. |
+| Gratuito | Checkout simplificado, sem etapa de pagamento. |
+| Em rascunho | Página avisando que o produto ainda não está disponível. |
 
-## Fluxo de checkout pago (Pix)
+## Compra paga com Pix
 
-1. O cliente preenche seus dados: **nome**, **e-mail** e **CPF**.
-2. Escolhe o método de pagamento **Pix**.
-3. A Miblify gera o código Pix através do Mercado Pago.
-4. O cliente é levado para a página de finalização, onde pode copiar o código Pix ou escanear o QR Code.
-5. Após o pagamento ser confirmado pelo banco, o status do pedido muda automaticamente para **pago**.
+1. O cliente preenche nome, e-mail e CPF.
+2. Escolhe pagar com Pix.
+3. A Miblify gera o código Pix pelo gateway que você conectou.
+4. O cliente vai para a página de finalização e pode copiar o código ou escanear o QR Code.
+5. Quando o banco confirma o pagamento, o pedido passa para pago automaticamente.
 
-## Fluxo de checkout gratuito (freebie)
+## Compra de produto gratuito
 
-1. O cliente preenche nome e e-mail.
-2. O produto é liberado imediatamente sem necessidade de pagamento.
+O cliente preenche nome e e-mail, e o produto é liberado na hora.
 
 ## Cancelamento automático de Pix
 
-Pagamentos Pix que não forem confirmados em até **1 hora** são cancelados automaticamente. Pagamentos recentes (com menos de 1 hora) têm seus status sincronizados periodicamente com o gateway para garantir que nenhuma confirmação seja perdida.
+Um Pix que não for pago em até uma hora é cancelado sozinho. Dentro dessa janela, a Miblify confere o pagamento com o gateway de tempos em tempos, para que nenhuma confirmação se perca no caminho.
 
 ## Acompanhando suas vendas
 
-### Painel principal (Dashboard)
+### Painel principal
 
-No dashboard, você encontra:
+O dashboard resume o período escolhido em receita, número de vendas, ticket médio e taxa de conversão, cada um comparado com o período anterior. Abaixo vêm o gráfico de receita por dia, o funil de conversão, os produtos que mais faturaram, a origem das vendas e a lista dos dez pedidos mais recentes. Os detalhes de cada painel estão no artigo do [painel administrativo](/help/admin/dashboard/).
 
-- **Receita total**: soma de todas as vendas pagas.
-- **Número de vendas**: quantidade de pedidos confirmados.
-- **Vendas recentes**: lista das últimas 10 vendas com nome do cliente, produto, valor e status.
+### Página de pedidos
 
-### Página de Pedidos
-
-No menu lateral, clique em **Pedidos** para ver todos os pedidos da sua loja. Cada pedido exibe:
-
-- Identificador do pedido
-- Nome e e-mail do cliente
-- Nome do produto
-- Valor total
-- Status: `completed` (pago), `pending` (aguardando) ou `cancelled` (cancelado)
-- Data de criação
+No menu lateral, clique em **Pedidos** para ver todos os pedidos da loja. Cada linha traz o identificador do pedido, o nome e e-mail do cliente, o produto, o valor total, a data de criação e o status, que pode ser pago, aguardando ou cancelado.
 
 ## Próximo passo
 

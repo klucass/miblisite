@@ -5,37 +5,35 @@ sidebar:
   order: 1
 ---
 
-A **Miblify** é uma plataforma de vendas de produtos digitais feita para quem quer começar a faturar online sem complicação.
+A Miblify é uma plataforma para vender produtos digitais sem complicação.
 
 ## O que é a Miblify?
 
-A Miblify é a sua plataforma para vender produtos digitais — e-books, cursos, consultorias, templates, arquivos, assinaturas e muito mais. Tudo isso sem taxas escondidas, porcentagens altas, sem cobranças por aluno e com controle total do seu negócio.
+Você usa a Miblify para vender e-books, cursos, consultorias, templates, arquivos, assinaturas e o que mais couber em formato digital. Sem taxa escondida, sem porcentagem alta, sem cobrança por aluno.
 
 ## Por que escolher a Miblify?
 
 ### Preço justo
-Cobramos apenas **2% por venda aprovada**. Sem mensalidades, sem taxa de adesão, sem taxa de cancelamento. Se você não vender, não paga nada.
+Cobramos 2% por venda aprovada. Não existe mensalidade, taxa de adesão nem multa de cancelamento. Se você não vender, não paga nada.
 
 ### Rápido para começar
-Crie sua conta, cadastre seu produto e comece a vender. Do upload à venda antes do café esfriar.
+Criar a conta, cadastrar o produto e vender leva menos tempo do que o café esfriar.
 
 ### Feito para criadores
-Seja você um criador de conteúdo, infoprodutor, consultor ou freelancer — a Miblify foi feita para simplificar o caminho entre o seu produto e o seu cliente.
+Criador de conteúdo, infoprodutor, consultor, freelancer: a ideia é encurtar o caminho entre o seu produto e o seu cliente.
 
 ### Pagamentos diretos
-Conecte sua conta com o **Mercado Pago** (ou outros gateways em breve) e receba seus pagamentos na hora ou no prazo contratado junto ao gateway de pagamento. Sem tarifas de saque, sem limites de vendas.
+Conecte sua conta do Mercado Pago (outros gateways vêm depois) e receba no prazo que você combinou com o gateway. Sem tarifa de saque, sem teto de vendas.
 
 ### A Miblify não é um gateway de pagamento
 
-Um dos mariores diferenciais da Miblify é atuar como uma infraestrutura tecnológica e não como uma subadquirente (intermediadora financeira). Isso significa que a plataforma fornece toda a vitrine, o checkout de alta conversão e a entrega segura do produto digital, mas a transação financeira acontece diretamente entre o cliente final e o gateway de pagamento do próprio vendedor (Mercado Pago etc.).
+Essa é a diferença que mais importa no bolso. A Miblify é infraestrutura, não intermediadora financeira. Nós entregamos a vitrine, o checkout e a entrega segura do produto, mas a transação acontece direto entre o seu cliente e o seu gateway.
 
-Essa arquitetura descentralizada é o que permite que a Miblify funcione com tanta fluidez e, mais importante, crie uma vantagem competitiva para os criadores como o fim das taxas absurdas, dinheiro direto na conta do vendedor, fim do risco de "dinheiro preso" dentre outros benefícios. 
+Na prática, o dinheiro cai na sua conta sem passar pela nossa, o que elimina taxa em cima de taxa e o velho problema do saldo preso na plataforma.
 
 ## Próximos passos
 
-Agora que você conhece a Miblify, vamos ao que interessa:
-
-1. [Crie sua conta](/help/getting-started/create-account/) — em poucos minutos
-2. [Crie sua loja](/help/getting-started/create-store/) — em poucos cliques
-3. [Cadastre seu primeiro produto](/help/products/create-product/) — simples e rápido
-4. [Configure seus pagamentos](/help/payments/setup-payments/) — e comece a receber
+1. [Crie sua conta](/help/getting-started/create-account/), em poucos minutos
+2. [Crie sua loja](/help/getting-started/create-store/), em poucos cliques
+3. [Cadastre seu primeiro produto](/help/products/create-product/)
+4. [Configure seus pagamentos](/help/payments/setup-payments/) e comece a receber

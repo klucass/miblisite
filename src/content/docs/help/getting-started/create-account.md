@@ -5,11 +5,11 @@ sidebar:
   order: 2
 ---
 
-Para começar a vender na Miblify, o primeiro passo é criar sua conta. O processo é rápido e você pode usar o seu e-mail ou a sua conta do Google.
+O primeiro passo para vender na Miblify é criar sua conta. Dá para usar sua conta do Google ou só o seu e-mail.
 
 ## Login com Google
 
-A forma mais rápida de criar sua conta:
+É o caminho mais curto:
 
 1. Acesse a página de login em `app.miblify.com`.
 2. Clique no botão **Entrar com Google**.
@@ -20,7 +20,7 @@ Se for o seu primeiro acesso, a conta será criada automaticamente com o nome e 
 
 ## Login com Magic Link (e-mail)
 
-Você também pode entrar sem precisar de senha, usando um link mágico enviado para o seu e-mail:
+Você também pode entrar sem senha nenhuma, com um link enviado para o seu e-mail:
 
 1. Acesse a página de login em `app.miblify.com`.
 2. Digite o seu e-mail no campo indicado.
@@ -28,9 +28,9 @@ Você também pode entrar sem precisar de senha, usando um link mágico enviado 
 4. Abra o seu e-mail e clique no link recebido.
 5. Pronto. Você será autenticado e redirecionado para o painel.
 
-O link mágico expira em **10 minutos**. Se você não usou a tempo, basta solicitar um novo.
+O link expira em 10 minutos. Se demorar, é só pedir outro.
 
-Se for o seu primeiro acesso com aquele e-mail, a conta será criada automaticamente.
+Sendo o primeiro acesso com aquele e-mail, a conta é criada automaticamente.
 
 ## Próximo passo
 

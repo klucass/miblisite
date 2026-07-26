@@ -5,54 +5,45 @@ sidebar:
   order: 2
 ---
 
-A Miblify permite que você conecte sua loja a sistemas externos usando **webhooks de saída**. Com isso, toda vez que uma venda for confirmada, os dados do pedido são enviados automaticamente para uma URL que você definir.
+Com webhooks, cada venda confirmada na sua loja é avisada automaticamente para uma URL que você escolher.
 
 ## O que é um webhook?
 
-Um webhook é uma notificação automática enviada por HTTP. Quando um evento acontece na sua loja (por exemplo, uma venda é paga), a Miblify envia uma requisição **POST** com os dados do pedido em formato **JSON** para a URL que você cadastrou.
+É uma notificação automática enviada por HTTP. Quando uma venda é paga, a Miblify manda uma requisição POST com os dados do pedido em JSON para o endereço que você cadastrou.
 
-Isso permite integrar sua loja com:
-
-- Plataformas de e-mail marketing
-- Sistemas de automação (como Zapier e n8n)
-- Áreas de membros
-- ERPs e CRMs
-- Qualquer sistema que aceite webhooks
+Serve para ligar sua loja a plataformas de e-mail marketing, ferramentas de automação como Zapier e n8n, áreas de membros, ERPs, CRMs e qualquer outro sistema que aceite webhooks.
 
 ## Cadastrando um webhook
 
 1. No menu lateral, acesse **Integrações**.
 2. Na aba **Webhooks**, clique em **Cadastrar Webhook**.
-3. Informe a **URL de destino**. A URL deve usar obrigatoriamente **HTTPS**.
-4. Marque se deseja que o webhook esteja **Ativo** desde já.
+3. Informe a URL de destino, que precisa ser HTTPS.
+4. Marque se o webhook já deve nascer ativo.
 5. Clique em **Cadastrar Webhook**.
 
-Ao cadastrar, a Miblify gera automaticamente um **Signing Secret** único para o seu webhook. Esse segredo é usado para assinar cada requisição, permitindo que você valide a autenticidade do envio.
+No cadastro, a Miblify gera um Signing Secret exclusivo para esse webhook. É com ele que cada requisição é assinada, e é assim que você confere se o envio veio mesmo de nós.
 
 ## Limite de webhooks
 
-No plano atual, cada loja pode ter no máximo **1 webhook** cadastrado. Se você tentar cadastrar mais, verá uma mensagem de limite atingido.
+Cada loja pode ter um webhook cadastrado. Ao tentar cadastrar o segundo, você vê um aviso de limite atingido.
 
 ## Editando e removendo webhooks
 
-Na aba de Webhooks, você pode:
-
-- **Editar**: alterar a URL de destino ou ativar/desativar o webhook.
-- **Remover**: excluir o webhook. As notificações de venda pararão de ser enviadas.
+Na aba de Webhooks você troca a URL de destino, ativa ou desativa o envio. Também dá para excluir o webhook, e nesse caso as notificações de venda param na hora.
 
 ## Evento disparado
 
-Atualmente, o webhook é disparado para o evento:
+Só existe um evento por enquanto:
 
 | Evento        | Descrição                                        |
 |---------------|--------------------------------------------------|
 | `order.paid`  | Disparado quando um pedido tem o pagamento confirmado. |
 
-Quando uma venda é confirmada, a Miblify verifica todos os webhooks ativos da loja, monta o payload com os dados do pedido e agenda o envio em segundo plano.
+Assim que uma venda é confirmada, o envio é feito para o webhook ativo da loja.
 
 ## Assinatura e segurança
 
-Cada requisição enviada inclui os seguintes headers:
+Toda requisição chega com estes headers:
 
 | Header                   | Descrição                                              |
 |--------------------------|--------------------------------------------------------|
@@ -62,11 +53,11 @@ Cada requisição enviada inclui os seguintes headers:
 
 ### Como validar a assinatura
 
-Para garantir que a requisição foi realmente enviada pela Miblify, você deve verificar o header `X-Miblify-Signature` no seu servidor. O processo é:
+No seu servidor, confira o header `X-Miblify-Signature` antes de confiar no conteúdo:
 
-1. Receba o corpo bruto (raw body) da requisição.
-2. Gere um HMAC-SHA256 usando o **Signing Secret** do webhook como chave e o corpo da requisição como mensagem.
-3. Compare o resultado com o valor do header `X-Miblify-Signature`.
+1. Pegue o corpo bruto (raw body) da requisição.
+2. Gere um HMAC-SHA256 usando o Signing Secret do webhook como chave e esse corpo como mensagem.
+3. Compare o resultado com o valor do header.
 
 Exemplo em Python:
 
@@ -102,14 +93,9 @@ function validarAssinatura(corpoRaw, signingSecret, assinaturaRecebida) {
 
 ## Retentativas
 
-Se o servidor de destino não responder com sucesso (status HTTP 2xx), a Miblify fará **retentativas automáticas** do envio. As tentativas são feitas em segundo plano até que a entrega seja bem-sucedida ou o limite de tentativas seja atingido.
+Se o seu servidor não responder com um status 2xx, a Miblify tenta de novo, até a entrega dar certo ou o limite de tentativas acabar.
 
-A Miblify respeita os seguintes limites de conexão:
-
-- Timeout de conexão: **5 segundos**
-- Timeout de resposta: **10 segundos**
-
-Se o seu servidor não responder dentro desses prazos, a tentativa será considerada falha.
+Os prazos de conexão são curtos: 5 segundos para conectar e 10 segundos para responder. Passou disso, a tentativa conta como falha.
 
 ## Próximo passo
 

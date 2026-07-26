@@ -5,24 +5,16 @@ sidebar:
   order: 3
 ---
 
-
-A Miblify permite que você pré-preencha as informações do seu cliente na página de checkout através de parâmetros na URL (Query Strings). 
-
-Isso é extremamente útil para:
-- Reduzir a fricção na hora da compra.
-- Aumentar a taxa de conversão enviando links personalizados por e-mail ou WhatsApp.
-- Aplicar cupons de desconto automaticamente.
+Você pode chegar no checkout com os campos do cliente já preenchidos, passando as informações na própria URL. Quanto menos o cliente tem que digitar, menos gente desiste no meio do caminho. Também dá para aplicar um cupom sozinho, sem pedir que ninguém decore um código.
 
 ## Como utilizar
 
-Para utilizar os parâmetros, você deve adicioná-los ao final do link de checkout do seu produto, começando com um ponto de interrogação `?`. Caso precise de mais de um parâmetro, separe-os com um caractere e-comercial `&`.
+Adicione os parâmetros no fim do link de checkout do produto, começando com um ponto de interrogação. Se precisar de mais de um, separe com o e-comercial `&`.
 
 Exemplo básico:
 `https://sualoja.miblify.com/slug-do-produto?email=cliente@exemplo.com`
 
-## Parâmetros Suportados
-
-Abaixo estão os parâmetros que você pode enviar para o nosso checkout:
+## Parâmetros suportados
 
 | Parâmetro | Descrição | Exemplo |
 |-----------|-----------|---------|
@@ -33,24 +25,24 @@ Abaixo estão os parâmetros que você pode enviar para o nosso checkout:
 
 ---
 
-## Exemplos Práticos
+## Exemplos práticos
 
-### 1. Pré-preencher Email e Nome
-Útil para links enviados via plataformas de e-mail marketing onde você já conhece o lead.
+### 1. Preencher e-mail e nome
+Útil em disparos de e-mail marketing, onde você já conhece o lead.
 `https://loja.miblify.com/e-book-vendas?name=Maria+Oliveira&email=maria@gmail.com`
 
 ### 2. Aplicar um cupom automaticamente
-Se você quer fazer uma promoção onde o cliente já chega com o desconto aplicado sem precisar digitar nada.
+Para promoções em que o cliente já chega com o desconto na tela.
 `https://loja.miblify.com/curso-completo?coupon=DESCONTOVIRTUAL`
 
-### 3. Preenchimento Total
-Ideal para processos de venda consultiva onde o vendedor já coletou todos os dados por chat.
+### 3. Preencher tudo
+Bom para venda consultiva, quando o vendedor já coletou os dados por chat.
 `https://loja.miblify.com/mentoria?name=Carlos+Eduardo&email=carlos@empresa.com&cpf=00011122233&coupon=OFFER50`
 
 ---
 
-## Dicas Importantes
+## Detalhes que evitam dor de cabeça
 
-- **Espaços**: Devem ser substituídos pelo sinal de mais `+` ou `%20`.
-- **Sensibilidade**: O parâmetro `coupon` transformará o texto automaticamente em letras maiúsculas para buscar o cupom na sua loja.
-- **Segurança**: Nunca envie dados sensíveis (como senhas) via URL. Os parâmetros suportados pela Miblify são seguros para uso público em campanhas de marketing.
+Espaços precisam virar `+` ou `%20`. O valor de `coupon` é convertido para maiúsculas antes da busca, então não se preocupe com a caixa das letras.
+
+E nunca coloque dados sensíveis, como senhas, em uma URL. Os quatro parâmetros acima são seguros para usar em campanhas públicas.
