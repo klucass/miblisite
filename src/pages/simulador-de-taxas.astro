@@ -1,0 +1,565 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BlogCTA from "../components/BlogCTA.astro";
+import ArrowRight from "phosphor-astro/ArrowRight.astro";
+import Calculator from "phosphor-astro/Calculator.astro";
+import Info from "phosphor-astro/Info.astro";
+
+const title = "Simulador de taxas de plataforma e gateway | Miblify";
+const description =
+  "Simule quanto sobra de cada venda do seu produto digital. Compare a taxa da Hotmart, Kiwify, Eduzz, Monetizze e Miblify e veja seu líquido por venda, no mês e no acumulado do ano. Grátis e sem cadastro.";
+
+const faq = [
+  {
+    q: "A Miblify substitui a plataforma que eu uso hoje?",
+    a: "Sim. Você cadastra o produto, a Miblify gera o checkout e faz a entrega automática para o seu cliente: assim que o pagamento é aprovado, ele recebe o acesso ao infoproduto sem você precisar mandar nada à mão. Serve para PDF e ebook, template, acesso a grupo ou comunidade e produto com cobrança recorrente.",
+  },
+  {
+    q: "Como o simulador calcula a taxa?",
+    a: "Para cada plataforma a conta é: taxa percentual sobre o preço do produto mais a taxa fixa por transação. O resultado é multiplicado pelo número de vendas no mês para mostrar o impacto mensal e anual. Na Miblify a conta soma os 2% da plataforma com a taxa do gateway de pagamento que você conectar.",
+  },
+  {
+    q: "Os percentuais estão atualizados?",
+    a: "São valores de referência praticados nos planos padrão. Cada plataforma muda condições por plano, tipo de produto e negociação, então confirme sempre no site oficial. Todos os campos do simulador são editáveis: se a sua taxa é diferente, troque o número e a conta se ajusta na hora.",
+  },
+  {
+    q: "Por que a taxa da Miblify aparece somada com a do gateway?",
+    a: "Porque na Miblify o dinheiro cai direto na sua conta do gateway, não na nossa. Cobramos 2% por venda aprovada e você paga separadamente a taxa do gateway que escolher. Nas plataformas tradicionais a taxa única já embute o processamento do pagamento, por isso o percentual é bem maior.",
+  },
+  {
+    q: "Pix tem taxa menor que cartão?",
+    a: "No gateway, sim, e a diferença é grande: o Pix costuma custar menos de 1%, ou até um valor fixo de centavos por transação, contra cerca de 5% do cartão de crédito. Nas plataformas tradicionais a taxa geralmente é a mesma para os dois métodos, então quem vende muito no Pix é quem mais perde dinheiro com taxa única alta.",
+  },
+  {
+    q: "O simulador considera reembolso e chargeback?",
+    a: "Não. Ele calcula o custo das vendas aprovadas. Reembolso, chargeback e taxa de saque variam muito por plataforma e por nicho, então entram como custo adicional em cima do resultado que você vê aqui.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      name: "Simulador de taxas de plataforma e gateway",
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Web",
+      url: "https://www.miblify.com/simulador-de-taxas/",
+      description,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "BRL" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    },
+  ],
+};
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main>
+    <section class="px-6 pt-10 pb-10 md:pt-16 md:pb-16 max-w-4xl mx-auto text-center">
+      <span class="inline-block text-base-content font-cabinet bg-pink-200 px-5 py-1 rounded-full mb-5">
+        Ferramenta grátis, sem cadastro
+      </span>
+      <h1 class="text-base-content text-3xl md:text-5xl font-cabinet-bold">
+        Simulador de taxas: quanto sobra de cada venda sua?
+      </h1>
+      <p class="text-base-content/80 text-lg md:text-xl mt-5">
+        Coloque o preço do seu produto e quantas vendas você faz por mês. O simulador mostra quanto cada plataforma
+        desconta por venda, quanto sobra líquido no seu mês e quanto de taxa isso acumula em um ano.
+      </p>
+    </section>
+
+    <!-- ======================= SIMULADOR ======================= -->
+    <section class="px-4 md:px-6 max-w-6xl mx-auto">
+      <fee-simulator class="block">
+        <div
+          class="bg-base-100 border-[3px] border-base-content rounded-2xl shadow-[8px_8px_0_0_oklch(0.235_0_129.63)] p-5 md:p-8">
+          <!-- Entradas -->
+          <div class="grid gap-6 md:grid-cols-3">
+            <label class="block">
+              <span class="font-cabinet-bold text-base-content">Preço do produto</span>
+              <div class="mt-2 flex items-center border-2 border-base-content rounded-xl bg-white overflow-hidden">
+                <span class="px-3 text-base-content/60 font-cabinet">R$</span>
+                <input
+                  data-field="price"
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="497"
+                  inputmode="decimal"
+                  class="w-full py-3 pr-3 text-xl font-cabinet-bold text-base-content outline-none"
+                />
+              </div>
+            </label>
+
+            <label class="block">
+              <span class="font-cabinet-bold text-base-content">Vendas por mês</span>
+              <div class="mt-2 border-2 border-base-content rounded-xl bg-white overflow-hidden">
+                <input
+                  data-field="sales"
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="60"
+                  inputmode="numeric"
+                  class="w-full py-3 px-3 text-xl font-cabinet-bold text-base-content outline-none"
+                />
+              </div>
+            </label>
+
+            <div>
+              <span class="font-cabinet-bold text-base-content">Forma de pagamento</span>
+              <div class="mt-2 flex border-2 border-base-content rounded-xl bg-white overflow-hidden" role="group">
+                <button
+                  type="button"
+                  data-method="pix"
+                  aria-pressed="true"
+                  class="method-btn flex-1 py-3 font-cabinet-bold text-base-content">
+                  Pix
+                </button>
+                <button
+                  type="button"
+                  data-method="card"
+                  aria-pressed="false"
+                  class="method-btn flex-1 py-3 font-cabinet-bold text-base-content border-l-2 border-base-content">
+                  Cartão
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gateway (linha da Miblify) -->
+          <div
+            class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 bg-base-200 border-2 border-base-content rounded-xl p-4">
+            <Calculator class="size-6 shrink-0" />
+            <label class="font-cabinet text-base-content">
+              Gateway que você usaria na Miblify:
+              <select
+                data-field="gateway"
+                class="mt-1 sm:mt-0 sm:ml-1 block sm:inline w-full sm:w-auto font-cabinet-bold bg-white border-2 border-base-content rounded-lg px-2 py-2 sm:py-1">
+                <option value="mercado_pago">Mercado Pago</option>
+                <option value="pague_dev">Pague.dev (só Pix)</option>
+                <option value="custom">Outro (eu informo)</option>
+              </select>
+            </label>
+            <span data-role="gateway-hint" class="text-sm text-base-content/70 font-cabinet"></span>
+          </div>
+
+          <!-- Resultado -->
+          <div class="mt-10 md:mt-12">
+            <h2 class="font-cabinet-bold text-xl md:text-2xl text-base-content mb-2">
+              O que sobra pra você, do melhor para o pior
+            </h2>
+            <p data-role="summary" class="text-base-content/70 font-cabinet mb-6"></p>
+            <div data-role="results" class="grid gap-4 overflow-x-auto"></div>
+          </div>
+
+          <!-- Taxas editáveis -->
+          <details class="mt-10 md:mt-12 border-2 border-base-content rounded-xl bg-base-200">
+            <summary class="cursor-pointer p-4 font-cabinet-bold text-base-content">
+              Ajustar as taxas usadas no cálculo
+            </summary>
+            <div class="px-4 pb-4">
+              <p class="text-sm text-base-content/70 font-cabinet mb-4">
+                Valores de referência dos planos padrão. Sua condição pode ser diferente: edite os campos abaixo e a
+                conta se refaz na hora.
+              </p>
+              <div data-role="editor" class="grid gap-3 sm:grid-cols-2"></div>
+              <button
+                type="button"
+                data-role="reset"
+                class="mt-4 font-cabinet underline text-base-content/70 hover:text-base-content">
+                Restaurar valores de referência
+              </button>
+            </div>
+          </details>
+
+          <p class="mt-8 flex gap-2 text-sm text-base-content/60 font-cabinet">
+            <Info class="size-5 shrink-0" />
+            <span>
+              Simulação com fins comparativos. Não considera reembolso, chargeback, antecipação de recebíveis, imposto
+              nem comissão de afiliado. Confirme as taxas atuais no site de cada plataforma.
+            </span>
+          </p>
+        </div>
+
+        <!-- Modelo de cada linha de resultado -->
+        <template data-role="row">
+          <div
+            class="result-row grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-6 border-2 border-base-content rounded-xl p-4 bg-white">
+            <div>
+              <p class="font-cabinet-bold text-lg text-base-content" data-slot="name"></p>
+              <p class="text-sm text-base-content/60 font-cabinet" data-slot="formula"></p>
+            </div>
+            <div class="fee-grid">
+              <span></span>
+              <span class="fee-head">Taxa</span>
+              <span class="fee-head">Líquido</span>
+
+              <span class="fee-period">Por venda</span>
+              <span class="fee-num text-orange" data-slot="feePerSale"></span>
+              <span class="fee-num text-base-content" data-slot="netPerSale"></span>
+
+              <span class="fee-period">No mês</span>
+              <span class="fee-num text-orange" data-slot="feePerMonth"></span>
+              <span class="fee-num text-base-content" data-slot="netPerMonth"></span>
+
+              <span class="fee-rule"></span>
+              <span class="fee-period">No ano</span>
+              <span class="fee-num text-orange" data-slot="feePerYear"></span>
+              <span class="fee-num text-base-content" data-slot="netPerYear"></span>
+            </div>
+          </div>
+        </template>
+      </fee-simulator>
+    </section>
+
+    <!-- ======================= CONTEÚDO ======================= -->
+    <article class="px-6 pt-20 md:pt-28 max-w-3xl mx-auto text-base-content">
+      <h2 class="text-2xl md:text-3xl font-cabinet-bold">Por que a taxa importa mais do que parece</h2>
+      <p class="mt-5 text-lg">
+        Uma taxa de 9,9% parece pequena escrita assim. Num produto de R$ 497, ela vira R$ 50 por venda. Em 60 vendas no
+        mês, R$ 3.012. Em um ano, mais de R$ 36 mil saindo do seu bolso para a plataforma.
+      </p>
+      <p class="mt-5 text-lg">
+        O detalhe que quase ninguém nota é que a taxa é percentual: ela cresce junto com o seu resultado. O custo da
+        plataforma para te atender é praticamente o mesmo quando você vende 5 ou 500 vezes no mês, mas o que ela cobra
+        de você multiplica.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-cabinet-bold mt-14 md:mt-20">A diferença entre taxa de plataforma e taxa de gateway</h2>
+      <p class="mt-5 text-lg">
+        São duas coisas que costumam vir embrulhadas num número só. O <strong>gateway</strong> é quem processa o
+        pagamento de fato, como o Mercado Pago ou o Pague.dev. Ele cobra pelo Pix e pelo cartão, e essa taxa é a mesma
+        para qualquer negócio. A <strong>plataforma</strong> é quem entrega o checkout, o cadastro do produto e a entrega
+        automática.
+      </p>
+      <p class="mt-5 text-lg">
+        Nas plataformas tradicionais os dois vêm juntos numa taxa única de ~10%, e você não vê quanto foi processamento e
+        quanto foi margem da plataforma. Na Miblify você conecta o seu próprio gateway, o dinheiro cai direto na sua
+        conta e a gente cobra 2% por venda aprovada. É por isso que no simulador a linha da Miblify aparece somada com a
+        taxa do gateway. Comparar nossos 2% soltos contra os 9,9% de quem já embute o processamento seria trapaça.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-cabinet-bold mt-14 md:mt-20">Quem vende no Pix é quem mais perde com taxa única</h2>
+      <p class="mt-5 text-lg">
+        No gateway, o Pix custa menos de 1% (em alguns casos uns centavos fixos por transação, e nada de percentual),
+        enquanto o cartão de crédito fica perto de 5%. Nas plataformas tradicionais
+        a taxa é a mesma para os dois. Ou seja: quando o seu cliente paga no Pix, o custo real de processamento cai a
+        quase zero, mas a plataforma continua cobrando ~10% de você. Troque a forma de pagamento no simulador acima e
+        veja o tamanho dessa diferença no ano.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-cabinet-bold mt-14 md:mt-20">Perguntas frequentes</h2>
+      <div class="mt-6">
+        {
+          faq.map(({ q, a }) => (
+            <details class="border-b-2 border-base-content/10 py-4">
+              <summary class="cursor-pointer font-cabinet-bold text-lg">{q}</summary>
+              <p class="mt-3 text-base-content/80">{a}</p>
+            </details>
+          ))
+        }
+      </div>
+
+      <div class="mt-16 md:mt-20 text-center">
+        <a
+          href="https://app.miblify.com/?utm_source=site&utm_medium=tool&utm_campaign=simulador-de-taxas"
+          class="inline-flex items-center gap-3 bg-amarelo border-2 border-base-content text-base-content px-8 py-4 rounded-xl font-cabinet-bold text-lg md:text-xl transition-all hover:-translate-y-1 active:translate-y-0 shadow-[4px_4px_0_0_oklch(0.235_0_129.63)] hover:shadow-[8px_8px_0_0_oklch(0.235_0_129.63)]">
+          Criar minha conta grátis
+          <ArrowRight class="size-6" />
+        </a>
+        <p class="text-base-content/70 font-cabinet mt-4">Sem mensalidade. Você só paga quando vende.</p>
+      </div>
+    </article>
+
+    <div class="mt-20 md:mt-28">
+      <BlogCTA />
+    </div>
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <style>
+    .method-btn[aria-pressed="true"] {
+      background-color: var(--color-amarelo);
+    }
+    .result-row[data-winner="true"] {
+      background-color: var(--color-amarelo);
+      box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63);
+    }
+    /* Mini tabela de cada linha: período nas linhas, taxa e líquido nas colunas. */
+    /* Colunas por conteúdo em qualquer largura: número comprido escorre para o scroll
+       do container em vez de ser cortado dentro da célula. */
+    .fee-grid {
+      display: grid;
+      grid-template-columns: auto max-content max-content;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.25rem 0.75rem;
+    }
+    .fee-head,
+    .fee-period {
+      font-family: "cabinet", serif;
+      font-size: 0.6875rem;
+      line-height: 1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: oklch(0.235 0 129.63 / 0.55);
+    }
+    .fee-head {
+      text-align: right;
+      white-space: nowrap;
+    }
+    .fee-num {
+      font-family: "cabinet-bold", serif;
+      font-size: 0.8125rem;
+      line-height: 1.25rem;
+      text-align: right;
+      white-space: nowrap;
+    }
+    /* A linha do ano fecha a conta, então ganha um fio atravessando a tabela como um total. */
+    .fee-rule {
+      grid-column: 1 / -1;
+      height: 0;
+      margin-top: 0.125rem;
+      border-top: 1px solid oklch(0.235 0 129.63 / 0.2);
+    }
+    @media (width >= 48rem) {
+      .fee-grid {
+        justify-content: end;
+        gap: 0.25rem 1.5rem;
+      }
+      .fee-num {
+        font-size: 0.875rem;
+      }
+    }
+    fee-simulator input[type="number"]::-webkit-outer-spin-button,
+    fee-simulator input[type="number"]::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  </style>
+
+  <script>
+    // @ts-nocheck
+    // Simulador de taxas. Web Component nativo, sem dependências.
+    const BRL = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+    const PCT = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+
+    /** Taxas de referência dos planos padrão (percentual + fixo por transação). `card: null` = não processa cartão. */
+    const REFERENCE = {
+      platforms: [
+        { id: "hotmart", name: "Hotmart", pix: { pct: 9.9, fixed: 1 }, card: { pct: 9.9, fixed: 1 } },
+        { id: "kiwify", name: "Kiwify", pix: { pct: 8.99, fixed: 2.49 }, card: { pct: 8.99, fixed: 2.49 } },
+        { id: "eduzz", name: "Eduzz", pix: { pct: 8.9, fixed: 1 }, card: { pct: 8.9, fixed: 1 } },
+        { id: "monetizze", name: "Monetizze", pix: { pct: 9.9, fixed: 2 }, card: { pct: 9.9, fixed: 2 } },
+      ],
+      miblify: { pix: { pct: 2, fixed: 0 }, card: { pct: 2, fixed: 0 } },
+      gateways: {
+        mercado_pago: { name: "Mercado Pago", pix: { pct: 0.99, fixed: 0 }, card: { pct: 4.98, fixed: 0 } },
+        pague_dev: { name: "Pague.dev", pix: { pct: 0, fixed: 0.8 }, card: null },
+        custom: { name: "Outro gateway", pix: { pct: 1, fixed: 0 }, card: { pct: 4.5, fixed: 0 } },
+      },
+    };
+
+    /** "0,99%", "R$ 0,80" ou "0,99% + R$ 0,80", conforme a taxa tenha percentual, fixo ou os dois. */
+    const rateLabel = ({ pct, fixed }) =>
+      [pct > 0 || !fixed ? `${PCT.format(pct)}%` : null, fixed > 0 ? BRL.format(fixed) : null]
+        .filter(Boolean)
+        .join(" + ");
+
+    class FeeSimulator extends HTMLElement {
+      #state = { price: 497, sales: 60, method: "pix", gateway: "mercado_pago", rates: structuredClone(REFERENCE) };
+      #els = {};
+
+      connectedCallback() {
+        this.#els = {
+          results: this.querySelector('[data-role="results"]'),
+          summary: this.querySelector('[data-role="summary"]'),
+          editor: this.querySelector('[data-role="editor"]'),
+          hint: this.querySelector('[data-role="gateway-hint"]'),
+          rowTemplate: this.querySelector('template[data-role="row"]'),
+        };
+
+        this.addEventListener("input", (event) => {
+          const field = event.target.dataset?.field;
+          if (!field) return;
+          if (field === "gateway") this.#state.gateway = event.target.value;
+          else if (field === "rate") this.#writeRate(event.target);
+          else this.#state[field] = Number(event.target.value);
+          this.#render();
+        });
+
+        this.addEventListener("click", (event) => {
+          const method = event.target.closest(".method-btn")?.dataset.method;
+          if (method) {
+            this.#state.method = method;
+            for (const btn of this.querySelectorAll(".method-btn")) {
+              btn.setAttribute("aria-pressed", String(btn.dataset.method === method));
+            }
+            this.#renderEditor();
+            this.#render();
+          }
+          if (event.target.closest('[data-role="reset"]')) {
+            this.#state.rates = structuredClone(REFERENCE);
+            this.#renderEditor();
+            this.#render();
+          }
+        });
+
+        this.#renderEditor();
+        this.#render();
+      }
+
+      /** Gateway em uso, caindo no Mercado Pago quando o escolhido não processa a forma de pagamento atual. */
+      #gateway() {
+        const { method, gateway, rates } = this.#state;
+        const chosen = rates.gateways[gateway];
+        return chosen[method] ? { ...chosen, id: gateway } : { ...rates.gateways.mercado_pago, id: "mercado_pago" };
+      }
+
+      /** Todas as opções comparadas, já com a linha da Miblify montada a partir do gateway escolhido. */
+      #options() {
+        const { method, rates } = this.#state;
+        const gw = this.#gateway();
+        const own = rates.miblify[method];
+        const gwRate = gw[method];
+
+        return [
+          {
+            id: "miblify",
+            name: "Miblify",
+            own: true,
+            pct: own.pct + gwRate.pct,
+            fixed: own.fixed + gwRate.fixed,
+            formula: `${rateLabel(own)} da Miblify + ${rateLabel(gwRate)} do ${gw.name}`,
+          },
+          ...rates.platforms.map(({ id, name, ...m }) => ({
+            id,
+            name,
+            own: false,
+            pct: m[method].pct,
+            fixed: m[method].fixed,
+            formula: `${rateLabel(m[method])} por venda`,
+          })),
+        ];
+      }
+
+      #render() {
+        const price = Math.max(0, this.#state.price || 0);
+        const sales = Math.max(0, this.#state.sales || 0);
+        const { results, summary, hint, rowTemplate } = this.#els;
+
+        const rows = this.#options()
+          .map((option) => {
+            const fee = Math.min(price, (price * option.pct) / 100 + option.fixed);
+            const net = price - fee;
+            return {
+              ...option,
+              fee,
+              net,
+              feeMonth: fee * sales,
+              netMonth: net * sales,
+              feeYear: fee * sales * 12,
+              netYear: net * sales * 12,
+            };
+          })
+          .sort((a, b) => a.fee - b.fee);
+
+        const best = rows[0];
+        const worst = rows.at(-1);
+        const mine = rows.find((row) => row.own);
+
+        results.replaceChildren(
+          ...rows.map((row) => {
+            const node = rowTemplate.content.cloneNode(true);
+            const el = node.querySelector(".result-row");
+            el.dataset.winner = String(row.id === best.id);
+            const set = (slot, text) => (node.querySelector(`[data-slot="${slot}"]`).textContent = text);
+            set("name", row.name);
+            set("formula", row.formula);
+            set("feePerSale", BRL.format(row.fee));
+            set("netPerSale", BRL.format(row.net));
+            set("feePerMonth", BRL.format(row.feeMonth));
+            set("netPerMonth", BRL.format(row.netMonth));
+            set("feePerYear", BRL.format(row.feeYear));
+            set("netPerYear", BRL.format(row.netYear));
+            return node;
+          }),
+        );
+
+        const saved = worst.feeYear - mine.feeYear;
+        summary.textContent =
+          sales > 0 && price > 0
+            ? `Com ${sales} venda${sales > 1 ? "s" : ""} de ${BRL.format(price)} por mês, na Miblify você fecha o mês com ${BRL.format(mine.netMonth)} no bolso contra ${BRL.format(worst.netMonth)} na opção mais cara (${worst.name}). Em 12 meses a diferença é de ${BRL.format(saved)}.`
+            : "Informe um preço e um número de vendas para ver a comparação.";
+
+        const { method, gateway } = this.#state;
+        const gw = this.#gateway();
+        const methodName = method === "pix" ? "Pix" : "cartão";
+        hint.textContent =
+          gw.id === gateway
+            ? `${gw.name}: ${rateLabel(gw[method])} no ${methodName}.`
+            : `O ${this.#state.rates.gateways[gateway].name} não processa cartão, então a simulação de cartão usa o ${gw.name} a ${rateLabel(gw[method])}.`;
+      }
+
+      #renderEditor() {
+        const { method, rates } = this.#state;
+        const entries = [
+          { scope: "miblify", label: "Miblify (plataforma)", rate: rates.miblify[method] },
+          ...Object.entries(rates.gateways)
+            .filter(([, gw]) => gw[method])
+            .map(([id, gw]) => ({ scope: `gateway:${id}`, label: `${gw.name} (gateway)`, rate: gw[method] })),
+          ...rates.platforms.map((p) => ({ scope: `platform:${p.id}`, label: p.name, rate: p[method] })),
+        ];
+
+        this.#els.editor.replaceChildren(
+          ...entries.map(({ scope, label, rate }) => {
+            const wrap = document.createElement("div");
+            wrap.className =
+              "flex flex-wrap items-center gap-x-2 gap-y-1 bg-white border-2 border-base-content rounded-lg p-2";
+            wrap.innerHTML = `
+              <span class="font-cabinet text-sm w-full sm:w-auto sm:flex-1 min-w-0 text-base-content">${label}</span>
+              <input data-field="rate" data-scope="${scope}" data-key="pct" type="number" step="0.01" min="0"
+                value="${rate.pct}" aria-label="Percentual de ${label}"
+                class="w-16 text-right font-cabinet-bold border-b-2 border-base-content/30 outline-none" />
+              <span class="text-sm text-base-content/60">%</span>
+              <span class="text-sm text-base-content/40">+</span>
+              <span class="text-sm text-base-content/60">R$</span>
+              <input data-field="rate" data-scope="${scope}" data-key="fixed" type="number" step="0.01" min="0"
+                value="${rate.fixed}" aria-label="Taxa fixa de ${label}"
+                class="w-14 text-right font-cabinet-bold border-b-2 border-base-content/30 outline-none" />`;
+            return wrap;
+          }),
+        );
+      }
+
+      #writeRate(input) {
+        const [kind, id] = input.dataset.scope.split(":");
+        const { method, rates } = this.#state;
+        const target =
+          kind === "miblify"
+            ? rates.miblify
+            : kind === "gateway"
+              ? rates.gateways[id]
+              : rates.platforms.find((p) => p.id === id);
+        target[method][input.dataset.key] = Math.max(0, Number(input.value) || 0);
+      }
+    }
+
+    customElements.define("fee-simulator", FeeSimulator);
+  </script>
+</Layout>

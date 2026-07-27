@@ -38,6 +38,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 4 | como sair da hotmart / migrar de plataforma | Passo a passo pra migrar sem perder vendas. Infoprodutor escalando | usada 2026-07-16 |
 | 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | usada 2026-07-19 |
 | 16 | quanto custa vender curso online | Somar TODOS os custos escondidos (taxa, antecipação, parcelamento, gateway) e mostrar o líquido real. Infoprodutor | usada 2026-07-27 |
+| 46 | taxa de gateway de pagamento quanto custa | Separar a taxa única de ~10% em duas partes: quanto é processamento (Pix <1%, cartão ~5%) e quanto é margem da plataforma. Fechar convidando a rodar a própria conta no [simulador de taxas](/simulador-de-taxas/). Infoprodutor escalando | pendente |
 | 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | pendente |
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | pendente |
 | 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | pendente |
@@ -97,6 +98,16 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 43 | black friday para infoprodutos | Publicar até início de outubro/2026 | pendente |
 | 44 | vender infoproduto no fim de ano / janeiro | Publicar em novembro/2026 (pico de "recomeço" em janeiro) | pendente |
 | 45 | planejamento de infoproduto para 2027 | Publicar em dezembro/2026 | pendente |
+
+---
+
+## Páginas-ferramenta para link interno
+
+Não são posts, mas são bons destinos de link dentro de qualquer pauta sobre custo, margem ou preço.
+
+| URL | Serve para |
+|---|---|
+| `/simulador-de-taxas/` | Comparar taxa de Hotmart, Kiwify, Eduzz, Monetizze e Miblify e ver o líquido por venda, no mês e no ano. Todas as taxas são editáveis pelo visitante |
 
 ---
 
