@@ -30,7 +30,7 @@ const faq = [
   },
   {
     q: "Pix tem taxa menor que cartão?",
-    a: "No gateway, sim, e a diferença é grande: o Pix costuma custar menos de 1%, ou até um valor fixo de centavos por transação, contra cerca de 5% do cartão de crédito. Nas plataformas tradicionais a taxa geralmente é a mesma para os dois métodos, então quem vende muito no Pix é quem mais perde dinheiro com taxa única alta.",
+    a: "No gateway, sim, e a diferença é grande: o Pix costuma custar menos de 1%, ou até um valor fixo de centavos por transação, contra cerca de 4% do cartão de crédito. Nas plataformas tradicionais a taxa geralmente é a mesma para os dois métodos, então quem vende muito no Pix é quem mais perde dinheiro com taxa única alta.",
   },
   {
     q: "O simulador considera reembolso e chargeback?",
@@ -255,7 +255,7 @@ const jsonLd = {
       <h2 class="text-2xl md:text-3xl font-cabinet-bold mt-14 md:mt-20">Quem vende no Pix é quem mais perde com taxa única</h2>
       <p class="mt-5 text-lg">
         No gateway, o Pix custa menos de 1% (em alguns casos uns centavos fixos por transação, e nada de percentual),
-        enquanto o cartão de crédito fica perto de 5%. Nas plataformas tradicionais
+        enquanto o cartão de crédito fica perto de 4%. Nas plataformas tradicionais
         a taxa é a mesma para os dois. Ou seja: quando o seu cliente paga no Pix, o custo real de processamento cai a
         quase zero, mas a plataforma continua cobrando ~10% de você. Troque a forma de pagamento no simulador acima e
         veja o tamanho dessa diferença no ano.
@@ -370,7 +370,7 @@ const jsonLd = {
       ],
       miblify: { pix: { pct: 2, fixed: 0 }, card: { pct: 2, fixed: 0 } },
       gateways: {
-        mercado_pago: { name: "Mercado Pago", pix: { pct: 0.99, fixed: 0 }, card: { pct: 4.98, fixed: 0 } },
+        mercado_pago: { name: "Mercado Pago", pix: { pct: 0.99, fixed: 0 }, card: { pct: 3.99, fixed: 0 } },
         pague_dev: { name: "Pague.dev", pix: { pct: 0, fixed: 0.8 }, card: null },
         custom: { name: "Outro gateway", pix: { pct: 1, fixed: 0 }, card: { pct: 4.5, fixed: 0 } },
       },
