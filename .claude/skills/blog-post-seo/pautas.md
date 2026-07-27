@@ -24,6 +24,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-criar-checkout-produto-digital` | como criar checkout produto digital | 2026-07-19 |
 | `como-criar-comunidade-paga` | como criar comunidade paga | 2026-07-19 |
 | `como-vender-mentoria-online` | como vender mentoria online | 2026-07-25 |
+| `quanto-custa-vender-curso-online` | quanto custa vender curso online | 2026-07-27 |
 
 ---
 
@@ -36,7 +37,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 3 | saque retido infoproduto | Por que plataformas seguram seu dinheiro e como ter controle do caixa. Infoprodutor | usada 2026-07-13 |
 | 4 | como sair da hotmart / migrar de plataforma | Passo a passo pra migrar sem perder vendas. Infoprodutor escalando | usada 2026-07-16 |
 | 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | usada 2026-07-19 |
-| 16 | quanto custa vender curso online | Somar TODOS os custos escondidos (taxa, antecipação, parcelamento, gateway) e mostrar o líquido real. Infoprodutor | pendente |
+| 16 | quanto custa vender curso online | Somar TODOS os custos escondidos (taxa, antecipação, parcelamento, gateway) e mostrar o líquido real. Infoprodutor | usada 2026-07-27 |
 | 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | pendente |
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | pendente |
 | 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | pendente |
