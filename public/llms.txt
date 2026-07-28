@@ -12,6 +12,10 @@ Miblify is a sales platform for digital products (e-books, courses, consulting, 
 - **Marketing Tools**: Discount coupons, abandoned cart recovery, and integrated email marketing.
 - **Automatic Delivery**: After payment confirmation, the system automatically delivers files or links to the customer.
 
+## Free Tools
+
+- **Fee Simulator** ([www.miblify.com/simulador-de-taxas](https://www.miblify.com/simulador-de-taxas/)): Free, no signup. Compares the fee charged by the main Brazilian infoproduct platforms (Hotmart, Kiwify, Eduzz, Monetizze) against Miblify, showing the fee and the net amount per sale, per month, and per year. Every rate is editable by the visitor, and Pix and credit card are calculated separately.
+
 ## How to Start Using Miblify (Human-Friendly Guide)
 
 Follow these steps to launch your first store in just a few minutes:

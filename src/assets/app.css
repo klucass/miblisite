@@ -57,6 +57,7 @@
   --color-amarelo: oklch(0.8994 0.1526 94.7);
   --color-orange: oklch(0.666 0.2145 36.1);
   --color-pink: oklch(0.7791 0.1994 332.91);
+  --color-roxo-suave: oklch(0.8865 0.0605 288.5);
 }
 .link {
    @apply text-primary underline-offset-4;

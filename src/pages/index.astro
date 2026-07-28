@@ -21,6 +21,88 @@ import X from "phosphor-astro/X.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import miblifyVendinha from "../assets/img/miblify-vendinha.png";
+import easyDigital from "../assets/img/miblify-easy-digital.png";
+
+// Mesma lista alimenta o acordeão visível e o FAQPage do JSON-LD, então pergunta na tela e
+// pergunta no schema não têm como divergir.
+const faq = [
+  {
+    q: "Quanto custa usar o Miblify?",
+    a: "Nossa filosofia é crescer com você. Não cobramos mensalidade, taxa de adesão ou taxa de cancelamento. A única taxa cobrada é de 2% sobre o valor de pedidos pagos. Se você não vender, não paga nada.",
+  },
+  {
+    q: "Como o comprador recebe o produto?",
+    a: "A entrega é automática. Assim que o pagamento é aprovado, o comprador recebe um e-mail com o acesso e o produto aparece na Minha Biblioteca, a área de conteúdo da Miblify. Lá ele assiste aos vídeos e baixa os arquivos que você subiu, na hora que quiser. Você não precisa mandar nada manualmente.",
+  },
+  {
+    q: "Existe alguma cobrança para pedidos cancelados ou não pagos?",
+    a: "Não. A taxa de 2% incide exclusivamente sobre vendas aprovadas e pagas.",
+  },
+  {
+    q: "Tenho que pagar algum plano mensal?",
+    a: "Todas as funcionalidades da plataforma estão liberadas desde o primeiro dia, sem travas por planos. Essa é nossa oferta de lançamento.",
+  },
+  {
+    q: "Preciso cadastrar cartão de crédito para começar?",
+    a: "Não é necessário. Como não há cobrança de mensalidade, você pode criar sua conta, configurar sua loja e começar a vender sem informar dados de cobrança antecipadamente.",
+  },
+  {
+    q: "Existe fidelidade ou contrato de longo prazo?",
+    a: "Não. Você é livre para usar o Miblify pelo tempo que desejar. Acreditamos na qualidade do nosso serviço para manter você conosco, não em contratos amarrados.",
+  },
+  {
+    q: "Como a taxa de 2% é cobrada?",
+    a: "Quando você começar a vender, o sistema vai requisitar que você forneça dados de pagamento para a cobrança das comissões.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.miblify.com/#organization",
+      name: "Miblify",
+      url: "https://www.miblify.com/",
+      logo: "https://app.miblify.com/miblify.png",
+      description:
+        "Plataforma para criadores venderem produtos digitais com checkout próprio, entrega automática e 2% por venda aprovada.",
+      sameAs: ["https://www.instagram.com/miblify", "https://twitter.com/miblify"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.miblify.com/#website",
+      url: "https://www.miblify.com/",
+      name: "Miblify",
+      inLanguage: "pt-BR",
+      publisher: { "@id": "https://www.miblify.com/#organization" },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Miblify",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: "https://www.miblify.com/",
+      publisher: { "@id": "https://www.miblify.com/#organization" },
+      description:
+        "Crie sua loja, conecte seu gateway de pagamento e venda ebook, curso, mentoria, comunidade e template com entrega automática.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "BRL",
+        description: "Sem mensalidade. 2% por venda aprovada, cobrados só quando você vende.",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    },
+  ],
+};
 ---
 
 <Layout>
@@ -55,7 +137,7 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
       <div class="text-center mt-10">
         <a
           href="https://app.miblify.com/"
-          class="cta-button btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl px-10 md:px-20"
+          class="cta-button btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl w-full md:w-auto px-10 md:px-20"
           style="box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63); font-size: clamp(1.125rem, 4vw, 1.5rem);">
           Começar agora de graça
           <ArrowRight class="size-5" />
@@ -362,7 +444,7 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
     <div class="text-center my-10 md:my-20 max-w-4xl mx-auto px-6 reveal-scale">
       <a
         href="https://app.miblify.com/"
-        class="cta-button btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl px-10 md:px-20"
+        class="cta-button btn btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl w-full md:w-auto px-10 md:px-20"
         style="box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63); font-size: clamp(1.125rem, 4vw, 1.5rem);">
         Quero criar minha loja
         <ArrowRight class="size-5" />
@@ -402,7 +484,7 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
             <strong data-role="saved" class="font-cabinet-bold text-orange whitespace-nowrap">R$ 10.521</strong>
             só de taxa na Miblify.
           </p>
-          <p data-role="basis" class="text-base-content/60 font-cabinet text-sm mt-5"></p>
+
           <a
             href="/simulador-de-taxas/"
             class="inline-block mt-6 font-cabinet-bold text-base-content underline decoration-2 underline-offset-4 hover:text-primary">
@@ -412,79 +494,48 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
       </fee-teaser>
     </section>
 
-    <div class="bg-pink px-6 py-10 md:px-10 md:py-20 mt-10">
+    <!-- Virada de chave: quem manda na plataforma é você -->
+    <section class="p-6 md:p-10">
+      <div class="bg-roxo-suave rounded-2xl px-6 py-12 md:px-14 md:py-36">
+        <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 md:gap-12 md:items-center">
+          <div class="reveal">
+            <h2 class="font-cabinet-bold text-base-content text-3xl md:text-5xl leading-tight">
+              Pare de trabalhar para a plataforma
+            </h2>
+            <p class="font-cabinet text-base-content/80 text-xl md:text-2xl mt-5 leading-relaxed">
+              Transforme sua audiência em renda de forma simples e sem custos escondidos.
+            </p>
+            <a
+              href="https://app.miblify.com/"
+              class="cta-button btn btn-lg md:btn-xl bg-amarelo border-2 border-base-content text-base-content rounded-xl w-full md:w-auto px-8 md:px-12 mt-8"
+              style="box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63);">
+              Começar agora
+              <ArrowRight class="size-5" />
+            </a>
+          </div>
+          <div class="flex justify-center md:justify-end reveal-scale">
+            <Image src={easyDigital} alt="" loading="lazy" class="w-full max-w-sm md:max-w-md" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-pink px-6 py-10 md:px-10 md:py-20">
       <div class="max-w-6xl mx-auto text-base-content">
         <div class="md:grid md:grid-cols-3 md:gap-0 items-start">
           <h2 class="text-3xl md:text-4xl font-bold font-cabinet mb-5 md:mb-0">Tire suas dúvidas</h2>
           <div class="join join-vertical w-full col-span-2 [--border:0px]">
-            <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" aria-label="Quanto custa usar o Miblify?" checked="checked" />
-              <div class="collapse-title text-lg font-bold">Quanto custa usar o Miblify?</div>
-              <div class="collapse-content text-base-content/80">
-                <p>
-                  Nossa filosofia é crescer com você. Não cobramos mensalidade, taxa de adesão ou taxa de cancelamento.
-                  A única taxa cobrada é de 2% sobre o valor de pedidos pagos. Se você não vender, não paga nada.
-                </p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item">
-              <input
-                type="radio"
-                name="miblify-faq"
-                aria-label="Existe alguma cobrança para pedidos cancelados ou não pagos?"
-              />
-              <div class="collapse-title text-lg font-bold">
-                Existe alguma cobrança para pedidos cancelados ou não pagos?
-              </div>
-              <div class="collapse-content text-base-content/80">
-                <p>Não. A taxa de 2% incide exclusivamente sobre vendas aprovadas e pagas.</p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" aria-label="Tenho que pagar algum plano mensal?" />
-              <div class="collapse-title text-lg font-bold">Tenho que pagar algum plano mensal?</div>
-              <div class="collapse-content text-base-content/80">
-                <p>
-                  Todas as funcionalidades da plataforma estão liberadas desde o primeiro dia, sem travas por planos.
-                  Essa é nossa oferta de lançamento.
-                </p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" aria-label="Preciso cadastrar cartão de crédito para começar?" />
-              <div class="collapse-title text-lg font-bold">Preciso cadastrar cartão de crédito para começar?</div>
-              <div class="collapse-content text-base-content/80">
-                <p>
-                  Não é necessário. Como não há cobrança de mensalidade, você pode criar sua conta, configurar sua loja
-                  e começar a vender sem informar dados de cobrança antecipadamente.
-                </p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" aria-label="Existe fidelidade ou contrato de longo prazo?" />
-              <div class="collapse-title text-lg font-bold">Existe fidelidade ou contrato de longo prazo?</div>
-              <div class="collapse-content text-base-content/80">
-                <p>
-                  Não. Você é livre para usar o Miblify pelo tempo que desejar. Acreditamos na qualidade do nosso
-                  serviço para manter você conosco, não em contratos amarrados.
-                </p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item">
-              <input type="radio" name="miblify-faq" aria-label="Como a taxa de 2% é cobrada?" />
-              <div class="collapse-title text-lg font-bold">Como a taxa de 2% é cobrada?</div>
-              <div class="collapse-content text-base-content/80">
-                <p>
-                  Quando você começar a vender, o sistema vai requisitar que você forneça dados de pagamento para a
-                  cobrança das comissões.
-                </p>
-              </div>
-            </div>
+            {
+              faq.map(({ q, a }, i) => (
+                <div class="collapse collapse-arrow join-item">
+                  <input type="radio" name="miblify-faq" aria-label={q} checked={i === 0} />
+                  <div class="collapse-title text-lg font-bold">{q}</div>
+                  <div class="collapse-content text-base-content/80">
+                    <p>{a}</p>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -492,6 +543,8 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
 
     <Footer />
   </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <style>
     .cta-button {
@@ -801,9 +854,11 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
         const worst = worstPlatform(REFERENCE, "pix", price);
         const savedPerSale = feeFor(worst.pix, price) - feeFor(miblifyRate(REFERENCE, "pix"), price);
 
-        this.querySelector('[data-role="saved"]').textContent = BRL_CHEIO.format(Math.max(0, savedPerSale) * sales * 12);
+        this.querySelector('[data-role="saved"]').textContent = BRL_CHEIO.format(
+          Math.max(0, savedPerSale) * sales * 12
+        );
         this.querySelector('[data-role="basis"]').textContent =
-          `Comparado com a plataforma mais cara da nossa lista no Pix (${worst.name}, ${rateLabel(worst.pix)} por venda) ` +
+          `Comparado com uma plataforma tradicional a ${rateLabel(worst.pix)} por venda no Pix, ` +
           `contra os 2% da Miblify mais a taxa do Mercado Pago.`;
       }
     }
