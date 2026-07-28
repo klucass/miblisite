@@ -25,6 +25,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-criar-comunidade-paga` | como criar comunidade paga | 2026-07-19 |
 | `como-vender-mentoria-online` | como vender mentoria online | 2026-07-25 |
 | `quanto-custa-vender-curso-online` | quanto custa vender curso online | 2026-07-27 |
+| `taxa-de-gateway-de-pagamento` | taxa de gateway de pagamento | 2026-07-28 |
 
 ---
 
@@ -38,7 +39,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 4 | como sair da hotmart / migrar de plataforma | Passo a passo pra migrar sem perder vendas. Infoprodutor escalando | usada 2026-07-16 |
 | 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | usada 2026-07-19 |
 | 16 | quanto custa vender curso online | Somar TODOS os custos escondidos (taxa, antecipação, parcelamento, gateway) e mostrar o líquido real. Infoprodutor | usada 2026-07-27 |
-| 46 | taxa de gateway de pagamento quanto custa | Separar a taxa única de ~10% em duas partes: quanto é processamento (Pix <1%, cartão ~5%) e quanto é margem da plataforma. Fechar convidando a rodar a própria conta no [simulador de taxas](/simulador-de-taxas/). Infoprodutor escalando | pendente |
+| 46 | taxa de gateway de pagamento quanto custa | Separar a taxa única de ~10% em duas partes: quanto é processamento (Pix <1%, cartão ~5%) e quanto é margem da plataforma. Fechar convidando a rodar a própria conta no [simulador de taxas](/simulador-de-taxas/). Infoprodutor escalando | usada 2026-07-28 |
 | 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | pendente |
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | pendente |
 | 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | pendente |

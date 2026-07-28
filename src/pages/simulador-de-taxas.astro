@@ -357,30 +357,7 @@ const jsonLd = {
   <script>
     // @ts-nocheck
     // Simulador de taxas. Web Component nativo, sem dependências.
-    const BRL = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
-    const PCT = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
-
-    /** Taxas de referência dos planos padrão (percentual + fixo por transação). `card: null` = não processa cartão. */
-    const REFERENCE = {
-      platforms: [
-        { id: "hotmart", name: "Hotmart", pix: { pct: 9.9, fixed: 1 }, card: { pct: 9.9, fixed: 1 } },
-        { id: "kiwify", name: "Kiwify", pix: { pct: 8.99, fixed: 2.49 }, card: { pct: 8.99, fixed: 2.49 } },
-        { id: "eduzz", name: "Eduzz", pix: { pct: 4.9, fixed: 2.49 }, card: { pct: 4.9, fixed: 2.49 } },
-        { id: "monetizze", name: "Monetizze", pix: { pct: 7.9, fixed: 1.5 }, card: { pct: 7.9, fixed: 1.5 } },
-      ],
-      miblify: { pix: { pct: 2, fixed: 0 }, card: { pct: 2, fixed: 0 } },
-      gateways: {
-        mercado_pago: { name: "Mercado Pago", pix: { pct: 0.99, fixed: 0 }, card: { pct: 3.99, fixed: 0 } },
-        pague_dev: { name: "Pague.dev", pix: { pct: 0, fixed: 0.8 }, card: null },
-        custom: { name: "Outro gateway", pix: { pct: 1, fixed: 0 }, card: { pct: 4.5, fixed: 0 } },
-      },
-    };
-
-    /** "0,99%", "R$ 0,80" ou "0,99% + R$ 0,80", conforme a taxa tenha percentual, fixo ou os dois. */
-    const rateLabel = ({ pct, fixed }) =>
-      [pct > 0 || !fixed ? `${PCT.format(pct)}%` : null, fixed > 0 ? BRL.format(fixed) : null]
-        .filter(Boolean)
-        .join(" + ");
+    import { REFERENCE, BRL, rateLabel, feeFor } from "../data/platform-fees.js";
 
     class FeeSimulator extends HTMLElement {
       #state = { price: 197, sales: 60, method: "pix", gateway: "mercado_pago", rates: structuredClone(REFERENCE) };
@@ -466,7 +443,7 @@ const jsonLd = {
 
         const rows = this.#options()
           .map((option) => {
-            const fee = Math.min(price, (price * option.pct) / 100 + option.fixed);
+            const fee = feeFor(option, price);
             const net = price - fee;
             return {
               ...option,

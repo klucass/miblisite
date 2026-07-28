@@ -369,6 +369,49 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
       </a>
     </div>
 
+    <!-- Simulador de uma linha: economia anual de taxa, com link para o simulador completo -->
+    <section class="px-6 md:px-10 max-w-4xl mx-auto mb-16 md:mb-24 reveal">
+      <fee-teaser class="block">
+        <div
+          class="bg-base-100 border-[3px] border-base-content rounded-2xl shadow-[8px_8px_0_0_oklch(0.235_0_129.63)] p-6 md:p-10 text-center">
+          <p class="text-base-content text-xl md:text-3xl font-cabinet leading-relaxed">
+            Se você fizer
+            <input
+              data-field="sales"
+              type="number"
+              min="1"
+              step="1"
+              value="60"
+              inputmode="numeric"
+              aria-label="Vendas por mês"
+              class="teaser-input"
+            />
+            vendas por mês de
+            <span class="whitespace-nowrap"
+              >R$ <input
+                data-field="price"
+                type="number"
+                min="1"
+                step="1"
+                value="197"
+                inputmode="decimal"
+                aria-label="Preço do produto"
+                class="teaser-input"
+              /></span
+            >, em um ano você economiza
+            <strong data-role="saved" class="font-cabinet-bold text-orange whitespace-nowrap">R$ 10.521</strong>
+            só de taxa na Miblify.
+          </p>
+          <p data-role="basis" class="text-base-content/60 font-cabinet text-sm mt-5"></p>
+          <a
+            href="/simulador-de-taxas/"
+            class="inline-block mt-6 font-cabinet-bold text-base-content underline decoration-2 underline-offset-4 hover:text-primary">
+            Ver a conta completa no simulador de taxas <ArrowRight class="size-5 inline align-[-0.2em]" />
+          </a>
+        </div>
+      </fee-teaser>
+    </section>
+
     <div class="bg-pink px-6 py-10 md:px-10 md:py-20 mt-10">
       <div class="max-w-6xl mx-auto text-base-content">
         <div class="md:grid md:grid-cols-3 md:gap-0 items-start">
@@ -687,6 +730,34 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
         transform: none !important;
       }
     }
+
+    /* Campos editáveis dentro da frase do simulador de uma linha. Largura acompanha o
+       conteúdo via field-sizing, com um mínimo pra caber dois dígitos em qualquer navegador. */
+    .teaser-input {
+      font-family: "cabinet-bold", serif;
+      color: var(--color-primary);
+      background: transparent;
+      border-bottom: 3px solid var(--color-amarelo);
+      text-align: center;
+      width: auto;
+      field-sizing: content;
+      min-width: 2ch;
+      outline: none;
+    }
+    /* Navegador sem field-sizing daria a largura padrão de ~20 caracteres ao input. */
+    @supports not (field-sizing: content) {
+      .teaser-input {
+        width: 3.5ch;
+      }
+    }
+    .teaser-input:focus {
+      border-bottom-color: var(--color-primary);
+    }
+    .teaser-input::-webkit-outer-spin-button,
+    .teaser-input::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
   </style>
 
   <script>
@@ -709,5 +780,34 @@ import miblifyVendinha from "../assets/img/miblify-vendinha.png";
       const revealElements = document.querySelectorAll(".reveal, .reveal-scale, .reveal-left, .reveal-right");
       revealElements.forEach((el) => observer.observe(el));
     });
+  </script>
+
+  <script>
+    // @ts-nocheck
+    // Simulador de uma linha. Compara a Miblify com a plataforma mais cara no Pix,
+    // que é o cenário de maior diferença. As taxas vêm do mesmo módulo do simulador completo.
+    import { REFERENCE, BRL_CHEIO, feeFor, miblifyRate, rateLabel, worstPlatform } from "../data/platform-fees.js";
+
+    class FeeTeaser extends HTMLElement {
+      connectedCallback() {
+        this.addEventListener("input", () => this.#render());
+        this.#render();
+      }
+
+      #render() {
+        const price = Math.max(0, Number(this.querySelector('[data-field="price"]').value) || 0);
+        const sales = Math.max(0, Number(this.querySelector('[data-field="sales"]').value) || 0);
+
+        const worst = worstPlatform(REFERENCE, "pix", price);
+        const savedPerSale = feeFor(worst.pix, price) - feeFor(miblifyRate(REFERENCE, "pix"), price);
+
+        this.querySelector('[data-role="saved"]').textContent = BRL_CHEIO.format(Math.max(0, savedPerSale) * sales * 12);
+        this.querySelector('[data-role="basis"]').textContent =
+          `Comparado com a plataforma mais cara da nossa lista no Pix (${worst.name}, ${rateLabel(worst.pix)} por venda) ` +
+          `contra os 2% da Miblify mais a taxa do Mercado Pago.`;
+      }
+    }
+
+    customElements.define("fee-teaser", FeeTeaser);
   </script>
 </Layout>
