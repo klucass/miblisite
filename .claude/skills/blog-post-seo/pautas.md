@@ -26,6 +26,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-vender-mentoria-online` | como vender mentoria online | 2026-07-25 |
 | `quanto-custa-vender-curso-online` | quanto custa vender curso online | 2026-07-27 |
 | `taxa-de-gateway-de-pagamento` | taxa de gateway de pagamento | 2026-07-28 |
+| `chargeback-em-infoproduto` | chargeback em infoproduto | 2026-07-29 |
 
 ---
 
@@ -40,7 +41,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 5 | por que minhas vendas de infoproduto pararam | Diagnóstico de dependência de algoritmo + dono dos próprios dados. Criador de conteúdo | usada 2026-07-19 |
 | 16 | quanto custa vender curso online | Somar TODOS os custos escondidos (taxa, antecipação, parcelamento, gateway) e mostrar o líquido real. Infoprodutor | usada 2026-07-27 |
 | 46 | taxa de gateway de pagamento quanto custa | Separar a taxa única de ~10% em duas partes: quanto é processamento (Pix <1%, cartão ~5%) e quanto é margem da plataforma. Fechar convidando a rodar a própria conta no [simulador de taxas](/simulador-de-taxas/). Infoprodutor escalando | usada 2026-07-28 |
-| 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | pendente |
+| 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | usada 2026-07-29 |
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | pendente |
 | 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | pendente |
 | 20 | plataforma de infoproduto sem mensalidade | Comparar o custo de entrar (mensalidade × taxa por venda) pra quem está começando. Criador iniciante | pendente |
