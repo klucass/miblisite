@@ -207,4 +207,109 @@ const ogImage = heroImage
     color: #3b38e8;
     font-weight: 700;
   }
+
+  /* Separador de seção */
+  .blog-content hr {
+    border: none;
+    border-top: 2px solid #1a1a1a;
+    margin: 3.5rem 0;
+    opacity: 0.15;
+  }
+
+  /* Código inline */
+  .blog-content code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background: #f2f2f7;
+    border: 1px solid #e0e0ea;
+    border-radius: 3px;
+    padding: 0.15em 0.4em;
+    white-space: nowrap;
+  }
+
+  .blog-content a code {
+    color: inherit;
+  }
+
+  /* Citação */
+  .blog-content blockquote {
+    margin: 2.5rem 0;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 4px solid #3b38e8;
+    color: #555;
+    font-style: italic;
+  }
+
+  .blog-content blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Tabelas — mesmo visual de borda dura do resto do site */
+  .blog-content table {
+    width: 100%;
+    margin: 2.5rem 0;
+    border-collapse: collapse;
+    border: 2px solid #1a1a1a;
+    border-radius: 2px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .blog-content thead {
+    background: #3b38e8;
+  }
+
+  .blog-content th {
+    padding: 0.9rem 1.1rem;
+    text-align: left;
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.2px;
+    border-right: 2px solid #1a1a1a;
+  }
+
+  .blog-content td {
+    padding: 0.85rem 1.1rem;
+    border-top: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+    vertical-align: top;
+  }
+
+  .blog-content th:last-child,
+  .blog-content td:last-child {
+    border-right: none;
+  }
+
+  .blog-content tbody tr:nth-child(even) {
+    background: #f7f7fb;
+  }
+
+  /* Última linha de tabela de conta costuma ser o total */
+  .blog-content tbody tr:last-child td strong {
+    color: #3b38e8;
+  }
+
+  /* Colunas numéricas alinhadas à direita quando a tabela tem 2 colunas */
+  .blog-content th:not(:first-child),
+  .blog-content td:not(:first-child) {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* Em telas estreitas a tabela rola horizontalmente em vez de vazar */
+  @media (max-width: 640px) {
+    .blog-content table {
+      display: block;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+
+    .blog-content th,
+    .blog-content td {
+      padding: 0.7rem 0.85rem;
+    }
+  }
 </style>
