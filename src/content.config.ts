@@ -10,6 +10,9 @@ const blog = defineCollection({
 		description: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		// Assuntos do post. Texto livre, mas mantenha o vocabulário de src/lib/tags.ts
+		// para não criar página de tag com um único artigo.
+		tags: z.array(z.string()).default([]),
 		// Aceita imagem local (posts antigos) OU URL https remota (ex.: Unsplash).
 		// image() vem primeiro para transformar caminhos locais; URLs remotas caem no z.string().
 		heroImage: z.union([image(), z.string().url()]).optional(),

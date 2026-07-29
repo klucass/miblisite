@@ -2,6 +2,10 @@
 title: "Como criar um checkout para produto digital que converte"
 description: "Aprenda como criar um checkout para produto digital em poucos minutos, sem site nem código, e veja o que reduz abandono e aumenta a conversão."
 pubDate: "2026-07-19"
+tags:
+  - "pagamentos"
+  - "tutorial"
+  - "produtos digitais"
 heroImage: "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=1600&q=80"
 ---
 

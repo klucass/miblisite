@@ -2,6 +2,9 @@
 title: "Eventos de marketing digital no 2º semestre de 2026"
 description: "Guia dos principais eventos de marketing digital e e-commerce do segundo semestre de 2026 no Brasil: datas, cidades e como aproveitar cada um."
 pubDate: "2026-07-13"
+tags:
+  - "marketing"
+  - "tendências"
 heroImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1600&q=80"
 ---
 

@@ -2,6 +2,10 @@
 title: "Chegou a Hora de Abandonar as Plataformas Tradicionais"
 description: "Descubra por que os grandes infoprodutores estão migrando para modelos de infraestrutura descentralizada e como a Miblify devolve o lucro e o controle do seu negócio."
 pubDate: "2026-03-06"
+tags:
+  - "plataformas"
+  - "autonomia"
+  - "taxas"
 heroImage: "../../assets/img/blog/arte_abstrata_neo_brutalista_miblify.png"
 ---
 

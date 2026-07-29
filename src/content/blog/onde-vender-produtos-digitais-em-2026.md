@@ -2,6 +2,10 @@
 title: "Onde vender produtos digitais em 2026: As melhores plataformas"
 description: "O mercado de infoprodutos mudou. Comparamos Miblify, Hotmart, Kiwify e WordPress para você escolher a melhor casa para seu negócio digital em 2026."
 pubDate: "2026-03-06"
+tags:
+  - "plataformas"
+  - "produtos digitais"
+  - "tendências"
 heroImage: "../../assets/img/blog/onde_vender_2026_hero_wide.png"
 ---
 

@@ -2,6 +2,9 @@
 title: "Conta bloqueada em plataforma de infoproduto? O que fazer"
 description: "Teve a conta bloqueada numa plataforma de infoproduto? Veja por que isso acontece, o que fazer agora e como nunca mais deixar seu negócio refém."
 pubDate: "2026-07-12"
+tags:
+  - "plataformas"
+  - "autonomia"
 heroImage: "https://images.unsplash.com/photo-1584105154398-99080f81b8ee?w=1600&q=80"
 ---
 

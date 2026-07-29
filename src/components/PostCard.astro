@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import TagList from "./TagList.astro";
+import type { Post } from "../lib/tags";
+
+interface Props {
+  post: Post;
+  /** Cards do bloco de relacionados são mais compactos. */
+  compact?: boolean;
+}
+
+const { post, compact = false } = Astro.props;
+const tags = post.data.tags ?? [];
+---
+
+<a href={`/blog/${post.id}/`} class="group block bg-white rounded-md border-2 border-[#1A1A1A] overflow-hidden blog-card">
+  {
+    post.data.heroImage && (
+      <div class="aspect-video overflow-hidden border-b-2 border-[#1A1A1A]">
+        {typeof post.data.heroImage === "string" ? (
+          <img src={post.data.heroImage} alt="" class="w-full h-full object-cover transition-transform group-hover:scale-105" />
+        ) : (
+          <Image src={post.data.heroImage} alt="" class="w-full h-full object-cover transition-transform group-hover:scale-105" />
+        )}
+      </div>
+    )
+  }
+  <div class:list={[compact ? "p-6" : "p-8"]}>
+    <h2
+      class:list={[
+        "font-bold text-[#1A1A1A] mb-3 group-hover:text-[#3B38E8] transition-colors font-cabinet-bold leading-snug",
+        compact ? "text-lg" : "text-2xl",
+      ]}>
+      {post.data.title}
+    </h2>
+    <p class:list={["text-gray-600 line-clamp-2 leading-relaxed", compact ? "text-sm" : "text-base"]}>
+      {post.data.description}
+    </p>
+    {tags.length > 0 && <TagList tags={tags} variant="ghost" linked={false} class="mt-4" />}
+  </div>
+</a>
+
+<style>
+  .blog-card {
+    box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63);
+    transform: translate(0, 0);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .blog-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 oklch(0.235 0 129.63);
+  }
+  .blog-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 oklch(0.235 0 129.63);
+  }
+</style>

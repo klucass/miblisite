@@ -2,6 +2,9 @@
 title: "Quanto a Hotmart cobra de taxa? A conta real em 2026"
 description: "Veja quanto a Hotmart cobra de taxa por venda, o quanto some do seu faturamento no fim do mês e como pagar menos vendendo seu produto digital."
 pubDate: "2026-07-12"
+tags:
+  - "taxas"
+  - "plataformas"
 heroImage: "https://images.unsplash.com/photo-1516570161787-2fd917215a3d?w=1600&q=80"
 ---
 

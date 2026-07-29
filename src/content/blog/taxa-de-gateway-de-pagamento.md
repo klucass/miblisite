@@ -2,6 +2,9 @@
 title: "Taxa de gateway de pagamento: quanto custa de verdade"
 description: "Entenda a taxa de gateway de pagamento, separe o que é custo real de processamento e o que é margem da plataforma, e veja quanto sobra por venda."
 pubDate: "2026-07-28"
+tags:
+  - "taxas"
+  - "pagamentos"
 heroImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1600&q=80"
 ---
 

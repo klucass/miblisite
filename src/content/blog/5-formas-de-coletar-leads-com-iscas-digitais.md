@@ -2,6 +2,9 @@
 title: "5 formas de coletar leads com iscas digitais"
 description: "Descubra como transformar visitantes anônimos em leads qualificados usando iscas digitais que entregam valor real instantaneamente."
 pubDate: "2026-03-05"
+tags:
+  - "marketing"
+  - "produtos digitais"
 heroImage: "../../assets/img/blog/lead-magnet-isca-digital-miblify.png"
 ---
 

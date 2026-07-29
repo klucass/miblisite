@@ -1,0 +1,109 @@
+---
+import { slugifyTag, tagPageUrl } from "../lib/tags";
+
+interface Props {
+  tags: string[];
+  /** "solid" para o topo do post, "ghost" para dentro dos cards. */
+  variant?: "solid" | "ghost";
+  /**
+   * Cards de post são um <a> inteiro, e <a> dentro de <a> é HTML inválido.
+   * Nesse caso passe linked={false} para sair como <span>.
+   */
+  linked?: boolean;
+  class?: string;
+}
+
+const { tags, variant = "solid", linked = true, class: className = "" } = Astro.props;
+const visible = tags.filter((tag) => slugifyTag(tag));
+---
+
+{
+  visible.length > 0 && (
+    <ul class:list={["tag-list", `tag-list--${variant}`, className]}>
+      {visible.map((tag) =>
+        linked ? (
+          <li>
+            <a href={tagPageUrl(slugifyTag(tag))} rel="tag">
+              {tag}
+            </a>
+          </li>
+        ) : (
+          <li>
+            <span>{tag}</span>
+          </li>
+        )
+      )}
+    </ul>
+  )
+}
+
+<style>
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tag-list a,
+  .tag-list span {
+    display: inline-block;
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    text-transform: lowercase;
+    padding: 0.45rem 0.75rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 2px;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  /* Topo do post: pill sólida com sombra dura, no padrão dos cards */
+  .tag-list--solid a,
+  .tag-list--solid span {
+    background: #fff;
+    color: #1a1a1a;
+    box-shadow: 2px 2px 0 0 #1a1a1a;
+  }
+
+  .tag-list--solid a:hover {
+    background: #3b38e8;
+    color: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+  }
+
+  .tag-list--solid a:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 0 #1a1a1a;
+  }
+
+  /* Dentro dos cards: mais discreta, sem sombra, para não competir com o título */
+  .tag-list--ghost a,
+  .tag-list--ghost span {
+    border-color: transparent;
+    background: #f2f2f7;
+    color: #55555f;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .tag-list--ghost a:hover {
+    background: #3b38e8;
+    color: #fff;
+  }
+</style>

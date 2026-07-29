@@ -2,6 +2,10 @@
 title: "Como Configurar o Pixel da Meta, Google e TikTok Para Rastrear Seus Anúncios"
 description: "Aprenda o que é um pixel de rastreamento, por que ele é essencial para suas campanhas de tráfego pago e como configurar o pixel da Meta, Google Ads e TikTok na sua loja de produtos digitais."
 pubDate: "2026-03-08"
+tags:
+  - "marketing"
+  - "tráfego pago"
+  - "tutorial"
 heroImage: "../../assets/img/blog/cover_miblify_post_pixel_tracking.png"
 ---
 

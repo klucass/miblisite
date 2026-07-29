@@ -2,6 +2,10 @@
 title: "Saque retido no infoproduto: por que travam e o que fazer"
 description: "Está com o saque retido na plataforma de infoproduto? Entenda por que seguram seu dinheiro, os prazos de liberação e como ter controle do seu caixa."
 pubDate: "2026-07-13"
+tags:
+  - "pagamentos"
+  - "plataformas"
+  - "autonomia"
 heroImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1600&q=80"
 ---
 

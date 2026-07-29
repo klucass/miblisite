@@ -2,6 +2,9 @@
 title: "Como criar uma comunidade paga que gera receita recorrente"
 description: "Aprenda como criar uma comunidade paga do zero: formato, preço, plataforma de cobrança e o que fazer pra manter os membros pagando mês após mês."
 pubDate: "2026-07-19"
+tags:
+  - "produtos digitais"
+  - "tutorial"
 heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80"
 ---
 

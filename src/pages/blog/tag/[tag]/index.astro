@@ -1,0 +1,137 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import BlogCTA from "../../../../components/BlogCTA.astro";
+import PostCard from "../../../../components/PostCard.astro";
+import Pagination from "../../../../components/Pagination.astro";
+import { getAllTags, getPostsByTagSlug, paginate, tagPageUrl } from "../../../../lib/tags";
+
+export async function getStaticPaths() {
+  const tags = await getAllTags();
+  return tags.map((tag) => ({
+    params: { tag: tag.slug },
+    props: { label: tag.tag, count: tag.count },
+  }));
+}
+
+const { label, count } = Astro.props;
+const tagSlug = Astro.params.tag!;
+const posts = await getPostsByTagSlug(tagSlug);
+const page = paginate(posts, 1);
+const otherTags = (await getAllTags()).filter((tag) => tag.slug !== tagSlug);
+const plural = count === 1 ? "artigo" : "artigos";
+---
+
+<Layout
+  title={`${label} | Blog Miblify`}
+  description={`${count} ${plural} sobre ${label} para quem vende produto digital com autonomia e taxa baixa.`}>
+  <div class="flex flex-col min-h-screen">
+    <Header isBlog={true} />
+    <main class="max-w-6xl mx-auto px-6 py-20 md:py-32 grow w-full">
+      <header class="mb-12 md:mb-16 text-center">
+        <p class="mb-4">
+          <a href="/blog/" class="back-link">← Todos os artigos</a>
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold text-[#1A1A1A] mb-6 font-cabinet-bold">{label}</h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          {count} {plural} sobre {label}.
+        </p>
+      </header>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {page.items.map((post) => <PostCard post={post} />)}
+      </div>
+
+      <Pagination currentPage={page.currentPage} lastPage={page.lastPage} urlFor={(p) => tagPageUrl(tagSlug, p)} />
+
+      {
+        otherTags.length > 0 && (
+          <section class="other-tags" aria-labelledby="other-tags-heading">
+            <h2 id="other-tags-heading">Outros assuntos</h2>
+            <nav class="tag-cloud">
+              {otherTags.map((tag) => (
+                <a href={tagPageUrl(tag.slug)}>
+                  {tag.tag}
+                  <span class="tag-cloud-count">{tag.count}</span>
+                </a>
+              ))}
+            </nav>
+          </section>
+        )
+      }
+    </main>
+    <BlogCTA />
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .back-link {
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #3b38e8;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .back-link:hover {
+    color: #1a1a1a;
+  }
+
+  .other-tags {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 2px solid #1a1a1a;
+  }
+
+  .other-tags h2 {
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag-cloud a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 0.5rem 0.85rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0 0 #1a1a1a;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .tag-cloud a:hover {
+    background: #3b38e8;
+    color: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+  }
+
+  .tag-cloud-count {
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.55;
+  }
+</style>

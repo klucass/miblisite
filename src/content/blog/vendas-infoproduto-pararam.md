@@ -2,6 +2,10 @@
 title: "Vendas de infoproduto pararam? O motivo real (e a saída)"
 description: "Suas vendas de infoproduto caíram do nada? Veja os motivos mais comuns por trás da queda e como parar de depender do algoritmo pra vender."
 pubDate: "2026-07-19"
+tags:
+  - "marketing"
+  - "tráfego pago"
+  - "autonomia"
 heroImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&q=80"
 ---
 

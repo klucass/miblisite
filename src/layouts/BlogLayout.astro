@@ -5,15 +5,20 @@ import Footer from "../components/Footer.astro";
 import BlogCTA from "../components/BlogCTA.astro";
 import { Image } from "astro:assets";
 import Calendar from "phosphor-astro/CalendarDuotone.astro";
+import TagList from "../components/TagList.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 
 interface Props {
   title: string;
   description?: string;
   pubDate?: Date;
   heroImage?: any;
+  tags?: string[];
+  /** id do post, usado para montar o bloco de artigos relacionados. */
+  slug?: string;
 }
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage, tags = [], slug } = Astro.props;
 
 // Normaliza a URL da imagem para o Layout (Open Graph)
 const ogImage = heroImage
@@ -56,11 +61,13 @@ const ogImage = heroImage
               </div>
             )
           }
+          {tags.length > 0 && <TagList tags={tags} variant="solid" class="post-tags" />}
         </div>
         <div class="blog-content">
           <slot />
         </div>
       </article>
+      {slug && <RelatedPosts slug={slug} limit={3} />}
     </main>
     <BlogCTA />
     <Footer />
@@ -100,6 +107,11 @@ const ogImage = heroImage
 
   .blog-meta time:hover {
     color: #3b38e8;
+  }
+
+  /* Quando há tags logo abaixo, a data respira menos para os dois virarem um bloco */
+  .blog-meta:has(+ .post-tags) {
+    margin-bottom: 1rem;
   }
 
   /* Seleção de texto — divertida com cores da marca */

@@ -2,6 +2,9 @@
 title: "Como vender ebook na internet: passo a passo do zero"
 description: "Aprenda como vender ebook na internet mesmo sem experiência técnica: escolha de plataforma, preço, página de vendas e primeira venda de verdade."
 pubDate: "2026-07-19"
+tags:
+  - "produtos digitais"
+  - "tutorial"
 heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=80"
 ---
 

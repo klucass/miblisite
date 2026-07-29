@@ -2,6 +2,9 @@
 title: "Quanto custa vender curso online? A conta real de 2026"
 description: "Quanto custa vender curso online de verdade? Somamos taxa, antecipação, gateway e ferramentas pra mostrar quanto sobra líquido de cada venda sua."
 pubDate: "2026-07-27"
+tags:
+  - "taxas"
+  - "produtos digitais"
 heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80"
 ---
 

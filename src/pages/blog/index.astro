@@ -3,56 +3,44 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import BlogCTA from "../../components/BlogCTA.astro";
-import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
+import PostCard from "../../components/PostCard.astro";
+import Pagination from "../../components/Pagination.astro";
+import { getSortedPosts, getAllTags, paginate, blogPageUrl, tagPageUrl } from "../../lib/tags";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await getSortedPosts();
+const tags = await getAllTags();
+const page = paginate(posts, 1);
 ---
 
 <Layout title="Blog | Miblify" description="Artigos sobre vendas digitais, marketing e novidades da Miblify.">
   <div class="flex flex-col min-h-screen">
     <Header isBlog={true} />
     <main class="max-w-6xl mx-auto px-6 py-20 md:py-32 grow w-full">
-      <header class="mb-16 md:mb-24 text-center">
+      <header class="mb-12 md:mb-16 text-center">
         <h1 class="text-4xl md:text-6xl font-bold text-[#1A1A1A] mb-6 font-cabinet-bold">Blog Miblify</h1>
         <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Conteúdo especializado para quem quer escalar suas vendas de produtos digitais com simplicidade.
         </p>
       </header>
 
+      {
+        tags.length > 0 && (
+          <nav class="tag-cloud" aria-label="Assuntos do blog">
+            {tags.map((tag) => (
+              <a href={tagPageUrl(tag.slug)}>
+                {tag.tag}
+                <span class="tag-cloud-count">{tag.count}</span>
+              </a>
+            ))}
+          </nav>
+        )
+      }
+
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {
-          posts.map((post) => (
-            <a
-              href={`/blog/${post.id}/`}
-              class="group block bg-white rounded-md border-2 border-[#1A1A1A] overflow-hidden transition-all blog-card">
-              {post.data.heroImage && (
-                <div class="aspect-video overflow-hidden border-b-2 border-[#1A1A1A]">
-                  {typeof post.data.heroImage === "string" ? (
-                    <img
-                      src={post.data.heroImage}
-                      alt=""
-                      class="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    />
-                  ) : (
-                    <Image
-                      src={post.data.heroImage}
-                      alt=""
-                      class="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    />
-                  )}
-                </div>
-              )}
-              <div class="p-8">
-                <h2 class="text-2xl font-bold text-[#1A1A1A] mb-3 group-hover:text-[#3B38E8] transition-colors font-cabinet-bold leading-snug">
-                  {post.data.title}
-                </h2>
-                <p class="text-gray-600 line-clamp-2 leading-relaxed text-base">{post.data.description}</p>
-              </div>
-            </a>
-          ))
-        }
+        {page.items.map((post) => <PostCard post={post} />)}
       </div>
+
+      <Pagination currentPage={page.currentPage} lastPage={page.lastPage} urlFor={blogPageUrl} />
 
       {
         posts.length === 0 && (
@@ -68,16 +56,51 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
 </Layout>
 
 <style>
-  .blog-card {
-    box-shadow: 4px 4px 0 0 oklch(0.235 0 129.63);
-    transform: translate(0, 0);
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
   }
-  .blog-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 0 oklch(0.235 0 129.63);
+
+  .tag-cloud a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 0.5rem 0.85rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0 0 #1a1a1a;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
   }
-  .blog-card:active {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 0 oklch(0.235 0 129.63);
+
+  .tag-cloud a:hover {
+    background: #3b38e8;
+    color: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+  }
+
+  .tag-cloud a:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 0 #1a1a1a;
+  }
+
+  .tag-cloud-count {
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.55;
   }
 </style>

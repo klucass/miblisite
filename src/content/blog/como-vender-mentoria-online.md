@@ -2,6 +2,9 @@
 title: "Como vender mentoria online: guia prático para experts"
 description: "Veja como vender mentoria online do jeito certo: formato, escopo, quanto cobrar e como automatizar a cobrança sem depender de nenhum marketplace."
 pubDate: "2026-07-25"
+tags:
+  - "produtos digitais"
+  - "tutorial"
 heroImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600&q=80"
 ---
 

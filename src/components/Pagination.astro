@@ -1,0 +1,189 @@
+---
+interface Props {
+  currentPage: number;
+  lastPage: number;
+  /** Recebe o número da página e devolve a URL. Vem de blogPageUrl/tagPageUrl. */
+  urlFor: (page: number) => string;
+}
+
+const { currentPage, lastPage, urlFor } = Astro.props;
+
+/**
+ * Janela de páginas em volta da atual, com elipse nas pontas quando necessário.
+ * Com 2 páginas mostra as 2; com 20 mostra 1 … 7 8 9 … 20.
+ */
+function pageWindow(current: number, last: number): (number | "gap")[] {
+  if (last <= 7) return Array.from({ length: last }, (_, i) => i + 1);
+
+  const pages = new Set<number>([1, last, current]);
+  if (current - 1 > 1) pages.add(current - 1);
+  if (current + 1 < last) pages.add(current + 1);
+
+  const sorted = [...pages].sort((a, b) => a - b);
+  const out: (number | "gap")[] = [];
+  sorted.forEach((page, i) => {
+    if (i > 0 && page - (sorted[i - 1] as number) > 1) out.push("gap");
+    out.push(page);
+  });
+  return out;
+}
+
+const pages = pageWindow(currentPage, lastPage);
+const prev = currentPage > 1 ? urlFor(currentPage - 1) : null;
+const next = currentPage < lastPage ? urlFor(currentPage + 1) : null;
+---
+
+{
+  lastPage > 1 && (
+    <nav class="pagination" aria-label="Paginação dos artigos">
+      {prev ? (
+        <a href={prev} class="page-link page-nav" rel="prev">
+          ← Anterior
+        </a>
+      ) : (
+        <span class="page-link page-nav is-disabled" aria-hidden="true">
+          ← Anterior
+        </span>
+      )}
+
+      <ul class="page-numbers">
+        {pages.map((page) =>
+          page === "gap" ? (
+            <li>
+              <span class="page-gap">…</span>
+            </li>
+          ) : (
+            <li>
+              {page === currentPage ? (
+                <span class="page-link is-current" aria-current="page">
+                  {page}
+                </span>
+              ) : (
+                <a href={urlFor(page)} class="page-link" aria-label={`Página ${page}`}>
+                  {page}
+                </a>
+              )}
+            </li>
+          )
+        )}
+      </ul>
+
+      {next ? (
+        <a href={next} class="page-link page-nav" rel="next">
+          Próxima →
+        </a>
+      ) : (
+        <span class="page-link page-nav is-disabled" aria-hidden="true">
+          Próxima →
+        </span>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+  }
+
+  .page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .page-numbers li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    padding: 0 0.75rem;
+    font-family: "cabinet", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  a.page-link:hover {
+    background: #3b38e8;
+    color: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 #1a1a1a;
+  }
+
+  a.page-link:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 #1a1a1a;
+  }
+
+  .page-link.is-current {
+    background: #3b38e8;
+    color: #fff;
+    box-shadow: 3px 3px 0 0 #1a1a1a;
+    cursor: default;
+  }
+
+  .page-link.is-disabled {
+    opacity: 0.35;
+    box-shadow: none;
+    cursor: default;
+  }
+
+  .page-gap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 2.75rem;
+    color: #999;
+    font-weight: 700;
+  }
+
+  /* Em telas estreitas o rótulo dos botões de navegação vira só a seta */
+  @media (max-width: 560px) {
+    .page-nav {
+      min-width: 2.75rem;
+      padding: 0;
+      font-size: 0;
+    }
+
+    .page-nav::after {
+      font-size: 1.1rem;
+    }
+
+    .page-nav[rel="prev"]::after,
+    .page-nav.is-disabled:first-child::after {
+      content: "←";
+    }
+
+    .page-nav[rel="next"]::after,
+    .page-nav.is-disabled:last-child::after {
+      content: "→";
+    }
+  }
+</style>

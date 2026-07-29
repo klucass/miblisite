@@ -2,6 +2,10 @@
 title: "Chargeback em infoproduto: o que fazer quando acontece"
 description: "Chargeback em infoproduto derruba sua margem e sua reputação no gateway. Veja como contestar, reduzir a taxa e proteger sua conta de bloqueio."
 pubDate: "2026-07-29"
+tags:
+  - "pagamentos"
+  - "taxas"
+  - "plataformas"
 heroImage: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=1600&q=80"
 ---
 

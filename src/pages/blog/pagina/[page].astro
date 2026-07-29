@@ -1,0 +1,51 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import BlogCTA from "../../../components/BlogCTA.astro";
+import PostCard from "../../../components/PostCard.astro";
+import Pagination from "../../../components/Pagination.astro";
+import { getSortedPosts, paginate, blogPageUrl, POSTS_PER_PAGE } from "../../../lib/tags";
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  const lastPage = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+
+  // A página 1 é /blog/, então /blog/pagina/1/ não existe de propósito
+  // (duas URLs com o mesmo conteúdo seria conteúdo duplicado aos olhos do Google).
+  return Array.from({ length: Math.max(0, lastPage - 1) }, (_, i) => ({
+    params: { page: String(i + 2) },
+  }));
+}
+
+const currentPage = Number(Astro.params.page);
+const posts = await getSortedPosts();
+const page = paginate(posts, currentPage);
+---
+
+<Layout
+  title={`Blog | Página ${page.currentPage} | Miblify`}
+  description={`Artigos sobre vendas digitais, marketing e novidades da Miblify. Página ${page.currentPage} de ${page.lastPage}.`}>
+  <div class="flex flex-col min-h-screen">
+    <Header isBlog={true} />
+    <main class="max-w-6xl mx-auto px-6 py-20 md:py-32 grow w-full">
+      <header class="mb-12 md:mb-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-[#1A1A1A] mb-6 font-cabinet-bold">Blog Miblify</h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Página {page.currentPage} de {page.lastPage}.
+          <a href="/blog/" class="underline decoration-2 underline-offset-4 text-[#3B38E8] font-semibold">
+            Voltar ao início do blog
+          </a>.
+        </p>
+      </header>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {page.items.map((post) => <PostCard post={post} />)}
+      </div>
+
+      <Pagination currentPage={page.currentPage} lastPage={page.lastPage} urlFor={blogPageUrl} />
+    </main>
+    <BlogCTA />
+    <Footer />
+  </div>
+</Layout>

@@ -2,6 +2,10 @@
 title: "Como sair da Hotmart: migre de plataforma sem perder venda"
 description: "Quer sair da Hotmart? Veja o passo a passo pra migrar de plataforma sem perder vendas, o que levar junto na mudança e os erros que mais custam caro."
 pubDate: "2026-07-16"
+tags:
+  - "plataformas"
+  - "autonomia"
+  - "tutorial"
 heroImage: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80"
 ---
 

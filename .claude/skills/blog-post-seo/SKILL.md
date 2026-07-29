@@ -85,6 +85,9 @@ A coleção valida com Zod. Use exatamente:
 title: "Título com a keyword principal (50-60 chars)"
 description: "Meta description persuasiva com keyword (140-160 chars)."
 pubDate: "AAAA-MM-DD"
+tags:
+  - "taxas"
+  - "plataformas"
 heroImage: "https://images.unsplash.com/photo-XXXXXXXX?w=1600&q=80"
 ---
 ```
@@ -93,6 +96,20 @@ Regras:
 - `title` e `description` são **obrigatórios** (string). `pubDate` obrigatório (data).
 - `heroImage` **obrigatório** e deve ser uma **URL https do Unsplash** (não baixar a imagem — usar por referência). O schema aceita URL remota; não use caminho local em posts novos.
 - `updatedDate` (opcional) só ao editar um post antigo.
+- `tags` **obrigatório na prática**: 2 a 3 assuntos por post. Alimenta `/blog/tag/<slug>/`, as pills abaixo do título e o bloco "Leia também" no rodapé.
+
+### Tags: use o vocabulário existente
+
+Reaproveite uma tag que já existe em vez de inventar uma nova — tag com um artigo só
+gera página de tag fraca e link interno que não leva a nada. O vocabulário fica em
+`src/lib/tags.ts` (`TAG_VOCABULARY`), hoje:
+
+`taxas` · `pagamentos` · `plataformas` · `autonomia` · `marketing` · `tráfego pago` ·
+`produtos digitais` · `tutorial` · `tendências`
+
+Só crie tag nova quando já existirem **pelo menos 2 posts** que a receberiam; nesse caso,
+adicione ao array em `src/lib/tags.ts` e marque a tag nos dois posts na mesma leva.
+Acento e espaço são resolvidos no slug automaticamente ("tráfego pago" → `/blog/tag/trafego-pago/`).
 
 ### Como escolher a heroImage (Unsplash, sem pessoas, paisagem)
 
@@ -131,6 +148,7 @@ Regras:
 - [ ] Seção de FAQ (3-4 perguntas) ao final
 - [ ] 2-4 links internos válidos + 2-3 menções à Miblify
 - [ ] CTA final em linha para app.miblify.com com UTM
+- [ ] `tags` com 2-3 assuntos do vocabulário de `src/lib/tags.ts`
 - [ ] `heroImage` válido OU omitido com aviso
 - [ ] Slug em kebab-case sem acento
 - [ ] Texto passou pela skill `humanizer` (sem cara de IA)
