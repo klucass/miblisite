@@ -33,31 +33,31 @@ export default defineConfig({
       sidebar: [
         {
           label: "Começando",
-          autogenerate: { directory: "help/getting-started" },
+          items: [{ autogenerate: { directory: "help/getting-started" } }],
         },
         {
           label: "Produtos",
-          autogenerate: { directory: "help/products" },
+          items: [{ autogenerate: { directory: "help/products" } }],
         },
         {
           label: "Pagamentos",
-          autogenerate: { directory: "help/payments" },
+          items: [{ autogenerate: { directory: "help/payments" } }],
         },
         {
           label: "Vendas",
-          autogenerate: { directory: "help/sales" },
+          items: [{ autogenerate: { directory: "help/sales" } }],
         },
         {
           label: "Integrações",
-          autogenerate: { directory: "help/integrations" },
+          items: [{ autogenerate: { directory: "help/integrations" } }],
         },
         {
           label: "Administração",
-          autogenerate: { directory: "help/admin" },
+          items: [{ autogenerate: { directory: "help/admin" } }],
         },
         {
           label: "Suporte",
-          autogenerate: { directory: "help/support" },
+          items: [{ autogenerate: { directory: "help/support" } }],
         },
       ],
       components: {
