@@ -11,9 +11,9 @@ heroImage: "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1600&
 
 O anúncio está rodando bem. Cliques bons, custo por lead estável, 40 pessoas abriram o checkout hoje.
 
-E 22 compraram.
+E 25 compraram.
 
-As outras 18 preencheram os dados, clicaram em pagar e viram uma mensagem genérica de "não foi possível processar". Você não recebeu e-mail sobre nenhuma delas. No painel, elas simplesmente não existem. Foi dinheiro que entrou no funil, pagou tráfego e evaporou entre o último clique e a confirmação.
+As outras 15 preencheram os dados, clicaram em pagar e viram uma mensagem genérica de "não foi possível processar". Você não recebeu e-mail sobre nenhuma delas. No painel, elas simplesmente não existem. Foi dinheiro que entrou no funil, pagou tráfego e evaporou entre o último clique e a confirmação.
 
 Essa é a conta mais cara que quase ninguém acompanha: a taxa de aprovação de cartão.
 
@@ -56,7 +56,7 @@ Num checkout longo, com muitos campos e sem validação em tempo real, essa fati
 ## O que derruba sua aprovação sem você perceber
 
 | Fator | Como aparece na prática |
-|---|---|
+| --- | --- |
 | Ticket alto sem histórico | Sua loja vendia R$ 97 e começou a vender R$ 1.997. O antifraude lê o salto como suspeita. |
 | Pico de lançamento | 300 tentativas em duas horas num domínio que fazia 10 por dia. Isso liga alerta de teste de cartão. |
 | Histórico de chargeback | Contestação alta faz adquirente e antifraude ficarem mais rígidos com você. É o efeito colateral do [chargeback em infoproduto](/blog/chargeback-em-infoproduto/). |
@@ -104,17 +104,13 @@ Isso não faz banco nenhum aprovar tudo. Só te devolve a informação para agir
 
 ## Perguntas frequentes
 
-**Qual é uma boa taxa de aprovação de cartão para infoproduto?**
-Como referência de mercado, algo entre 85% e 90% costuma ser tratado como saudável no cartão de crédito. Abaixo de 80% existe problema estrutural para investigar. Mais importante que a média do mercado é a sua série histórica: uma queda de 8 pontos numa semana diz muito mais do que o número absoluto.
+**Qual é uma boa taxa de aprovação de cartão para infoproduto?** Como referência de mercado, algo entre 85% e 90% costuma ser tratado como saudável no cartão de crédito. Abaixo de 80% existe problema estrutural para investigar. Mais importante que a média do mercado é a sua série histórica: uma queda de 8 pontos numa semana diz muito mais do que o número absoluto.
 
-**Recusa no cartão prejudica minha conta na plataforma?**
-Pode. Volume alto de recusa, especialmente muitas tentativas seguidas do mesmo cartão ou do mesmo IP, é lido como teste de cartão roubado. Isso liga alerta de risco e, em alguns casos, leva a análise ou bloqueio. Se já aconteceu com você, o caminho está em [conta bloqueada em plataforma de infoproduto](/blog/conta-bloqueada-plataforma-infoproduto/).
+**Recusa no cartão prejudica minha conta na plataforma?** Pode. Volume alto de recusa, especialmente muitas tentativas seguidas do mesmo cartão ou do mesmo IP, é lido como teste de cartão roubado. Isso liga alerta de risco e, em alguns casos, leva a análise ou bloqueio. Se já aconteceu com você, o caminho está em [conta bloqueada em plataforma de infoproduto](/blog/conta-bloqueada-plataforma-infoproduto/).
 
-**Por que meu cliente diz que tem limite e o cartão foi recusado?**
-Na maioria dos casos é regra de risco do banco emissor, não falta de limite. Compra digital, valor fora do padrão de consumo ou primeira compra naquele estabelecimento entram nesse filtro. Uma ligação do cliente para o banco costuma liberar na segunda tentativa.
+**Por que meu cliente diz que tem limite e o cartão foi recusado?** Na maioria dos casos é regra de risco do banco emissor, não falta de limite. Compra digital, valor fora do padrão de consumo ou primeira compra naquele estabelecimento entram nesse filtro. Uma ligação do cliente para o banco costuma liberar na segunda tentativa.
 
-**Vale a pena vender só no Pix para fugir da recusa?**
-Não. Pix aprova quase tudo e custa menos, mas cartão parcelado é o que sustenta ticket alto, e cortar o cartão corta faturamento. O caminho é oferecer os dois com destaque igual e usar o Pix como resgate imediato de quem foi recusado.
+**Vale a pena vender só no Pix para fugir da recusa?** Não. Pix aprova quase tudo e custa menos, mas cartão parcelado é o que sustenta ticket alto, e cortar o cartão corta faturamento. O caminho é oferecer os dois com destaque igual e usar o Pix como resgate imediato de quem foi recusado.
 
 ## Conclusão
 
