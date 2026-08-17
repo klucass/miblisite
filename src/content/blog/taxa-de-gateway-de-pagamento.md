@@ -57,7 +57,7 @@ Esse é o custo que mais gente ignora e que mais aparece no fim do mês.
 Junte tudo numa venda de R$ 697 no cartão à vista:
 
 | Item | Valor |
-|---|---|
+|---|---:|
 | Custo real de processamento (~4,5%) | R$ 31 |
 | Taxa cobrada pela plataforma (10%) | R$ 70 |
 | Diferença | **R$ 39** |

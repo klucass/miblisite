@@ -78,7 +78,7 @@ Não dá pra chutar um número aqui sem conhecer seu caso. Só não esqueça del
 Curso de R$ 497, 60 vendas no mês, faturamento de R$ 29.820. A maioria parcelada, como costuma acontecer em ticket médio.
 
 | Custo | Valor no mês |
-|---|---|
+|---|---:|
 | Taxa da plataforma (9,9% + R$ 1) | R$ 3.012 |
 | Antecipação de recebíveis (~6%) | R$ 1.789 |
 | Reembolsos (5% das vendas) | R$ 1.491 |

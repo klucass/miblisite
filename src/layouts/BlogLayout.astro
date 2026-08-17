@@ -304,11 +304,24 @@ const ogImage = heroImage
     color: #3b38e8;
   }
 
-  /* Colunas numéricas alinhadas à direita quando a tabela tem 2 colunas */
-  .blog-content th:not(:first-child),
-  .blog-content td:not(:first-child) {
-    text-align: right;
+  /* Colunas de valor: alinhamento vem da própria tabela em markdown (|---:|).
+     Só essas não quebram linha; coluna de texto corrido quebra normalmente. */
+  .blog-content th[align="right"],
+  .blog-content td[align="right"],
+  .blog-content th[style*="right"],
+  .blog-content td[style*="right"] {
     white-space: nowrap;
+  }
+
+  /* Texto longo na célula não pode empurrar a tabela além da coluna do post */
+  .blog-content table {
+    table-layout: auto;
+    max-width: 100%;
+  }
+
+  .blog-content td,
+  .blog-content th {
+    overflow-wrap: break-word;
   }
 
   /* Em telas estreitas a tabela rola horizontalmente em vez de vazar */
