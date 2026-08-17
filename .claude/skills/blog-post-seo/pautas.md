@@ -28,6 +28,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `taxa-de-gateway-de-pagamento` | taxa de gateway de pagamento | 2026-07-28 |
 | `chargeback-em-infoproduto` | chargeback em infoproduto | 2026-07-29 |
 | `reembolso-de-infoproduto` | reembolso de infoproduto | 2026-07-31 |
+| `taxa-de-aprovacao-de-cartao-baixa` | taxa de aprovação de cartão baixa | 2026-08-17 |
 
 ---
 
@@ -44,10 +45,15 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 46 | taxa de gateway de pagamento quanto custa | Separar a taxa única de ~10% em duas partes: quanto é processamento (Pix <1%, cartão ~5%) e quanto é margem da plataforma. Fechar convidando a rodar a própria conta no [simulador de taxas](/simulador-de-taxas/). Infoprodutor escalando | usada 2026-07-28 |
 | 17 | chargeback em infoproduto o que fazer | Como reagir a contestação, reduzir taxa de chargeback e por que a plataforma te penaliza. Infoprodutor escalando | usada 2026-07-29 |
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | usada 2026-07-31 |
-| 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | pendente |
+| 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | usada 2026-08-17 |
 | 20 | plataforma de infoproduto sem mensalidade | Comparar o custo de entrar (mensalidade × taxa por venda) pra quem está começando. Criador iniciante | pendente |
 | 21 | como parar de depender de afiliados | Recuperar margem e controle da base quando afiliado domina a venda. Infoprodutor escalando | pendente |
 | 22 | pirataria de curso online como proteger | Vazamento de conteúdo, o que dá e o que não dá pra evitar. Infoprodutor | pendente |
+| 47 | quanto tempo demora pra receber o dinheiro da venda | Prazo de repasse (D+2, D+14, D+30) por plataforma e o que isso faz com o caixa de quem investe em tráfego. Infoprodutor escalando | pendente |
+| 48 | cliente não recebeu o produto digital | Falha de entrega, e-mail em spam, acesso perdido: como resolver e como evitar que vire reembolso. Infoprodutor | pendente |
+| 49 | carrinho abandonado em infoproduto | Por que o Pix gerado nunca é pago e o que dá pra recuperar sem parecer cobrador. Infoprodutor | pendente |
+| 50 | vender infoproduto para fora do Brasil | Moeda, meio de pagamento e imposto quando o cliente é de fora. Infoprodutor escalando | pendente |
+| 51 | plataforma de infoproduto travou no lançamento | Risco de indisponibilidade em pico de venda e como ter plano B de checkout. Infoprodutor escalando | pendente |
 
 ## 2. Operação e burocracia (dor alta, pouca concorrência de conteúdo bom)
 
@@ -58,6 +64,10 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 25 | imposto sobre venda de infoproduto | O que incide, o que a plataforma retém e o que sobra pra você declarar. Infoprodutor escalando | pendente |
 | 26 | lgpd para infoprodutores | O que fazer com dado de aluno e lead sem virar problema jurídico. Todas | pendente |
 | 27 | como escolher gateway de pagamento | Critério prático (taxa, antecipação, Pix, suporte) pra quem vende digital. Infoprodutor escalando | pendente |
+| 52 | split de pagamento como funciona | Dividir receita com sócio, coprodutor ou afiliado sem planilha e sem transferência manual. Infoprodutor escalando | pendente |
+| 53 | contrato para mentoria e curso online | O que precisa estar escrito (escopo, prazo, cancelamento) pra evitar disputa com aluno. Expert | pendente |
+| 54 | termos de uso e política de reembolso da sua loja | Quais páginas sua loja precisa ter e o que escrever em cada uma. Complementa `reembolso-de-infoproduto` sem repetir o prazo legal. Todas | pendente |
+| 55 | como declarar renda de infoproduto no imposto de renda | Pessoa física × CNPJ, o que a plataforma informa e o que cai na sua malha. Infoprodutor | pendente |
 
 ## 3. Como fazer / tutoriais (volume + topo de funil)
 
@@ -82,6 +92,11 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 37 | como escolher nicho de infoproduto | Critério de demanda × concorrência × sua autoridade. Criador iniciante | pendente |
 | 38 | como vender assinatura recorrente | Modelo de receita previsível aplicado a produto digital. Infoprodutor | pendente |
 | 39 | como usar ia para criar produto digital | Acelerar produção sem entregar conteúdo genérico. Todas | pendente |
+| 56 | como vender infoproduto no instagram | Do conteúdo ao checkout sem depender de DM manual. Criador de conteúdo | pendente |
+| 57 | como usar cupom de desconto para vender mais | Cupom por campanha, por parceiro e por prazo, sem queimar margem. Infoprodutor | pendente |
+| 58 | como fazer webinar de vendas | Aula ao vivo que termina em checkout aberto. Expert | pendente |
+| 59 | como criar funil de vendas para infoproduto | Do primeiro clique à compra, mapeado em etapas mensuráveis. Infoprodutor | pendente |
+| 60 | como vender presets e pacotes de fotos | Nicho visual, produção baixa, entrega por arquivo. Criador iniciante | pendente |
 
 ## 4. Tendências e dados 2026 (autoridade + backlinks)
 
@@ -98,9 +113,10 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 
 | # | Keyword principal | Janela ideal | Status |
 |---|---|---|---|
-| 43 | black friday para infoprodutos | Publicar até início de outubro/2026 | pendente |
+| 43 | black friday para infoprodutos | Publicar até início de outubro/2026. Janela abre em setembro: priorizar sobre as pautas de tendências | pendente |
 | 44 | vender infoproduto no fim de ano / janeiro | Publicar em novembro/2026 (pico de "recomeço" em janeiro) | pendente |
 | 45 | planejamento de infoproduto para 2027 | Publicar em dezembro/2026 | pendente |
+| 61 | retrospectiva de vendas do ano | Publicar em dezembro/2026: fechar o ano lendo os próprios números antes de planejar o seguinte | pendente |
 
 ---
 
