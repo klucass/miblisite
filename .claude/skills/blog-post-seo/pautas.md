@@ -30,6 +30,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `reembolso-de-infoproduto` | reembolso de infoproduto | 2026-07-31 |
 | `taxa-de-aprovacao-de-cartao-baixa` | taxa de aprovação de cartão baixa | 2026-08-17 |
 | `plataforma-infoproduto-sem-mensalidade` | plataforma de infoproduto sem mensalidade | 2026-08-19 |
+| `como-parar-de-depender-de-afiliados` | como parar de depender de afiliados | 2026-08-20 |
 
 ---
 
@@ -48,7 +49,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 18 | reembolso de infoproduto como funciona | Direito de arrependimento, prazo legal e como reduzir pedido sem enrolar cliente. Infoprodutor | usada 2026-07-31 |
 | 19 | taxa de aprovação de cartão baixa | Por que venda é recusada no checkout e o que fazer pra recuperar. Infoprodutor escalando | usada 2026-08-17 |
 | 20 | plataforma de infoproduto sem mensalidade | Comparar o custo de entrar (mensalidade × taxa por venda) pra quem está começando. Criador iniciante | usada 2026-08-19 |
-| 21 | como parar de depender de afiliados | Recuperar margem e controle da base quando afiliado domina a venda. Infoprodutor escalando | pendente |
+| 21 | como parar de depender de afiliados | Recuperar margem e controle da base quando afiliado domina a venda. Infoprodutor escalando | usada 2026-08-20 |
 | 22 | pirataria de curso online como proteger | Vazamento de conteúdo, o que dá e o que não dá pra evitar. Infoprodutor | pendente |
 | 47 | quanto tempo demora pra receber o dinheiro da venda | Prazo de repasse (D+2, D+14, D+30) por plataforma e o que isso faz com o caixa de quem investe em tráfego. Infoprodutor escalando | pendente |
 | 48 | cliente não recebeu o produto digital | Falha de entrega, e-mail em spam, acesso perdido: como resolver e como evitar que vire reembolso. Infoprodutor | pendente |
