@@ -51,6 +51,35 @@ Consulte e atualize a fila de pautas em `.claude/skills/blog-post-seo/pautas.md`
 - Analogias do dia a dia são bem-vindas.
 - Sem promessas irreais nem "ganhe dinheiro fácil".
 
+### Resumo em tópicos na introdução
+
+Todo post abre com **gancho primeiro, resumo depois**. A ordem é: 2-3 parágrafos de dor/cena que fisgam, uma linha de transição, e então os bullets. Nunca comece o post pelos bullets — quem abre com lista mata o gancho e perde o leitor na primeira rolagem.
+
+Regras dos bullets:
+
+- **3 a 5 bullets**, um por ideia, cada um com no máximo ~15 palavras.
+- Cada bullet entrega **o que o leitor leva** (a resposta, o número, o passo), não o nome da seção. Escreva "Pix libera em D+1 a D+7; cartão à vista segue o padrão D+30", não "Prazos por meio de pagamento".
+- **Sem rótulo em negrito no começo** do bullet (`**Prazos:** ...`). É padrão de texto de IA e a skill `humanizer` derruba isso no passe seguinte.
+- Sem link dentro dos bullets. Os links internos vivem no corpo do texto.
+- Se o post tem número forte (taxa, prazo, valor), coloque pelo menos um deles nos bullets. É o que faz o leitor descer.
+
+Modelo:
+
+```markdown
+[gancho: 2-3 parágrafos de cena/dor]
+
+O resumo, se você só tem dois minutos:
+
+- Cartão de crédito à vista segue o padrão D+30 do mercado brasileiro.
+- Pix cai em segundos, mas a plataforma costuma liberar entre D+1 e D+7.
+- Venda em 12x pinga uma parcela por mês, mesmo com o aluno assistindo tudo hoje.
+- Antecipar custa de 1,5% a 2,5% ao mês sobre o valor adiantado.
+
+## [primeiro H2]
+```
+
+A linha de transição pode variar ("O resumo antes de descer", "Em quatro linhas:", "O que este post responde:"), desde que não vire fórmula repetida em todo post do blog.
+
 ## Metodologia SEO (siga em ordem)
 
 1. **Keyword-first.** Defina 1 palavra-chave principal (long-tail, com intenção) + 2-4 secundárias. Escreva a keyword principal no plano interno.
@@ -58,6 +87,7 @@ Consulte e atualize a fila de pautas em `.claude/skills/blog-post-seo/pautas.md`
 3. **Título (H1 / `title`).** 50-60 caracteres, contém a keyword principal perto do começo, promete um benefício claro. Único no blog.
 4. **Meta description (`description`).** 140-160 caracteres, contém a keyword, gera clique. Não repita o título literal.
 5. **Estrutura escaneável.**
+   - **Resumo em tópicos na introdução (obrigatório).** Logo depois do gancho e antes do primeiro H2, entregue de 3 a 5 bullets curtos com o que o leitor vai levar do post. Detalhes em [Resumo em tópicos](#resumo-em-tópicos-na-introdução).
    - H2s a cada ~200-300 palavras, com keywords secundárias quando natural.
    - H3s para subtópicos.
    - Listas, negrito em termos-chave, um parágrafo = uma ideia.
@@ -143,6 +173,7 @@ Acento e espaço são resolvidos no slug automaticamente ("tráfego pago" → `/
 - [ ] `title` 50-60 chars com keyword, único no blog
 - [ ] `description` 140-160 chars com keyword
 - [ ] Abertura com dor/cena nas primeiras linhas
+- [ ] Resumo em 3-5 tópicos na introdução, **depois** do gancho e antes do 1º H2
 - [ ] H2s escaneáveis + keywords secundárias naturais
 - [ ] 1.200+ palavras (tutorial/dor) sem enrolação — CONTE antes de entregar
 - [ ] Seção de FAQ (3-4 perguntas) ao final
