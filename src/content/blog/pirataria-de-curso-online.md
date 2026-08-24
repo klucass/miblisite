@@ -69,6 +69,8 @@ Material em PDF é o que vaza mais rápido, porque é um arquivo só e voa em qu
 
 Se o PDF é essencial, gere com o nome e o e-mail do aluno no rodapé de cada página. Se não é essencial, transforme em conteúdo dentro da área de membros. Aula de texto na plataforma vaza bem menos que apostila baixável.
 
+Fazer isso arquivo por arquivo é inviável quando você tem turma grande, então vale conferir se a sua plataforma resolve sozinha. Na [Miblify](https://www.miblify.com) todo PDF que o aluno baixa já sai com marca d'água aplicada automaticamente, identificando quem fez o download. Se aquele material aparecer num grupo depois, você sabe de qual conta ele saiu.
+
 ### 5. Um aviso curto no lugar certo
 
 Uma linha na primeira aula e no rodapé do material, dizendo que o conteúdo é registrado e que a distribuição é rastreada, resolve mais que ameaça jurídica em caixa alta.
