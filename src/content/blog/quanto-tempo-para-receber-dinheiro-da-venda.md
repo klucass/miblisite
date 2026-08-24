@@ -15,7 +15,14 @@ Na sua conta bancária tem R$ 6 mil.
 
 A fatura do cartão onde você pagou R$ 12 mil de anúncio vence sexta. E o resto do dinheiro está espalhado no futuro, em pedaços, com data pra cair que você não controla.
 
-Esse descompasso entre vender e receber derruba mais infoprodutor que taxa alta. Vale entender exatamente onde o dinheiro fica parado.
+Esse descompasso entre vender e receber derruba mais infoprodutor que taxa alta.
+
+Antes de descer, o resumo:
+
+- Cartão de crédito à vista segue o padrão D+30 do mercado brasileiro.
+- Pix liquida em segundos, mas a plataforma costuma liberar entre D+1 e D+7.
+- Venda em 12x pinga uma parcela por mês, com o aluno assistindo tudo hoje.
+- Antecipar resolve o prazo e custa de 1,5% a 2,5% ao mês sobre o adiantado.
 
 ## Por que o dinheiro não cai na hora
 
