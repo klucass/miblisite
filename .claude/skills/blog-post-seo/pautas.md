@@ -33,6 +33,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-parar-de-depender-de-afiliados` | como parar de depender de afiliados | 2026-08-20 |
 | `pirataria-de-curso-online` | pirataria de curso online | 2026-08-21 |
 | `quanto-tempo-para-receber-dinheiro-da-venda` | quanto tempo para receber o dinheiro da venda | 2026-08-24 |
+| `cliente-nao-recebeu-produto-digital` | cliente não recebeu o produto digital | 2026-08-25 |
 
 ---
 
@@ -54,7 +55,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 21 | como parar de depender de afiliados | Recuperar margem e controle da base quando afiliado domina a venda. Infoprodutor escalando | usada 2026-08-20 |
 | 22 | pirataria de curso online como proteger | Vazamento de conteúdo, o que dá e o que não dá pra evitar. Infoprodutor | usada 2026-08-21 |
 | 47 | quanto tempo demora pra receber o dinheiro da venda | Prazo de repasse (D+2, D+14, D+30) por plataforma e o que isso faz com o caixa de quem investe em tráfego. Infoprodutor escalando | usada 2026-08-24 |
-| 48 | cliente não recebeu o produto digital | Falha de entrega, e-mail em spam, acesso perdido: como resolver e como evitar que vire reembolso. Infoprodutor | pendente |
+| 48 | cliente não recebeu o produto digital | Falha de entrega, e-mail em spam, acesso perdido: como resolver e como evitar que vire reembolso. Infoprodutor | usada 2026-08-25 |
 | 49 | carrinho abandonado em infoproduto | Por que o Pix gerado nunca é pago e o que dá pra recuperar sem parecer cobrador. Infoprodutor | pendente |
 | 50 | vender infoproduto para fora do Brasil | Moeda, meio de pagamento e imposto quando o cliente é de fora. Infoprodutor escalando | pendente |
 | 51 | plataforma de infoproduto travou no lançamento | Risco de indisponibilidade em pico de venda e como ter plano B de checkout. Infoprodutor escalando | pendente |
