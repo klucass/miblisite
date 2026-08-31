@@ -36,6 +36,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `cliente-nao-recebeu-produto-digital` | cliente não recebeu o produto digital | 2026-08-25 |
 | `carrinho-abandonado-infoproduto` | carrinho abandonado em infoproduto | 2026-08-27 |
 | `vender-infoproduto-fora-do-brasil` | vender infoproduto para fora do Brasil | 2026-08-30 |
+| `plataforma-travou-no-lancamento` | plataforma travou no lançamento | 2026-08-31 |
 
 ---
 
@@ -60,7 +61,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 48 | cliente não recebeu o produto digital | Falha de entrega, e-mail em spam, acesso perdido: como resolver e como evitar que vire reembolso. Infoprodutor | usada 2026-08-25 |
 | 49 | carrinho abandonado em infoproduto | Por que o Pix gerado nunca é pago e o que dá pra recuperar sem parecer cobrador. Infoprodutor | usada 2026-08-27 |
 | 50 | vender infoproduto para fora do Brasil | Moeda, meio de pagamento e imposto quando o cliente é de fora. Infoprodutor escalando | usada 2026-08-30 |
-| 51 | plataforma de infoproduto travou no lançamento | Risco de indisponibilidade em pico de venda e como ter plano B de checkout. Infoprodutor escalando | pendente |
+| 51 | plataforma de infoproduto travou no lançamento | Risco de indisponibilidade em pico de venda e como ter plano B de checkout. Infoprodutor escalando | usada 2026-08-31 |
 
 ## 2. Operação e burocracia (dor alta, pouca concorrência de conteúdo bom)
 
