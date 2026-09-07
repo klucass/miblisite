@@ -37,6 +37,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `carrinho-abandonado-infoproduto` | carrinho abandonado em infoproduto | 2026-08-27 |
 | `vender-infoproduto-fora-do-brasil` | vender infoproduto para fora do Brasil | 2026-08-30 |
 | `plataforma-travou-no-lancamento` | plataforma travou no lançamento | 2026-08-31 |
+| `nota-fiscal-produto-digital` | nota fiscal de produto digital | 2026-09-07 |
 
 ---
 
@@ -67,7 +68,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 
 | # | Keyword principal | Ângulo / persona | Status |
 |---|---|---|---|
-| 23 | nota fiscal de produto digital como emitir | Quem precisa emitir, como funciona no digital, o que muda vendendo por plataforma. Expert / infoprodutor | pendente |
+| 23 | nota fiscal de produto digital como emitir | Quem precisa emitir, como funciona no digital, o que muda vendendo por plataforma. Expert / infoprodutor | usada 2026-09-07 |
 | 24 | mei pode vender infoproduto | CNAE, limite de faturamento e quando vale sair do MEI. Criador iniciante | pendente |
 | 25 | imposto sobre venda de infoproduto | O que incide, o que a plataforma retém e o que sobra pra você declarar. Infoprodutor escalando | pendente |
 | 26 | lgpd para infoprodutores | O que fazer com dado de aluno e lead sem virar problema jurídico. Todas | pendente |
