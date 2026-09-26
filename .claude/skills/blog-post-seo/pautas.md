@@ -38,6 +38,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `vender-infoproduto-fora-do-brasil` | vender infoproduto para fora do Brasil | 2026-08-30 |
 | `plataforma-travou-no-lancamento` | plataforma travou no lançamento | 2026-08-31 |
 | `nota-fiscal-produto-digital` | nota fiscal de produto digital | 2026-09-07 |
+| `black-friday-infoprodutos` | black friday para infoprodutos | 2026-09-26 |
 
 ---
 
@@ -122,7 +123,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 
 | # | Keyword principal | Janela ideal | Status |
 |---|---|---|---|
-| 43 | black friday para infoprodutos | Publicar até início de outubro/2026. Janela abre em setembro: priorizar sobre as pautas de tendências | pendente |
+| 43 | black friday para infoprodutos | Publicar até início de outubro/2026. Janela abre em setembro: priorizar sobre as pautas de tendências | usada 2026-09-26 |
 | 44 | vender infoproduto no fim de ano / janeiro | Publicar em novembro/2026 (pico de "recomeço" em janeiro) | pendente |
 | 45 | planejamento de infoproduto para 2027 | Publicar em dezembro/2026 | pendente |
 | 61 | retrospectiva de vendas do ano | Publicar em dezembro/2026: fechar o ano lendo os próprios números antes de planejar o seguinte | pendente |
