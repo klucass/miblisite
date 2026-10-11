@@ -25,3 +25,6 @@ pnpm-debug.log*
 .agents
 # Claude Code config pessoal
 .claude/settings.local.json
+
+# Rotina do blog (log e lock locais)
+.rotina/
