@@ -12,6 +12,28 @@ HOJE="$(date +%F)"
 LOCK="$REPO/.rotina/lock"
 mkdir -p "$REPO/.rotina"
 
+# Notificação do macOS com o resultado (sucesso, nada a fazer ou erro).
+notificar() {
+  osascript - "$1" "$2" "$3" <<'APPLESCRIPT' || true
+on run argv
+  display notification (item 2 of argv) with title "Blog Miblify" subtitle (item 1 of argv) sound name (item 3 of argv)
+end run
+APPLESCRIPT
+}
+
+RESULTADO=""   # preenchido quando a rotina termina bem
+MOTIVO=""      # preenchido nos abortos explícitos
+ERRO_CMD=""
+finalizar() {
+  local codigo=$?
+  rmdir "$LOCK" 2>/dev/null || true
+  if [ "$codigo" -eq 0 ]; then
+    [ -n "$RESULTADO" ] && notificar "Sucesso" "$RESULTADO" "Glass"
+  else
+    notificar "Erro na publicação" "${MOTIVO:-Falhou em: $ERRO_CMD} (veja .rotina/rotina.log)" "Basso"
+  fi
+}
+
 echo "=== $(date '+%F %T') rotina blog-post"
 
 # Uma execução por vez (o launchd pode disparar de novo ao acordar o Mac).
@@ -19,7 +41,15 @@ if ! mkdir "$LOCK" 2>/dev/null; then
   echo "Outra execução em andamento ($LOCK). Saindo."
   exit 0
 fi
-trap 'rmdir "$LOCK"' EXIT
+trap 'ERRO_CMD=$BASH_COMMAND' ERR
+trap finalizar EXIT
+
+if [ -n "$(git status --porcelain)" ]; then
+  echo "Working tree sujo antes de começar. Abortando para não misturar alterações:"
+  MOTIVO="Há alterações não commitadas no miblisite"
+  git status --short
+  exit 1
+fi
 
 git checkout master
 git pull --rebase
@@ -27,13 +57,8 @@ git pull --rebase
 # Já saiu post hoje? Não publica dois.
 if grep -lq "^pubDate: \"$HOJE\"" src/content/blog/*.md 2>/dev/null; then
   echo "Já existe post com pubDate $HOJE. Nada a fazer."
+  RESULTADO="Já existe post de hoje ($HOJE), nada a publicar."
   exit 0
-fi
-
-if [ -n "$(git status --porcelain)" ]; then
-  echo "Working tree sujo antes de começar. Abortando para não misturar alterações:"
-  git status --short
-  exit 1
 fi
 
 PROMPT="Use a skill blog-post-seo para escrever o post de hoje ($HOJE), como se o scheduler tivesse disparado:
@@ -56,11 +81,13 @@ claude -p "$PROMPT" \
 NOVOS="$(git status --porcelain -- src/content/blog | awk '$1=="??"{print $2}')"
 if [ "$(echo "$NOVOS" | grep -c '\.md$')" -ne 1 ]; then
   echo "Esperava exatamente 1 post novo em src/content/blog, achei: '${NOVOS}'. Abortando sem commit."
+  MOTIVO="O Claude não gerou exatamente 1 post novo"
   exit 1
 fi
 POST="$NOVOS"
 if ! grep -q "^pubDate: \"$HOJE\"" "$POST"; then
   echo "$POST não tem pubDate $HOJE. Abortando sem commit."
+  MOTIVO="$(basename "$POST") não tem pubDate $HOJE"
   exit 1
 fi
 
@@ -72,3 +99,4 @@ git commit -m "Novo post: ${TITULO:-$(basename "$POST" .md)}"
 git push origin master
 
 echo "=== $(date '+%F %T') publicado: $POST"
+RESULTADO="Publicado: ${TITULO:-$(basename "$POST" .md)}"
