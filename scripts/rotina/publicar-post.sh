@@ -44,6 +44,25 @@ fi
 trap 'ERRO_CMD=$BASH_COMMAND' ERR
 trap finalizar EXIT
 
+PAUTAS=".claude/skills/blog-post-seo/pautas.md"
+# marcar_pauta <número> <slug>: status vira "usada AAAA-MM-DD" e o slug entra no fim de "Já publicados".
+marcar_pauta() {
+  awk -v n="$1" -v slug="$2" -v hoje="$HOJE" '
+    { linhas[NR] = $0 }
+    $0 ~ "^\\| " n " \\| " && /\| pendente \|$/ {
+      split($0, col, " \\| "); kw = col[2]
+      sub(/\| pendente \|$/, "| usada " hoje " |", linhas[NR])
+    }
+    /^\| `/ && !fim { ultima = NR }
+    /^---$/ && ultima { fim = 1 }
+    END {
+      for (i = 1; i <= NR; i++) {
+        print linhas[i]
+        if (i == ultima) printf "| `%s` | %s | %s |\n", slug, kw, hoje
+      }
+    }' "$PAUTAS" > "$PAUTAS.tmp" && mv "$PAUTAS.tmp" "$PAUTAS"
+}
+
 # Alterações locais que já existiam ficam onde estão: só a nova publicação entra no commit.
 sujos() { git status --porcelain --untracked-files=all | cut -c4- | sort; }
 ANTES="$(sujos)"
@@ -74,10 +93,12 @@ fi
 
 PROMPT="Use a skill blog-post-seo para escrever o post de hoje ($HOJE), como se o scheduler tivesse disparado:
 pegue a próxima pauta pendente de .claude/skills/blog-post-seo/pautas.md, escreva o post em src/content/blog/<slug>.md
-com pubDate \"$HOJE\", passe pela skill humanizer, marque a pauta como usada (e adicione o slug na tabela 'Já publicados')
-e rode pnpm build até passar. Siga o checklist final da skill inteiro.
-NÃO faça git commit nem git push: o script que te chamou cuida disso.
-Na última linha da resposta escreva exatamente: SLUG=<slug-do-post>"
+com pubDate \"$HOJE\", passe pela skill humanizer e rode pnpm build até passar. Siga o checklist final da skill inteiro.
+NÃO edite o pautas.md (você não tem permissão de escrita em .claude/): o script que te chamou marca a pauta como usada.
+NÃO faça git commit nem git push: o script cuida disso.
+Termine a resposta com estas duas linhas exatas:
+PAUTA=<número da pauta na coluna #>
+SLUG=<slug-do-post>"
 
 claude -p "$PROMPT" \
   --model claude-sonnet-5-5 \
@@ -108,6 +129,15 @@ if ! grep -q "^pubDate: \"$HOJE\"" "$POST"; then
 fi
 
 pnpm build
+
+# Marca a pauta como usada e registra em "Já publicados" (o Claude não escreve em .claude/).
+PAUTA="$(sed -n 's/^PAUTA=\([0-9][0-9]*\).*/\1/p' "$REPO/.rotina/ultima-resposta.txt" | tail -1)"
+if [ -z "$PAUTA" ] || ! grep -q "^| $PAUTA | .*| pendente |$" "$PAUTAS"; then
+  MOTIVO="Não achei a pauta pendente informada pelo Claude (PAUTA=${PAUTA:-vazio})"
+  exit 1
+fi
+marcar_pauta "$PAUTA" "$(basename "$POST" .md)"
+MUDOU="$(printf '%s\n%s\n' "$MUDOU" "$PAUTAS" | sort -u | grep . )"
 
 TITULO="$(sed -n 's/^title: "\(.*\)"$/\1/p' "$POST" | head -1)"
 echo "Arquivos no commit:"

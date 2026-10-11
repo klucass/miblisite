@@ -40,6 +40,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `nota-fiscal-produto-digital` | nota fiscal de produto digital | 2026-09-07 |
 | `black-friday-infoprodutos` | black friday para infoprodutos | 2026-09-26 |
 | `mei-pode-vender-infoproduto` | mei pode vender infoproduto | 2026-10-05 |
+| `imposto-sobre-venda-de-infoproduto` | imposto sobre venda de infoproduto | 2026-10-11 |
 
 ---
 
@@ -72,7 +73,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 |---|---|---|---|
 | 23 | nota fiscal de produto digital como emitir | Quem precisa emitir, como funciona no digital, o que muda vendendo por plataforma. Expert / infoprodutor | usada 2026-09-07 |
 | 24 | mei pode vender infoproduto | CNAE, limite de faturamento e quando vale sair do MEI. Criador iniciante | usada 2026-10-05 |
-| 25 | imposto sobre venda de infoproduto | O que incide, o que a plataforma retém e o que sobra pra você declarar. Infoprodutor escalando | pendente |
+| 25 | imposto sobre venda de infoproduto | O que incide, o que a plataforma retém e o que sobra pra você declarar. Infoprodutor escalando | usada 2026-10-11 |
 | 26 | lgpd para infoprodutores | O que fazer com dado de aluno e lead sem virar problema jurídico. Todas | pendente |
 | 27 | como escolher gateway de pagamento | Critério prático (taxa, antecipação, Pix, suporte) pra quem vende digital. Infoprodutor escalando | pendente |
 | 52 | split de pagamento como funciona | Dividir receita com sócio, coprodutor ou afiliado sem planilha e sem transferência manual. Infoprodutor escalando | pendente |
