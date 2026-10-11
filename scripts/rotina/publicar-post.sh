@@ -44,18 +44,29 @@ fi
 trap 'ERRO_CMD=$BASH_COMMAND' ERR
 trap finalizar EXIT
 
-if [ -n "$(git status --porcelain)" ]; then
-  echo "Working tree sujo antes de começar. Abortando para não misturar alterações:"
-  MOTIVO="Há alterações não commitadas no miblisite"
-  git status --short
+# Alterações locais que já existiam ficam onde estão: só a nova publicação entra no commit.
+sujos() { git status --porcelain --untracked-files=all | cut -c4- | sort; }
+ANTES="$(sujos)"
+if [ -n "$ANTES" ]; then
+  echo "Alterações locais pré-existentes (ficam fora do commit):"
+  echo "$ANTES"
+fi
+# Se a fila ou as tags já estão alteradas, o commit levaria essa mudança junto.
+for f in .claude/skills/blog-post-seo/pautas.md src/lib/tags.ts; do
+  if echo "$ANTES" | grep -qxF "$f"; then
+    MOTIVO="$f tem alterações locais não commitadas"
+    exit 1
+  fi
+done
+if [ "$(git branch --show-current)" != "master" ]; then
+  MOTIVO="O miblisite não está no branch master"
   exit 1
 fi
 
-git checkout master
-git pull --rebase
+git pull --rebase --autostash
 
-# Já saiu post hoje? Não publica dois.
-if grep -lq "^pubDate: \"$HOJE\"" src/content/blog/*.md 2>/dev/null; then
+# Já saiu post hoje? Não publica dois. (Só olha posts commitados, não rascunhos locais.)
+if git grep -q "^pubDate: \"$HOJE\"" HEAD -- src/content/blog; then
   echo "Já existe post com pubDate $HOJE. Nada a fazer."
   RESULTADO="Já existe post de hoje ($HOJE), nada a publicar."
   exit 0
@@ -78,8 +89,13 @@ claude -p "$PROMPT" \
   | tee "$REPO/.rotina/ultima-resposta.txt"
 
 # Confere o resultado em vez de confiar na resposta.
-NOVOS="$(git status --porcelain -- src/content/blog | awk '$1=="??"{print $2}')"
-if [ "$(echo "$NOVOS" | grep -c '\.md$')" -ne 1 ]; then
+# O que a rotina mudou = sujo agora e limpo antes, restrito aos arquivos do blog.
+MUDOU="$(comm -13 <(echo "$ANTES") <(sujos) \
+  | grep -E '^(src/content/blog/|src/lib/tags\.ts$|\.claude/skills/blog-post-seo/pautas\.md$)' || true)"
+NOVOS="$(echo "$MUDOU" | while read -r f; do
+  if [ -n "$f" ] && ! git ls-files --error-unmatch -- "$f" >/dev/null 2>&1; then echo "$f"; fi
+done | grep '\.md$' || true)"
+if [ "$(echo "$NOVOS" | grep -c .)" -ne 1 ]; then
   echo "Esperava exatamente 1 post novo em src/content/blog, achei: '${NOVOS}'. Abortando sem commit."
   MOTIVO="O Claude não gerou exatamente 1 post novo"
   exit 1
@@ -94,8 +110,11 @@ fi
 pnpm build
 
 TITULO="$(sed -n 's/^title: "\(.*\)"$/\1/p' "$POST" | head -1)"
-git add -- "$POST" .claude/skills/blog-post-seo/pautas.md src/lib/tags.ts src/content/blog
-git commit -m "Novo post: ${TITULO:-$(basename "$POST" .md)}"
+echo "Arquivos no commit:"
+echo "$MUDOU"
+# --only: commita só esses caminhos, mesmo que haja outras coisas no stage.
+echo "$MUDOU" | xargs git add --
+echo "$MUDOU" | xargs git commit -m "Novo post: ${TITULO:-$(basename "$POST" .md)}" --only --
 git push origin master
 
 echo "=== $(date '+%F %T') publicado: $POST"
