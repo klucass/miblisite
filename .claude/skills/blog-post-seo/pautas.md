@@ -42,6 +42,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `mei-pode-vender-infoproduto` | mei pode vender infoproduto | 2026-10-05 |
 | `imposto-sobre-venda-de-infoproduto` | imposto sobre venda de infoproduto | 2026-10-11 |
 | `lgpd-para-infoprodutores` | lgpd para infoprodutores | 2026-10-13 |
+| `como-escolher-gateway-de-pagamento` | como escolher gateway de pagamento | 2026-10-14 |
 
 ---
 
@@ -76,7 +77,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 24 | mei pode vender infoproduto | CNAE, limite de faturamento e quando vale sair do MEI. Criador iniciante | usada 2026-10-05 |
 | 25 | imposto sobre venda de infoproduto | O que incide, o que a plataforma retém e o que sobra pra você declarar. Infoprodutor escalando | usada 2026-10-11 |
 | 26 | lgpd para infoprodutores | O que fazer com dado de aluno e lead sem virar problema jurídico. Todas | usada 2026-10-13 |
-| 27 | como escolher gateway de pagamento | Critério prático (taxa, antecipação, Pix, suporte) pra quem vende digital. Infoprodutor escalando | pendente |
+| 27 | como escolher gateway de pagamento | Critério prático (taxa, antecipação, Pix, suporte) pra quem vende digital. Infoprodutor escalando | usada 2026-10-14 |
 | 52 | split de pagamento como funciona | Dividir receita com sócio, coprodutor ou afiliado sem planilha e sem transferência manual. Infoprodutor escalando | pendente |
 | 53 | contrato para mentoria e curso online | O que precisa estar escrito (escopo, prazo, cancelamento) pra evitar disputa com aluno. Expert | pendente |
 | 54 | termos de uso e política de reembolso da sua loja | Quais páginas sua loja precisa ter e o que escrever em cada uma. Complementa `reembolso-de-infoproduto` sem repetir o prazo legal. Todas | pendente |
