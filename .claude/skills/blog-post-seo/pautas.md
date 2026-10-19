@@ -45,6 +45,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-escolher-gateway-de-pagamento` | como escolher gateway de pagamento | 2026-10-14 |
 | `split-de-pagamento-como-funciona` | split de pagamento como funciona | 2026-10-15 |
 | `contrato-para-mentoria-e-curso-online` | contrato para mentoria e curso online | 2026-10-16 |
+| `termos-de-uso-e-politica-de-reembolso` | termos de uso e política de reembolso da sua loja | 2026-10-19 |
 
 ---
 
@@ -82,7 +83,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 27 | como escolher gateway de pagamento | Critério prático (taxa, antecipação, Pix, suporte) pra quem vende digital. Infoprodutor escalando | usada 2026-10-14 |
 | 52 | split de pagamento como funciona | Dividir receita com sócio, coprodutor ou afiliado sem planilha e sem transferência manual. Infoprodutor escalando | usada 2026-10-15 |
 | 53 | contrato para mentoria e curso online | O que precisa estar escrito (escopo, prazo, cancelamento) pra evitar disputa com aluno. Expert | usada 2026-10-16 |
-| 54 | termos de uso e política de reembolso da sua loja | Quais páginas sua loja precisa ter e o que escrever em cada uma. Complementa `reembolso-de-infoproduto` sem repetir o prazo legal. Todas | pendente |
+| 54 | termos de uso e política de reembolso da sua loja | Quais páginas sua loja precisa ter e o que escrever em cada uma. Complementa `reembolso-de-infoproduto` sem repetir o prazo legal. Todas | usada 2026-10-19 |
 | 55 | como declarar renda de infoproduto no imposto de renda | Pessoa física × CNPJ, o que a plataforma informa e o que cai na sua malha. Infoprodutor | pendente |
 
 ## 3. Como fazer / tutoriais (volume + topo de funil)
