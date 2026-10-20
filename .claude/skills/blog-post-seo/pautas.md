@@ -46,6 +46,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `split-de-pagamento-como-funciona` | split de pagamento como funciona | 2026-10-15 |
 | `contrato-para-mentoria-e-curso-online` | contrato para mentoria e curso online | 2026-10-16 |
 | `termos-de-uso-e-politica-de-reembolso` | termos de uso e política de reembolso da sua loja | 2026-10-19 |
+| `declarar-renda-de-infoproduto-imposto-de-renda` | como declarar renda de infoproduto no imposto de renda | 2026-10-20 |
 
 ---
 
@@ -84,7 +85,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 52 | split de pagamento como funciona | Dividir receita com sócio, coprodutor ou afiliado sem planilha e sem transferência manual. Infoprodutor escalando | usada 2026-10-15 |
 | 53 | contrato para mentoria e curso online | O que precisa estar escrito (escopo, prazo, cancelamento) pra evitar disputa com aluno. Expert | usada 2026-10-16 |
 | 54 | termos de uso e política de reembolso da sua loja | Quais páginas sua loja precisa ter e o que escrever em cada uma. Complementa `reembolso-de-infoproduto` sem repetir o prazo legal. Todas | usada 2026-10-19 |
-| 55 | como declarar renda de infoproduto no imposto de renda | Pessoa física × CNPJ, o que a plataforma informa e o que cai na sua malha. Infoprodutor | pendente |
+| 55 | como declarar renda de infoproduto no imposto de renda | Pessoa física × CNPJ, o que a plataforma informa e o que cai na sua malha. Infoprodutor | usada 2026-10-20 |
 
 ## 3. Como fazer / tutoriais (volume + topo de funil)
 
