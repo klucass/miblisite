@@ -47,6 +47,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `contrato-para-mentoria-e-curso-online` | contrato para mentoria e curso online | 2026-10-16 |
 | `termos-de-uso-e-politica-de-reembolso` | termos de uso e política de reembolso da sua loja | 2026-10-19 |
 | `declarar-renda-de-infoproduto-imposto-de-renda` | como declarar renda de infoproduto no imposto de renda | 2026-10-20 |
+| `como-fazer-link-na-bio-que-vende` | como fazer link na bio que vende | 2026-10-21 |
 
 ---
 
@@ -95,7 +96,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 7 | como criar um checkout para produto digital | Tutorial prático de checkout que converte. Iniciante / expert | usada 2026-07-19 |
 | 8 | como criar uma comunidade paga | Monetizar audiência com comunidade. Criador de conteúdo | usada 2026-07-19 |
 | 9 | como vender mentoria online | Estruturar e vender mentoria sem marketplace. Expert | usada 2026-07-25 |
-| 10 | como fazer link na bio que vende | Link-in-bio + venda direta + captura de lead. Criador de conteúdo | pendente |
+| 10 | como fazer link na bio que vende | Link-in-bio + venda direta + captura de lead. Criador de conteúdo | usada 2026-10-21 |
 | 11 | como precificar produto digital | Fórmula de preço + margem real sem taxas. Iniciante/expert | pendente |
 | 12 | como criar uma área de membros | Entregar curso/conteúdo com boa experiência. Infoprodutor | pendente |
 | 28 | como vender curso online do zero | Guia pillar: da validação da ideia à primeira turma. Criador iniciante | pendente |
