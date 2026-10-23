@@ -49,6 +49,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `declarar-renda-de-infoproduto-imposto-de-renda` | como declarar renda de infoproduto no imposto de renda | 2026-10-20 |
 | `como-fazer-link-na-bio-que-vende` | como fazer link na bio que vende | 2026-10-21 |
 | `como-precificar-produto-digital` | como precificar produto digital | 2026-10-22 |
+| `como-criar-area-de-membros` | como criar uma área de membros | 2026-10-23 |
 
 ---
 
@@ -99,7 +100,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 9 | como vender mentoria online | Estruturar e vender mentoria sem marketplace. Expert | usada 2026-07-25 |
 | 10 | como fazer link na bio que vende | Link-in-bio + venda direta + captura de lead. Criador de conteúdo | usada 2026-10-21 |
 | 11 | como precificar produto digital | Fórmula de preço + margem real sem taxas. Iniciante/expert | usada 2026-10-22 |
-| 12 | como criar uma área de membros | Entregar curso/conteúdo com boa experiência. Infoprodutor | pendente |
+| 12 | como criar uma área de membros | Entregar curso/conteúdo com boa experiência. Infoprodutor | usada 2026-10-23 |
 | 28 | como vender curso online do zero | Guia pillar: da validação da ideia à primeira turma. Criador iniciante | pendente |
 | 29 | como criar página de vendas que converte | Estrutura de copy + elementos que reduzem objeção. Iniciante / expert | pendente |
 | 30 | como validar ideia de produto digital | Testar demanda antes de gravar 40 aulas. Criador iniciante | pendente |
