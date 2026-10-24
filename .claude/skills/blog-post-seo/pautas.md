@@ -50,6 +50,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-fazer-link-na-bio-que-vende` | como fazer link na bio que vende | 2026-10-21 |
 | `como-precificar-produto-digital` | como precificar produto digital | 2026-10-22 |
 | `como-criar-area-de-membros` | como criar uma área de membros | 2026-10-23 |
+| `como-vender-curso-online-do-zero` | como vender curso online do zero | 2026-10-24 |
 
 ---
 
@@ -101,7 +102,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 10 | como fazer link na bio que vende | Link-in-bio + venda direta + captura de lead. Criador de conteúdo | usada 2026-10-21 |
 | 11 | como precificar produto digital | Fórmula de preço + margem real sem taxas. Iniciante/expert | usada 2026-10-22 |
 | 12 | como criar uma área de membros | Entregar curso/conteúdo com boa experiência. Infoprodutor | usada 2026-10-23 |
-| 28 | como vender curso online do zero | Guia pillar: da validação da ideia à primeira turma. Criador iniciante | pendente |
+| 28 | como vender curso online do zero | Guia pillar: da validação da ideia à primeira turma. Criador iniciante | usada 2026-10-24 |
 | 29 | como criar página de vendas que converte | Estrutura de copy + elementos que reduzem objeção. Iniciante / expert | pendente |
 | 30 | como validar ideia de produto digital | Testar demanda antes de gravar 40 aulas. Criador iniciante | pendente |
 | 31 | como vender template no canva | Nicho de baixo esforço de produção e alta recorrência. Criador iniciante | pendente |
