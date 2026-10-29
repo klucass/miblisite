@@ -53,6 +53,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-vender-curso-online-do-zero` | como vender curso online do zero | 2026-10-24 |
 | `como-criar-pagina-de-vendas` | como criar página de vendas que converte | 2026-10-27 |
 | `como-validar-ideia-de-produto-digital` | como validar ideia de produto digital | 2026-10-28 |
+| `como-vender-template-no-canva` | como vender template no canva | 2026-10-29 |
 
 ---
 
@@ -107,7 +108,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 28 | como vender curso online do zero | Guia pillar: da validação da ideia à primeira turma. Criador iniciante | usada 2026-10-24 |
 | 29 | como criar página de vendas que converte | Estrutura de copy + elementos que reduzem objeção. Iniciante / expert | usada 2026-10-27 |
 | 30 | como validar ideia de produto digital | Testar demanda antes de gravar 40 aulas. Criador iniciante | usada 2026-10-28 |
-| 31 | como vender template no canva | Nicho de baixo esforço de produção e alta recorrência. Criador iniciante | pendente |
+| 31 | como vender template no canva | Nicho de baixo esforço de produção e alta recorrência. Criador iniciante | usada 2026-10-29 |
 | 32 | como vender planilha na internet | Produto digital simples de produzir, dor operacional clara. Criador iniciante | pendente |
 | 33 | como fazer lançamento de infoproduto | Cronograma prático de lançamento sem equipe grande. Infoprodutor | pendente |
 | 34 | order bump e upsell como usar | Aumentar ticket médio sem tráfego novo. Infoprodutor escalando | pendente |
