@@ -55,6 +55,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | `como-validar-ideia-de-produto-digital` | como validar ideia de produto digital | 2026-10-28 |
 | `como-vender-template-no-canva` | como vender template no canva | 2026-10-29 |
 | `como-vender-planilha-na-internet` | como vender planilha na internet | 2026-10-30 |
+| `como-fazer-lancamento-de-infoproduto` | como fazer lançamento de infoproduto | 2026-10-31 |
 
 ---
 
@@ -111,7 +112,7 @@ Use esta tabela para escolher links internos (`/blog/<slug>/`).
 | 30 | como validar ideia de produto digital | Testar demanda antes de gravar 40 aulas. Criador iniciante | usada 2026-10-28 |
 | 31 | como vender template no canva | Nicho de baixo esforço de produção e alta recorrência. Criador iniciante | usada 2026-10-29 |
 | 32 | como vender planilha na internet | Produto digital simples de produzir, dor operacional clara. Criador iniciante | usada 2026-10-30 |
-| 33 | como fazer lançamento de infoproduto | Cronograma prático de lançamento sem equipe grande. Infoprodutor | pendente |
+| 33 | como fazer lançamento de infoproduto | Cronograma prático de lançamento sem equipe grande. Infoprodutor | usada 2026-10-31 |
 | 34 | order bump e upsell como usar | Aumentar ticket médio sem tráfego novo. Infoprodutor escalando | pendente |
 | 35 | como vender no whatsapp produto digital | Transformar conversa em link de checkout, sem cobrança manual. Expert / iniciante | pendente |
 | 36 | como fazer email marketing para infoprodutor | Sequência mínima que converte lead em cliente. Criador de conteúdo | pendente |
